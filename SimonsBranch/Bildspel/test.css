@@ -1,28 +1,4 @@
-        /* Style the header and navigation menu */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
 
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
 
         /* Style the gallery section */
         .gallery {
@@ -53,62 +29,4 @@
             cursor: pointer;
         }
 
-        /* Style the text section */
-        .text {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .text h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .text p {
-            font-size: 16px;
-        }
-
-        /* Style the flexbox section */
-        .flexbox {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        .flex-item {
-            width: calc(25% - 20px); /* Four columns with some spacing in between */
-            margin: 10px;
-            padding: 10px;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        /* Style the contact section */
-        .contact {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .contact h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .contact p {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        /* Style the footer */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+        
