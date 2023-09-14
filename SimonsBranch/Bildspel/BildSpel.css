@@ -15,6 +15,15 @@
             width: 300px; /* Adjust the width to your desired size */
             margin: 0 auto; /* Center the image horizontally */
         }
+        
+        #prevBtn {
+            float: left;
+        }
+
+        #nextBtn {
+            float: right;
+        }
+
 
         /* Style the controls */
         .controls {
