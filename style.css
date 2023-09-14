@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 /* Reset some default styles for the entire page */
 body, h1, h2, p, ul, li {
     margin: 0;
@@ -45,41 +53,37 @@ nav ul li a {
     animation: slide 35s linear infinite; /* Adjust the duration as needed */
 }
 
-/* Individual Slides */
-.slideshow img {
-   max-width: 100%; /* Make sure images fill the container */
-   height: auto;
-   margin: 0 10px;
-   width: 300px;
+/* Style the gallery section */
+.gallery {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Keyframe Animation */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33.33% {
-        transform: translateX(-100%);
-    }
-    66.67% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+/* Style the individual slides */
+.gallery-image {
+    display: none;
+    max-width: 100%; /* Make sure images fill the container */
+    height: auto;
+    width: 300px; /* Adjust the width to your desired size */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
-
-.gallery-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Style the controls */
+.controls {
+    margin-top: 10px;
 }
 
-
-.gallery-images img {
-    /* Adjust the width to your desired size */
+.controls button {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
+/* .gallery-images img {
+    Adjust the width to your desired size
+} */
 
 /* Style the text section */
 .text {
@@ -98,22 +102,22 @@ nav ul li a {
 }
 
 /* Style the flexbox section */
-.flexbox {
+/* .flexbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #f2f2f2;
     padding: 20px;
-}
+} */
 
-.flex-item {
-    width: calc(25% - 20px); /* Four columns with some spacing in between */
+/* .flex-item {
+    width: calc(25% - 20px); Four columns with some spacing in between
     margin: 10px;
     padding: 10px;
     background-color: #fff;
     text-align: center;
-}
+} */
 
 /* Style the contact section */
 .contact {
@@ -121,6 +125,7 @@ nav ul li a {
     color: #fff;
     padding: 20px;
     text-align: center;
+    
 }
 
 .contact h3 {
@@ -139,4 +144,88 @@ footer {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+
+.grid-container {
+    display: grid;
+    
+}
+.grid-item {
+    
+    margin: 1em 1em 0 1em;
+    
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1em;
+    align-self: center;
+}
+.projectColumn {
+    width: 280px;
+}
+
+img {
+    width: 100%;
+}
+.thumb {
+    width: 100%;
+}
+
+/* CSS for 1280px and more */
+@media only screen and (min-width: 1280px) {
+    .item1 {
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 2;
+    }
+    
+    .item2 {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+    }
+    .item3 {
+        grid-column: 1 / span 4;
+        grid-row: 4 / span 2;
+    }
+    .item4 {
+        grid-column: 1 / span 4;
+        grid-row: 6;
+    }
+    
+    .item5 {
+        grid-column: 1 / span 4;
+        grid-row: 7;
+    }
+    .item6 {
+        grid-column: 1 / span 4;
+        grid-row: 8;
+    }
+    img {
+        width: 35vw;
+    }
+
+    /* .item1 {
+        background-color: aquamarine;
+    }
+    .item2 {
+        background-color: red;
+    }
+    .item3 {
+        background-color: green;
+    }
+    .item4 {
+        background-color: goldenrod;
+    }
+    .item5 {
+        background-color: aqua;
+    }
+    .item6 {
+        background-color: orange;
+    } */
+    
+
+
 }
