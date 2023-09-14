@@ -1,3 +1,145 @@
 .h1{
     background-color: blue;
++/* Reset some default styles for the entire page */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation menu */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the large gallery section */
+.gallery {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* Slideshow Container */
+.slideshow {
+    display: flex; /* Display images in a row */
+    animation: slide 35s linear infinite; /* Adjust the duration as needed */
+}
+
+/* Individual Slides */
+.slideshow img {
+   max-width: 100%; /* Make sure images fill the container */
+   height: auto;
+   margin: 0 10px;
+   width: 300px;
+}
+
+/* Keyframe Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.67% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gallery-images img {
+    /* Adjust the width to your desired size */
+}
+
+/* Style the text section */
+.text {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+}
+
+/* Style the flexbox section */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.flex-item {
+    width: calc(25% - 20px); /* Four columns with some spacing in between */
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Style the contact section */
+.contact {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
 }
