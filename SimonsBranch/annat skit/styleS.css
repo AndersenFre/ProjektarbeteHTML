@@ -1,10 +1,3 @@
-/* Reset some default styles for the entire page */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the header and navigation menu */
 header {
     background-color: #333;
     color: #fff;
@@ -30,55 +23,33 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Style the large gallery section */
+/* Style the gallery section */
 .gallery {
     background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
 }
 
-
-
-/* Slideshow Container */
-.slideshow {
-    display: flex; /* Display images in a row */
-    animation: slide 35s linear infinite; /* Adjust the duration as needed */
+/* Style the individual slides */
+.gallery-image {
+    display: none;
+    max-width: 100%; /* Make sure images fill the container */
+    height: auto;
+    width: 300px; /* Adjust the width to your desired size */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
-/* Individual Slides */
-.slideshow img {
-   max-width: 100%; /* Make sure images fill the container */
-   height: auto;
-   margin: 0 10px;
-   width: 300px;
+/* Style the controls */
+.controls {
+    margin-top: 10px;
 }
 
-/* Keyframe Animation */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33.33% {
-        transform: translateX(-100%);
-    }
-    66.67% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-.gallery-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.gallery-images img {
-    /* Adjust the width to your desired size */
+.controls button {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
 /* Style the text section */

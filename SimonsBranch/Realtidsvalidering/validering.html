@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtidsvalidering</title>
+    <link rel="stylesheet" href="validering.css">
+    <script defer src="validering.js"></script>
+   
+</head>
+<body>
+    <h1>Realtidsvalidering av formulär</h1>
+    
+    <form id="myForm">
+        <div>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">E-postadress:</label>
+            <input type="text" id="email" name="email">
+            <span class="error-message" id="emailError"></span>
+        </div>
+    </form>
+
+   
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="styleS.css"> <!-- You can link your CSS file here -->
+    <link src="appS.js" defer>
 </head>
 <body>
     <!-- Header with Menu -->
@@ -19,19 +20,22 @@
         </nav>
     </header>
 
-    <!-- Large Gallery Section -->
-    <section class="gallery">
-        <!-- You can use JavaScript or CSS for rotating pictures in this section -->
-        <!-- Example using CSS animations: -->
-        <section class="gallery">
-            <div class="slideshow">
-                <img src="Djungel.png" alt="Image 1" >
-                <img src="Guide.png" alt="Image 2">
-                <img src="Porträttbild.png" alt="Image 3">
-            </div>
-        </section>
-        
-   
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <section class="gallery">
+                <div class="slideshow">
+                    <img src="Djungel.png" alt="Image 1" class="gallery-image" >
+                    <img src="Guide.png" alt="Image 2" class="gallery-image">
+                    <img src="Portrait.png" alt="Image 3" class="gallery-image">
+                </div>
+                <div class="controls">
+                    <button id="prevBtn">Previous</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+            </section>
+        </div> 
+    </div>
+    
 
     <!-- Text Section -->
     <section class="text">
