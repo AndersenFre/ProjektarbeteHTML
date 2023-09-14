@@ -1,4 +1,4 @@
-// JavaScript code for gallery navigation
+// Det funkar nu
 const images = document.querySelectorAll('.gallery-image');
 const prevButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
@@ -20,5 +20,5 @@ nextButton.addEventListener('click', () => {
     showImage(currentIndex);
 });
 
-// Show the initial image
+// (visar första bilden)
 showImage(currentIndex);
