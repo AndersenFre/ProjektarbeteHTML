@@ -27,15 +27,23 @@
             <div class="grid-item item1">
                 <section class="gallery">
                     <div class="slideshow">
-                        <img src="Djungel.png" alt="Image 1" class="gallery-image">
-                        <img src="Guide.png" alt="Image 2" class="gallery-image">
-                        <img src="Matmarknad.jpg" alt="Image 3" class="gallery-image">
-                        <img src="Mur.jpg" alt="Image 3" class="gallery-image">
+                        <div class="controls">
+                            <button id="prevBtn"> &larr; Previous</button>
+                            <!-- <button id="nextBtn">Next &rarr;</button> -->
+                        </div>
+                        <img src="BildspelApor.png" alt="Bild på apor" class="gallery-image">
+                        <img src="BildspelBjörn.png" alt="Bild på Isbjörn" class="gallery-image">
+                        <img src="BildspelSavann.png" alt="Bild på lejon" class="gallery-image">
+                        <img src="BildspelTaj.png" alt="Bild på Taj mahal" class="gallery-image">
+                        <img src="BildspelMur.png" alt="Bild på kinesiska muren" class="gallery-image">
+                        <img src="BildspelDjungel.png" alt="Bild från djungel" class="gallery-image">
+                        <img src="BildspelPingvin.png" alt="Bild på pingviner" class="gallery-image">
+                        <img src="BildspelMarknad.png" alt="Bild från matmarknad" class="gallery-image">
+                        <div class="controls">
+                            <button id="nextBtn">Next &rarr;</button>
+                        </div>
                     </div>
-                    <div class="controls">
-                        <button id="prevBtn"> &larr; Previous</button>
-                        <button id="nextBtn">Next &rarr;</button>
-                    </div>
+
                 </section>
             </div>
 
@@ -64,7 +72,7 @@
                             </div>
                             <div class="flex-item">
                                 <div class="projectColumn">
-                                    <img src="PorträttMåns.jpg" alt="Bild på Måns" class="thumb">
+                                    <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
                                         <div v-for="person in personer">
                                             <div v-if="person.id === 2">
                                                 <h3> {{person.titel}} </h3>
@@ -76,7 +84,7 @@
                             </div>
                             <div class="flex-item">
                                 <div class="projectColumn">
-                                    <img src="PorträttFredrik.jpg" alt="Bild på Fredrik" class="thumb">
+                                    <img src="PorträttFredrik.png" alt="Bild på Fredrik" class="thumb">
                                     <div v-for="person in personer">
                                         <div v-if="person.id === 3">
                                             <h3> {{person.titel}} </h3>
