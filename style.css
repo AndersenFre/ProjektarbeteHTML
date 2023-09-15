@@ -10,6 +10,8 @@ header {
     color: #fff;
     padding: 0.5em 0.5em;
     margin: 0 0 -1em 0;
+    background-attachment: fixed;
+    
 }
 
 nav ul {
@@ -40,7 +42,6 @@ nav ul li a {
 }
 /* Style the large gallery section */
 .gallery {
-    background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
 }
@@ -109,27 +110,29 @@ nav ul li a {
 .contact {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    /* padding: 20px; */
+    text-align: center; 
+    margin: 0 -1em 0 -1em;
     
 }
 
 .contact h3 {
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
 .contact p {
     font-size: 16px;
-    margin-bottom: 5px;
+    margin: 0 0 1em 0;
+   
 }
 
 /* Style the footer */
 footer {
     background-color: #222;
     color: #fff;
-    padding: 10px 0;
+    padding: 1em;
     text-align: center;
+    margin: -1em -1em 0 -1em;
 }
 
 
@@ -153,12 +156,24 @@ footer {
 .projectColumn {
     width: 280px;
 }
+.projectColumn h3 {
+    text-align: center;
+    }
 
 img {
     width: 100%;
 }
 .thumb {
     width: 100%;
+}
+.item2
+{
+    text-align: center;
+}
+#namnRubrik
+{
+    text-align: center;
+    margin: 1em 0 0 0;
 }
 
 /* CSS for 1280px and more */
