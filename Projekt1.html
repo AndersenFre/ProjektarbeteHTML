@@ -2,83 +2,161 @@
 <html lang ="sv">
 <head>
     <meta charset="UTF-8">
-    <title>World Wide Adventure</title>
-    <!-- Länk till JavaScript -->
+    <title>Your Website</title>
+    <!-- You can link your CSS file here -->
     <link rel="stylesheet" href="style.css">
-    
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
-<body> <!-- Header with Menu -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div>
-        
-    
-        <section class="gallery">
-            <!-- You can use JavaScript or CSS for rotating pictures in this section -->
-            <!-- Example using CSS animations: -->
-            <section class="gallery">
-                <div class="slideshow">
-                    <img src="Djungel.png" alt="Image 1" >
-                    <img src="Guide.png" alt="Image 2">
-                    <img src="Porträttbild.png" alt="Image 3">
+<body>
+        <!-- Header with Menu -->
+        <header>
+            <nav>
+                <ul id="menu">
+                    <!-- Länkar ska in här -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <section class="gallery">
+                    <div class="slideshow">
+                        <div class="controls">
+                            <button id="prevBtn"> &larr; Previous</button>
+                            <!-- <button id="nextBtn">Next &rarr;</button> -->
+                        </div>
+                        <img src="BildspelApor.png" alt="Bild på apor" class="gallery-image">
+                        <img src="BildspelBjörn.png" alt="Bild på Isbjörn" class="gallery-image">
+                        <img src="BildspelSavann.png" alt="Bild på lejon" class="gallery-image">
+                        <img src="BildspelTaj.png" alt="Bild på Taj mahal" class="gallery-image">
+                        <img src="BildspelMur.png" alt="Bild på kinesiska muren" class="gallery-image">
+                        <img src="BildspelDjungel.png" alt="Bild från djungel" class="gallery-image">
+                        <img src="BildspelPingvin.png" alt="Bild på pingviner" class="gallery-image">
+                        <img src="BildspelMarknad.png" alt="Bild från matmarknad" class="gallery-image">
+                        <div class="controls">
+                            <button id="nextBtn">Next &rarr;</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="grid-item item2">
+                <!-- Innehåll anställda -->
+                <h2>Welcome to Our Website</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, libero in lacinia fringilla, ligula augue consequat elit, nec tempus elit elit id odio.</p>
+                
+            </div>
+
+            <div class="grid-item item3">
+                <div id="app">
+                <!-- Innehåll personer med flexbox -->
+                <!-- <section class="flexbox"> -->
+                    <div class="flexcontainer">
+                            <div class="flex-item">
+                                <div class="projectColumn">
+                                    <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
+                                        <div v-for="person in personer">
+                                            <div v-if="person.id === 1">
+                                                <h3> {{person.titel}} </h3>
+                                                <br>
+                                                <p> {{person.kortText}} </p>
+                                            </div>
+                                        </div>
+                            </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="projectColumn">
+                                    <img src="PorträttMåns.jpg" alt="Bild på Måns" class="thumb">
+                                        <div v-for="person in personer">
+                                            <div v-if="person.id === 2">
+                                                <h3> {{person.titel}} </h3>
+                                                <br>
+                                                <p> {{person.kortText}} </p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="projectColumn">
+                                    <img src="PorträttFredrik.jpg" alt="Bild på Fredrik" class="thumb">
+                                    <div v-for="person in personer">
+                                        <div v-if="person.id === 3">
+                                            <h3> {{person.titel}} </h3>
+                                            <br>
+                                            <p> {{person.kortText}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="projectColumn">
+                                    <img src="PorträttFelix.png" alt="Bild på Felix" class="thumb">
+                                    <div v-for="person in personer">
+                                        <div v-if="person.id === 4">
+                                            <h3> {{person.titel}} </h3>
+                                            <br>
+                                            <p> {{person.kortText}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            </section>
-    </div>
-    <div>
-        <div>
-        
-        </div> 
-    </div>
-    <div>
-        
-    </div>
-    <div>
-        
-    </div>
-    <div>
-        
-    </div>
-    <div>
-        
-    </div>
+                <!-- </section> -->
+            </div>
 
+            <div class="grid-item item4">
+                <!-- Innehåll produkter -->
+                <p>hallå i stugan</p>
+            </div>
 
-    <!-- Text Section -->
-    <section class="text">
-        <div class="text-content">
-            <h2>Welcome to Our Website</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, libero in lacinia fringilla, ligula augue consequat elit, nec tempus elit elit id odio.</p>
-        </div>
-    </section>
+            <div class="grid-item item5">
+                <div class="flexcontainer">
+                <!-- Innehåll produkt flexbox -->
+                <!-- <section class="flexbox"> -->
+                    <div class="flex-item">
+                        <div class="projectColumn">¨
 
-    <!-- Flexbox Section -->
-    <section class="flexbox">
-        <div class="flex-item">Column 1, Row 1</div>
-        <div class="flex-item">Column 2, Row 1</div>
-        <div class="flex-item">Column 3, Row 1</div>
-        <div class="flex-item">Column 4, Row 1</div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h3>Contact Information</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Main Street, City</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 Your Website</p>
-    </footer>
-    
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="projectColumn">¨
+                            
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="projectColumn">¨
+                            
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="projectColumn">¨
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- </section> -->
+            </div>
+            <div class="grid-item item6">
+                <!-- Innehåll kontakt -->
+                <!-- <section class="contact"> -->
+                    <div class="contact">
+                    <h3>Contact Information</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Main Street, City</p>
+                    </div>
+                    <footer>
+                        <p>&copy; 2023 Your Website</p>
+                    </footer>
+                <!-- </section> -->
+            </div>
+        
 </body>
 </html>
