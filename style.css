@@ -8,7 +8,8 @@ body, h1, h2, p, ul, li {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 0.5em 0.5em;
+    margin: 0 0 -1em 0;
 }
 
 nav ul {
@@ -29,7 +30,14 @@ nav ul li a {
     color: #fff;
     font-weight: bold;
 }
-
+.rubrik 
+{
+    text-align: center;
+}
+.rubrik h3
+{
+    margin-top: 0.2em;
+}
 /* Style the large gallery section */
 .gallery {
     background-color: #f2f2f2;
@@ -61,15 +69,13 @@ nav ul li a {
 .controls button {
     background-color: #333;
     color: #fff;
-    padding: 10px 10px;
+    padding: 20px 20px;
     border: none;
     cursor: pointer;
     position: relative;
-    top: 50%;
+    top: 45%;
+    font-size: 1em;
 }
-/* .gallery-images img {
-    Adjust the width to your desired size
-} */
 
 /* Style the text section */
 .text {
@@ -97,13 +103,7 @@ nav ul li a {
     padding: 20px;
 } */
 
-/* .flex-item {
-    width: calc(25% - 20px); Four columns with some spacing in between
-    margin: 10px;
-    padding: 10px;
-    background-color: #fff;
-    text-align: center;
-} */
+
 
 /* Style the contact section */
 .contact {
