@@ -11,25 +11,38 @@ nameInput.addEventListener('input', validateName);
 emailInput.addEventListener('input', validateEmail);
 
 // Validera namnfältet
-function validateName() {
+function validateName() 
+{
     const nameValue = nameInput.value.trim();
-    if (nameValue === '') {
+    if (nameValue === '') 
+    {
         nameError.textContent = 'Namn är obligatoriskt';
-    } else {
+    } else 
+    {
         nameError.textContent = '';
     }
 }
 
 // Validera e-postfältet
-function validateEmail() {
+function validateEmail() 
+{
     const emailValue = emailInput.value.trim();
-    //inte helt med på detta men den kolla på tecken
+ /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.
+    framför @ (mellan ^och @) är a-zA-Z0-9._- tillåtna tecken. 
+    @ krävs och efter det teckent är a-zA-Z0-9._- tillåtna
+    Slutligen krävs en punkt . och här tillåts a-zA-Z i en längd av 2 till 4 tecken ex: .com */
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (emailValue === '') {
+    //om fältet är tomt visa detta felmedelande
+    if (emailValue === '') 
+    {
         emailError.textContent = 'E-postadress är obligatorisk';
-    } else if (!emailPattern.test(emailValue)) {
+    } else if (!emailPattern.test(emailValue)) 
+    //om textfältet ej uppfyller de krav vi ställt.
+    {
         emailError.textContent = 'Ogiltig e-postadress';
-    } else {
+    //ananrs så visas inget felmedelande
+    } else 
+    {
         emailError.textContent = '';
     }
 }
