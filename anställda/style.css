@@ -170,6 +170,11 @@ img {
 {
     text-align: center;
 }
+.item10{
+    background-color: #333;
+    text-align: center;
+    margin: 1em 0 -1em 0;
+}
 .item11 {
     text-align: center;
 }
