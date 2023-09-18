@@ -1,0 +1,78 @@
+/* centrerar sliderbaren på sidan */
+.wrap
+{
+  max-width: 60%;
+  margin: 150px auto 0; 
+}
+
+/* stil för barsen*/
+.bar
+{
+  color:#000000;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 16px;
+  position:relative;
+}
+
+/* stil för själva bars-elementen*/ 
+.bar span
+{
+  position:relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 25px;
+  background: #000000db;
+  border-radius: 50px;
+}
+
+/* stil och animation för de animerade barsen*/
+.bar span:before
+{
+  position: absolute;
+  content:'';
+  top: 6px;
+  left: 5px;
+  width: 80%;
+  height: 50%;
+  background: linear-gradient(to left, rgb(155, 155, 159), rgb(231, 230, 227));
+  border-radius: 50px;
+  animation: bar 4s ease;
+}
+
+/* hur stor bar 1 ska bli*/
+.bar:nth-child(1) span:before
+{
+  width:60%;
+}
+
+/* hur stor bar 2 ska bli*/
+.bar:nth-child(2) span:before
+{
+  width:80%;
+}
+
+/* hur stor bar 3 ska bli*/
+.bar:nth-child(3) span:before
+{
+  width:50%;
+}
+
+/* hur stor bar 4 ska bli*/
+.bar:nth-child(4) span:before
+{
+  width:90%;
+}
+
+/* för att möjligöra animationen */
+@keyframes bar
+{
+  from
+  {
+    width:0; 
+  }
+ 
+}
+  
+
