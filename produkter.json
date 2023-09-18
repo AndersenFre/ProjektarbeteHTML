@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "titel": "Res till Sydamerika",
+        "text": "Följ med på äventyr i djupaste Amazonas"
+    },
+    {
+        "id": 2,
+        "titel": "Res till Asien",
+        "text": "Följ med på äventyr på muren"
+    },
+    {
+        "id": 3,
+        "titel": "Res till Nordpolen",
+        "text": "Följ med på äventyr på isarna"
+    },
+    {
+        "id": 4,
+        "titel": "Res till Afrika",
+        "text": "Följ med på äventyr på savannen"
+    }
+]
