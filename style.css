@@ -142,6 +142,7 @@ footer {
 .grid-item {
     
     margin: 1em 1em 0 1em;
+   
     
 }
 
@@ -177,7 +178,7 @@ img {
 
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
-    .item1 {
+    /* .item1 {
         grid-column: 1 / span 4;
         grid-row: 1 / span 2;
     }
@@ -205,7 +206,28 @@ img {
     }
     img {
         width: 35vw;
+    } */
+    .item20{
+        grid-column: 1;
+        grid-row: 1;
     }
+       
+    .item21{
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+    .item22{
+        grid-column:1 /span 2;
+        grid-row: 2;
+        
+    }
+    .item23{
+        grid-column:1 /span 2;
+        grid-row: 3;
+    }
+
+
 
     /* .item1 {
         background-color: aquamarine;
