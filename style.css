@@ -178,6 +178,7 @@ img {
 {
     text-align: center;
 }
+
 .item10{
     background-color: #333;
     text-align: center;
@@ -307,6 +308,10 @@ img {
         grid-column: 1 / span 4;
         grid-row: 9;
     }
+    .item8 {
+        grid-column: 1 / span 4;
+        grid-row: 10;
+    }
     img {
         width: 35vw;
     }
@@ -354,10 +359,10 @@ img {
         grid-row: 2;
         
     }
-    .item23{
+    /* .item23{
         grid-column:1 /span 2;
         grid-row: 3;
-    }
+    } */
 
 
 }

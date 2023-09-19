@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkter</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -21,25 +24,39 @@
     </header>
     <div class="grid-container">
        <div class="grid-item item20">
-        <img src="" alt="Felix som rider en giraff">
+        <img src="" alt="Simon som upptäcker djungeln" class="thumb">
         
        </div>
 
        <div class="grid-item item21">
-        <ul id="felixLista">
-            <li>1-2 veckor av spännande safari turer</li>
-            <li>Du får chansen att brottas med en lejonhanne</li>
-            <li>2-8 personer är välkomna att övernatta på savannen</li>
-            <li>Pris: 873.80 riksdaler</li>
-        </ul>
-
-        
-       </div>
+        <div id="produktApp">
+        <div v-for="produkt in produkter">
+            <div v-if="produkt.id === 1">
+                <ul>
+                <li>{{produkt.titel}}</li>
+                <li>{{produkt.plats}}</li>
+                <li>{{produkt.tid}}</li>
+                <li>{{produkt.boende}}</li>
+                <li>{{produkt.guider}}</li>
+                <li>{{produkt.pris}}</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+       
 
        <div class="grid-item item22">
-        <h1>HEJ3</h1>
-       </div>
-       <div class="grid-item item23">
+            <div v-for="produkt in produkter">
+                <div v-if="produkt.id === 1">
+                    <h2>Amazonas, en djungel du sent kommer glömma.</h2>
+                    <br>
+                     <p>{{produkt.titel}}<p> 
+                </div>
+            </div>
+    </div>
+
+      <!-- missa inte att döpa grid-itemet!!  -->
+       <!-- <div class="grid-item item2">
        
             <div class="contact">
             <h3>Contact Information</h3>
@@ -51,10 +68,11 @@
                 <p>&copy; 2023 Your Website</p>
             </footer>
         
+    </div> -->
+
+
+    </div> 
     </div>
-
-
-    </div>  
     
 </body>
 </html>
