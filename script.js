@@ -40,8 +40,6 @@ const kundvagnApp = Vue.createApp({
     data() {
         return {
             produkter: [
-                // { name: 'Produkt 1', price: 10 },
-                // { name: 'Produkt 2', price: 15 },
                 ],
             vagn: [],
         };
@@ -102,13 +100,14 @@ nextButton.addEventListener('click', () => {
 
 // Visar bilden 
 showImage(currentIndex);
-
+document.addEventListener('DOMContentLoaded', function() {
 // Hämta referenser till formulärfälten och felmeddelandeelementen
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
-
+validateName();
+validateEmail();
 // Lyssna på ändringar i namnfältet
 nameInput.addEventListener('input', validateName);
 
@@ -118,7 +117,7 @@ emailInput.addEventListener('input', validateEmail);
 // Validera namnfältet
 function validateName() 
 {
-    const nameValue = nameInput.value.trim();
+    const nameValue = nameInput.value;
     if (nameValue === '') 
     {
         nameError.textContent = 'Namn är obligatoriskt';
@@ -131,27 +130,30 @@ function validateName()
 // Validera e-postfältet
 function validateEmail() 
 {
-    const emailValue = emailInput.value.trim();
+    const emailValue = emailInput.value;
  /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.
     framför @ (mellan ^och @) är a-zA-Z0-9._- tillåtna tecken. 
     @ krävs och efter det teckent är a-zA-Z0-9._- tillåtna
     Slutligen krävs en punkt . och här tillåts a-zA-Z i en längd av 2 till 4 tecken ex: .com */
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
     //om fältet är tomt visa detta felmedelande
-    if (emailValue === '') 
+    if (emailValue ==='') 
     {
         emailError.textContent = 'E-postadress är obligatorisk';
-    } else if (!emailPattern.test(emailValue)) 
+    } 
     //om textfältet ej uppfyller de krav vi ställt.
+    else if (!emailPattern.test(emailValue)) 
     {
         emailError.textContent = 'Ogiltig e-postadress';
-    //ananrs så visas inget felmedelande
-    } else 
+    } 
+    //annars så visas inget felmedelande
+    else 
     {
         emailError.textContent = '';
     }
 }
-
+})
 const urlParams = new URLSearchParams(window.location.search);
 
 const varde = urlParams.get('varde');
