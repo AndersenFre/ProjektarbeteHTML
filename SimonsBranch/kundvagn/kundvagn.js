@@ -1,36 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() 
-{
-    new Vue
-    ({
-        el: '#app', // Elementet där Vue-appen monteras
-        data:
-        {
-            products: [
-                { name: 'Produkt 1', price: 10 },
-                { name: 'Produkt 2', price: 15 },
-            ],
-            cart: [], // Array för att lagra varor i kundvagnen
+document.addEventListener('DOMContentLoaded', function() {
+    const app = Vue.createApp({
+        data() {
+            return {
+                products: [
+                    { name: 'Produkt 1', price: 10 },
+                    { name: 'Produkt 2', price: 15 },
+                ],
+                cart: [],
+            };
         },
-        computed: 
-        {
-            cartTotal() 
-            {
-                // Beräknar den totala kostnaden av varor i kundvagnen
+        computed: {
+            cartTotal() {
                 return this.cart.reduce((total, item) => total + item.price, 0);
             },
         },
-        methods: 
-        {
-            addToCart(product) 
-            {
-                // Lägg till en vara i kundvagnen
+        methods: {
+            addToCart(product) {
                 this.cart.push({ name: product.name, price: product.price });
             },
-            removeFromCart(index) 
-            {
-                // Ta bort en vara från kundvagnen baserat på dess index
+            removeFromCart(index) {
                 this.cart.splice(index, 1);
             },
         },
     });
+
+    // Mount the Vue app on the element with id "app"
+    app.mount('#app');
 });

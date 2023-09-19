@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-   
-   
-    <script src="kundvagn.js"></script>
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="kundvagn.js"></script>
 </head>
 <body>
     <div id="app">
@@ -19,17 +17,13 @@
         <div id="cart">
             <h2>Kundvagn</h2>
             <ul>
-            <!-- för varje cart-element så skapas nya element i en lista där pris visas och kan tas bort med en knapp -->
-                <li 
-                v-for="(item, index) in cart" :key="index">{{ item.name }} - ${{ item.price }} 
-                <button @click="removeFromCart(index)">Ta bort</button>
-               </li>
+                <li v-for="(item, index) in cart" :key="index">
+                    {{ item.name }} - ${{ item.price }}
+                    <button @click="removeFromCart(index)">Ta bort</button>
+                </li>
             </ul>
             <p>Totalt: ${{ cartTotal }}</p>
         </div>
     </div>    
 </body>
-
-
 </html>
-
