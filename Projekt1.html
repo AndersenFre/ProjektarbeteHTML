@@ -5,6 +5,7 @@
     <title>Your Website</title>
     <!-- You can link your CSS file here -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script defer src="https://unpkg.com/vue@3"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
@@ -19,6 +20,14 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="Kontakt.html">Kontakt</a></li>
                     <li><a href="Kundvagn.html">Kundvagn</a></li>
+                    <li>
+                        <div id="kundvagnApp">
+                            <a href="Kundvagn.html">
+                              <i class="fa fa-shopping-cart"></i>
+                              <span id="cart-counter">{{ cartCount }}</span>
+                            </a>
+                          </div>
+                    </li>
                 </ul>
             </nav>
             
