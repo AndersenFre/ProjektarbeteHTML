@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
     const app = Vue.createApp({
         data() {
             return {
@@ -26,4 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mount the Vue app on the element with id "app"
     app.mount('#app');
-});
+

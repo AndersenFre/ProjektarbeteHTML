@@ -4,6 +4,10 @@ const emailInput = document.getElementById('email');
 const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
 
+//Köra valideringen när sidan laddas in första gången
+validateName();
+validateEmail();
+
 // Lyssna på ändringar i namnfältet
 nameInput.addEventListener('input', validateName);
 
@@ -46,3 +50,4 @@ function validateEmail()
         emailError.textContent = '';
     }
 }
+
