@@ -36,6 +36,41 @@ const produktApp = Vue.createApp({
 produktApp.mount('#produktApp');
 
 
+const kundvagnApp = Vue.createApp({
+    data() {
+        return {
+            produkter: [
+                // { name: 'Produkt 1', price: 10 },
+                // { name: 'Produkt 2', price: 15 },
+                ],
+            vagn: [],
+        };
+    },
+    created () {
+        axios.get('produkter.json')
+        .then((response) => {
+            this.produkter = response.data;
+        })
+    },
+    computed: {
+        vagnTotal() {
+            return this.vagn.reduce((total, item) => total + item.pris, 0);
+        },
+    },
+    methods: {
+        addToVagn(produkt) {
+            this.vagn.push({ titel: produkt.titel, pris: produkt.pris });
+        },
+        removeFromVagn(index) {
+            this.vagn.splice(index, 1);
+        },
+    },
+});
+
+    // Mount the Vue app on the element with id "app"
+kundvagnApp.mount('#kundvagnApp');
+
+
 // JavaScript code for gallery navigation
 //Skapar och sparar bilderna här
 const images = document.querySelectorAll('.gallery-image');
@@ -115,63 +150,7 @@ function validateEmail()
     {
         emailError.textContent = '';
     }
-};
-
-// document.addEventListener('DOMContentLoaded', function() 
-// {
-// new Vue({
-//         el: '#app', // Elementet där Vue-appen monteras
-//         data:
-//         {
-//             products: [
-//                 { name: 'Produkt 1', price: 10 },
-//                 { name: 'Produkt 2', price: 15 },
-//             ],
-//             cart: [], // Array för att lagra varor i kundvagnen
-//         },
-//         computed: 
-//         {
-//             cartTotal() 
-//             {
-//                 // Beräknar den totala kostnaden av varor i kundvagnen
-//                 return this.cart.reduce((total, item) => total + item.price, 0);
-//             },
-//         },
-//         methods: 
-//         {
-//             addToCart(product) 
-//             {
-//                 // Lägg till en vara i kundvagnen
-//                 this.cart.push({ name: product.name, price: product.price });
-//             },
-//             removeFromCart(index) 
-//             {
-//                 // Ta bort en vara från kundvagnen baserat på dess index
-//                 this.cart.splice(index, 1);
-//             },
-//         },
-//     });
-// });
-
-const kundvagnApp = Vue.createApp({
-    data(){
-        return{
-            products: [
-                // { name: 'Produkt 1', price: 10 },
-                // { name: 'Produkt 2', price: 15 },
-            ],
-            // Array för att lagra varor i kundvagnen
-            cart: [],
-        }
-    },
-    created () {
-        axios.get('products')
-        .then((response) => {
-            this.products = response.data;
-        })
-    }
-});
-produktApp.mount('#kundvagnApp');
+}
 
 const urlParams = new URLSearchParams(window.location.search);
 
