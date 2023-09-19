@@ -18,7 +18,8 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="Kontakt.html">Kontact</a></li>
+                    <li><a href="Kundvagn.html">Kundvagn</a></li>
                 </ul>
             </nav>
         </header>
@@ -112,38 +113,133 @@
             </div>
 
             <div class="grid-item item4">
-                <!-- Innehåll produkter -->
-                <p>hallå i stugan</p>
-            </div>
-
-            <div class="grid-item item5">
-                <div class="flexcontainer">
-                <!-- Innehåll produkt flexbox -->
-                <!-- <section class="flexbox"> -->
-                    <div class="flex-item">
-                        <div class="projectColumn">¨
-
-                        </div>
-                    </div>
-                    <div class="flex-item">
-                        <div class="projectColumn">¨
-                            
-                        </div>
-                    </div>
-                    <div class="flex-item">
-                        <div class="projectColumn">¨
-                            
-                        </div>
-                    </div>
-                    <div class="flex-item">
-                        <div class="projectColumn">¨
-                            
-                        </div>
+                <div id="personApp">
+                    <!-- Innehåll personer med flexbox -->
+                        <div class="flexcontainer">
+                                <div class="flex-item">
+                                    <div class="projectColumn">
+                                        <h3 id="namnRubrik">Simon</h3>
+                                        <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
+                                        <div v-for="person in personer">
+                                            <div v-if="person.id === 1">
+                                                <h3> {{person.titel}} </h3>
+                                                <br>
+                                                <p> {{person.kortText}} </p>
+                                                <a href="Personal.html?varde=1"> Läs mer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="projectColumn">
+                                        <h3 id="namnRubrik">Måns</h3>
+                                        <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
+                                            <div v-for="person in personer">
+                                                <div v-if="person.id === 2">
+                                                    <h3> {{person.titel}} </h3>
+                                                    <br>
+                                                    <p> {{person.kortText}} </p>
+                                                    <a href="Personal.html?varde=2">Läs mer!</a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="projectColumn">
+                                        <h3 id="namnRubrik">Fredrik</h3>
+                                        <img src="PorträttFredrik.png" alt="Bild på Fredrik" class="thumb">
+                                        <div v-for="person in personer">
+                                            <div v-if="person.id === 3">
+                                                <h3> {{person.titel}} </h3>
+                                                <br>
+                                                <p> {{person.kortText}} </p>
+                                                <a href="Personal.html?varde=3">Läs mer!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="projectColumn">
+                                        <h3 id="namnRubrik">Felix</h3>
+                                        <img src="PorträttFelix.png" alt="Bild på Felix" class="thumb">
+                                        <div v-for="person in personer">
+                                            <div v-if="person.id === 4">
+                                                <h3> {{person.titel}} </h3>
+                                                <br>
+                                                <p> {{person.kortText}} </p>
+                                                <a href="Personal.html?varde=4">Läs mer!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
+               
+                <div class="grid-item item5">
+                <h2>Våra resor</h2>
                 <!-- </section> -->
             </div>
             <div class="grid-item item6">
+                <div id="produktApp">
+                    <div class="flexcontainer">
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Sydamerika</h3>
+                                <img src="Guide.png" alt="Bild på Simon" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 1">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Asien</h3>
+                                <img src="Tokyo.png" alt="Bild på Måns" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 2">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Nordpolen</h3>
+                                <img src="Pingvin.png" alt="Bild på Fredrik" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 3">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Afrika</h3>
+                                <img src="Safari.png" alt="Bild på Felix" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 4">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+        </div>   
+
+            <div class="grid-item item7">
                 <!-- Innehåll kontakt -->
                 <!-- <section class="contact"> -->
                     <div class="contact">

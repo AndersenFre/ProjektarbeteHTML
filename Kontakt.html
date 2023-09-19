@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <h1>Realtidsvalidering av formulär</h1>
     
+    <form id="myForm">
+        <div>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">E-postadress:</label>
+            <input type="text" id="email" name="email">
+            <span class="error-message" id="emailError"></span>
+        </div>   
+    </form>
 </body>
 </html>

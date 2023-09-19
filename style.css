@@ -1,3 +1,4 @@
+/* Reset some default styles for the entire page */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
@@ -5,12 +6,20 @@ body, h1, h2, p, ul, li {
 
 /* Style the header and navigation menu */
 header {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     padding: 0.5em 0.5em;
     margin: 0 0 -1em 0;
     background-attachment: fixed;
     
+}
+.rubrik{
+        background-color: #333;
+        color: #fff;
+        text-align: center; 
+        margin: 0 -1em 0 -1em;
+        padding: 0.5em;
+        
 }
 
 nav ul {
@@ -142,7 +151,6 @@ footer {
 .grid-item {
     
     margin: 1em 1em 0 1em;
-   
     
 }
 
@@ -166,8 +174,19 @@ img {
 .thumb {
     width: 100%;
 }
-.item2
+.item3
 {
+    text-align: center;
+}
+.item10{
+    background-color: #333;
+    text-align: center;
+    margin: 1em 0 -1em 0;
+}
+.item11 {
+    text-align: center;
+}
+.item14{
     text-align: center;
 }
 #namnRubrik
@@ -175,38 +194,151 @@ img {
     text-align: center;
     margin: 1em 0 0 0;
 }
+.error-message {
+    color: red;
+    font-size: 14px;
+}
 
+/* centrerar sliderbaren på sidan */
+.wrap
+{
+  max-width: 60%;
+  margin: 150px auto 0; 
+}
+
+/* stil för barsen*/
+.bar
+{
+  color:#000000;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 16px;
+  position:relative;
+}
+
+/* stil för själva bars-elementen*/ 
+.bar span
+{
+  position:relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 25px;
+  background: #000000db;
+  border-radius: 50px;
+}
+
+/* stil och animation för de animerade barsen*/
+.bar span:before
+{
+  position: absolute;
+  content:'';
+  top: 6px;
+  left: 5px;
+  width: 80%;
+  height: 50%;
+  background: linear-gradient(to left, rgb(155, 155, 159), rgb(231, 230, 227));
+  border-radius: 50px;
+  animation: bar 4s ease;
+}
+
+/* hur stor bar 1 ska bli*/
+.bar:nth-child(1) span:before
+{
+  width:60%;
+}
+
+/* hur stor bar 2 ska bli*/
+.bar:nth-child(2) span:before
+{
+  width:80%;
+}
+
+/* hur stor bar 3 ska bli*/
+.bar:nth-child(3) span:before
+{
+  width:50%;
+}
+
+/* hur stor bar 4 ska bli*/
+.bar:nth-child(4) span:before
+{
+  width:90%;
+}
+
+/* för att möjligöra animationen */
+@keyframes bar
+{
+  from
+  {
+    width:0; 
+  }
+ 
+}
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
-    /* .item1 {
+    .item1 {
         grid-column: 1 / span 4;
-        grid-row: 1 / span 2;
+        grid-row: 1;
     }
-    
     .item2 {
         grid-column: 1 / span 4;
-        grid-row: 3;
+        grid-row: 2 / span 2;
     }
+    
     .item3 {
         grid-column: 1 / span 4;
-        grid-row: 4 / span 2;
+        grid-row: 4;
     }
     .item4 {
         grid-column: 1 / span 4;
-        grid-row: 6;
+        grid-row:  5/ span 2;
     }
-    
     .item5 {
         grid-column: 1 / span 4;
         grid-row: 7;
     }
+    
     .item6 {
         grid-column: 1 / span 4;
         grid-row: 8;
     }
+    .item7 {
+        grid-column: 1 / span 4;
+        grid-row: 9;
+    }
     img {
         width: 35vw;
-    } */
+    }
+    .item10{
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .item11 {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    
+    .item12 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item13 {
+        grid-column: 2;
+        grid-row: 3;
+ 
+    }
+    .item14 {
+        grid-column: 1 /span 2;
+        grid-row: 4;
+    }
+    .item15 {
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
+
+
     .item20{
         grid-column: 1;
         grid-row: 1;
@@ -228,26 +360,5 @@ img {
     }
 
 
-
-    /* .item1 {
-        background-color: aquamarine;
-    }
-    .item2 {
-        background-color: red;
-    }
-    .item3 {
-        background-color: green;
-    }
-    .item4 {
-        background-color: goldenrod;
-    }
-    .item5 {
-        background-color: aqua;
-    }
-    .item6 {
-        background-color: orange;
-    } */
-    
-
-
 }
+    
