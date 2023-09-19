@@ -60,25 +60,25 @@
             <div class="grid-item item4">
                 <div id="personApp">
                     <!-- Innehåll personer med flexbox -->
-                        <div class="flexcontainer">
-                                <div class="flex-item">
-                                    <div class="projectColumn">
-                                        <h3 id="namnRubrik">Simon</h3>
-                                        <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
-                                        <div v-for="person in personer">
-                                            <div v-if="person.id === 1">
-                                                <h3> {{person.titel}} </h3>
-                                                <br>
-                                                <p> {{person.kortText}} </p>
-                                                <a href="Personal.html?varde=1"> Läs mer</a>
-                                            </div>
-                                        </div>
+                    <div class="flexcontainer">
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Simon</h3>
+                                <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 1">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <a href="Personal.html?varde=1"> Läs mer</a>
                                     </div>
                                 </div>
-                                <div class="flex-item">
-                                    <div class="projectColumn">
-                                        <h3 id="namnRubrik">Måns</h3>
-                                        <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Måns</h3>
+                                <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
                                             <div v-for="person in personer">
                                                 <div v-if="person.id === 2">
                                                     <h3> {{person.titel}} </h3>
@@ -118,8 +118,8 @@
                                     </div>
                                 </div>
                             </div>
-                    </div>
                 </div>
+            </div>
                 <div class="grid-item item5">
                     <h2>Våra resor</h2>
                 </div>
@@ -181,18 +181,21 @@
                             </div>
                         </div>
                 </div> 
-            </div>   
+            </div>
             <div class="grid-item item7">
-                    <div class="contact">
+                <h2><a href="Produkt.html">Gå till våra resor</a></h2>
+            </div>   
+            <div class="grid-item item8">
+                <div class="contact">
                     <h3>Contact Information</h3>
                     <p>Email: info@example.com</p>
                     <p>Phone: (123) 456-7890</p>
                     <p>Address: 123 Main Street, City</p>
                     <br>
-                    </div>
-                    <footer>
-                        <p>&copy; 2023 Your Website</p>
-                    </footer>
+                </div>
+                <footer>
+                    <p>&copy; 2023 Your Website</p>
+                </footer>
             </div>
         
 </body>

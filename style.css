@@ -174,6 +174,9 @@ img {
 .thumb {
     width: 100%;
 }
+.thumbProdukt {
+    width: 30em;
+}
 .item3
 {
     text-align: center;
@@ -194,7 +197,9 @@ img {
     text-align: center;
     margin: 1em 0 0 0;
 }
-.error-message {
+/* Visar felmeddelande i kontakt */
+.error-message 
+{
     color: red;
     font-size: 14px;
 }
@@ -307,6 +312,10 @@ img {
         grid-column: 1 / span 4;
         grid-row: 9;
     }
+    .item8 {
+        grid-column: 1 / span 4;
+        grid-row: 10;
+    }
     img {
         width: 35vw;
     }
@@ -337,5 +346,24 @@ img {
         grid-column: 1 / span 2;
         grid-row: 5;
     }
+    .item20{
+        grid-column: 1;
+        grid-row: 1;
+    }
+       
+    .item21{
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+    .item22{
+        grid-column:1 /span 2;
+        grid-row: 2;
+        
+    }
+    /* .item23{
+        grid-column:1 /span 2;
+        grid-row: 3;
+    } */
 
 }

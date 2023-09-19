@@ -64,12 +64,10 @@ const kundvagnApp = Vue.createApp({
         },
     },
 });
-
-    // Mount the Vue app on the element with id "app"
+// Mount the Vue app on the element with id "app"
 kundvagnApp.mount('#kundvagnApp');
 
-
-// JavaScript code for gallery navigation
+// JavaScript kode för bildspelsnavigation
 //Skapar och sparar bilderna här
 const images = document.querySelectorAll('.gallery-image');
 //för att visa tidigare bild
@@ -86,81 +84,19 @@ function showImage(index) {
     });
 }
 
-//Vid ett klick på den vänstra knappet visas föregående bild
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-});
-
 //Vid ett klick på den högra knappet visas nästkommande bild
 nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
 });
 
+//Vid ett klick på den vänstra knappet visas föregående bild
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
+
+
+
 // Visar bilden 
 showImage(currentIndex);
-document.addEventListener('DOMContentLoaded', function() {
-// Hämta referenser till formulärfälten och felmeddelandeelementen
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const nameError = document.getElementById('nameError');
-const emailError = document.getElementById('emailError');
-validateName();
-validateEmail();
-// Lyssna på ändringar i namnfältet
-nameInput.addEventListener('input', validateName);
-
-// Lyssna på ändringar i e-postfältet
-emailInput.addEventListener('input', validateEmail);
-
-// Validera namnfältet
-function validateName() 
-{
-    const nameValue = nameInput.value;
-    if (nameValue === '') 
-    {
-        nameError.textContent = 'Namn är obligatoriskt';
-    } else 
-    {
-        nameError.textContent = '';
-    }
-}
-
-// Validera e-postfältet
-function validateEmail() 
-{
-    const emailValue = emailInput.value;
- /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.
-    framför @ (mellan ^och @) är a-zA-Z0-9._- tillåtna tecken. 
-    @ krävs och efter det teckent är a-zA-Z0-9._- tillåtna
-    Slutligen krävs en punkt . och här tillåts a-zA-Z i en längd av 2 till 4 tecken ex: .com */
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    
-    //om fältet är tomt visa detta felmedelande
-    if (emailValue ==='') 
-    {
-        emailError.textContent = 'E-postadress är obligatorisk';
-    } 
-    //om textfältet ej uppfyller de krav vi ställt.
-    else if (!emailPattern.test(emailValue)) 
-    {
-        emailError.textContent = 'Ogiltig e-postadress';
-    } 
-    //annars så visas inget felmedelande
-    else 
-    {
-        emailError.textContent = '';
-    }
-}
-})
-const urlParams = new URLSearchParams(window.location.search);
-
-const varde = urlParams.get('varde');
-
-if(varde) {
-    console.log('Simon');
-}
-else {
-    console.log('inget medskickat värde');
-};

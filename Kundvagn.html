@@ -12,7 +12,7 @@
     <div id="kundvagnApp">
         <div class="produkt" v-for="(produkt, index) in produkter" :key="index">
             <h3>{{ produkt.titel }}</h3>
-            <p>Pris: ${{ produkt.pris }}</p>
+            <p>Pris: {{ produkt.pris }}</p>
             <button @click="addToVagn(produkt)">Lägg till i kundvagn</button>
         </div>
     
@@ -20,11 +20,11 @@
             <h2>Kundvagn</h2>
             <ul>
                 <li v-for="(item, index) in vagn" :key="index">
-                    {{ item.titel }} - ${{ item.pris }}
+                    {{ item.titel }} - {{ item.pris }}
                     <button @click="removeFromVagn(index)">Ta bort</button>
                 </li>
             </ul>
-            <p>Totalt: ${{ vagnTotal }}</p>
+            <p>Totalt: {{ vagnTotal }} sek</p>
         </div>
     </div>    
 </body>
