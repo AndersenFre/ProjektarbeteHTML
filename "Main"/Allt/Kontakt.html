@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtidsvalidering</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="scriptKontakt.js"></script>
+   
+</head>
+<body>
+    <!-- Header with Menu -->
+    <header>
+        <nav>
+            <ul id="menu">
+                <!-- Länkar ska in här -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><a href="Kundvagn.html">Kundvagn</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <div class="rubrik">
+                <h1> Beyond Bounds Adventure</h1>
+                <h3> Här väntar ditt nästa äventyr </h3>
+             </div>
+        </div>
+
+    <h1>Realtidsvalidering av formulär</h1>
+    
+    <form id="myForm">
+        <div>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">E-postadress:</label>
+            <input type="text" id="email" name="email">
+            <span class="error-message" id="emailError"></span>
+        </div>
+    </form>
+
+    <div class="contact">
+        <h3>Contact Information</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Main Street, City</p>
+        <br>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+   
+</body>
+</html>

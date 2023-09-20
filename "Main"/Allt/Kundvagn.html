@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div id="kundvagnApp">
+        <div class="produkt" v-for="(produkt, index) in produkter" :key="index">
+            <h3>{{ produkt.titel }}</h3>
+            <p>Pris: {{ produkt.pris }}</p>
+            <button @click="addToVagn(produkt)">Lägg till i kundvagn</button>
+        </div>
+    
+        <div id="vagn">
+            <h2>Kundvagn</h2>
+            <ul>
+                <li v-for="(item, index) in vagn" :key="index">
+                    {{ item.titel }} - {{ item.pris }}
+                    <button @click="removeFromVagn(index)">Ta bort</button>
+                </li>
+            </ul>
+            <p>Totalt: {{ vagnTotal }} sek</p>
+        </div>
+    </div>    
+</body>
+</html>
