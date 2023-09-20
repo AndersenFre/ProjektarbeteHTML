@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personinformation</title>
+    <script src="https://unpkg.com/vue@3"></script> <!-- Lägg till Vue.js här -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script1.js"></script>
+</head>
+<body>
+    <div id="personApp">
+        <div v-for="person in personer" :key="person.id" class="person-info">
+            <h3>{{ person.namn }}</h3>
+            <h4>{{ person.titel }}</h4>
+            <p>{{ person.kortText }}</p>
+            <a :href="'Personal.html?id=' + person.id">Läs mer</a>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

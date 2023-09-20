@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titel": "Res till Sydamerika",
+        "text": "Följ med på äventyr i djupaste Amazonas",
+        "pris": 150
+    },
+    {
+        "id": 2,
+        "titel": "Res till Asien",
+        "text": "Följ med på äventyr på muren",
+        "pris": 200
+    },
+    {
+        "id": 3,
+        "titel": "Res till Nordpolen",
+        "text": "Följ med på äventyr på isarna",
+        "pris": 300
+    },
+    {
+        "id": 4,
+        "titel": "Res till Afrika",
+        "text": "Följ med på äventyr på savannen",
+        "pris": 350
+    }
+]
