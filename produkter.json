@@ -7,14 +7,19 @@
     "tid": "Tid: 1 vecka",
     "boende": "Boende: Små stugor brevid djungeln",
     "guider": "Arbetande hjälpredor: 1 djungelguide och 2 assistenter",
-    "pris": "Pris: 4500 kr",
-    "langText":"Utforska djupet av Amazonas regnskogar på spännande vandringar och kanotturer., Möte med lokala stammar för att lära och förstå deras livsstil och unika sätt att leva i symbios med naturen. Dyk ner i det tropiska paradiset med guidade utflykter för att få en närbild av exotiska djur och fåglar som bara finns här. Njut av oförglömliga kvällar med nattvandringar där skogens ljud och mysterier blir till liv under stjärnhimlen. Besök av avlägsna byar för att uppleva äkta gästfrihet och känna pulsen i det ursprungliga Amazonas., Förundras över den fantastiska flora och fauna som Amazonas har att erbjuda från majestätiska träd till färggranna orkidéer. Smaka på de läckra och autentiska smakerna av lokala rätter och traditionell matlagning."
+    "pris": 4500,
+    "langText":"Utforska djupet av Amazonas regnskogar på spännande vandringar och kanotturer. Möte med lokala stammar för att lära och förstå deras livsstil och unika sätt att leva i symbios med naturen. Dyk ner i det tropiska paradiset med guidade utflykter för att få en närbild av exotiska djur och fåglar som bara finns här. Njut av oförglömliga kvällar med nattvandringar där skogens ljud och mysterier blir till liv under stjärnhimlen. Besök av avlägsna byar för att uppleva äkta gästfrihet och känna pulsen i det ursprungliga Amazonas. Förundras över den fantastiska flora och fauna som Amazonas har att erbjuda från majestätiska träd till färggranna orkidéer. Smaka på de läckra och autentiska smakerna av lokala rätter och traditionell matlagning."
 },
 {
     "id": 2,
     "titel": "Res till Asien",
     "text": "Följ med på äventyr på muren",
-    "pris": 200
+    "plats": "Plats: Stora länderna i Asien",
+    "tid": "Tid: 2 vecka",
+    "boende": "Boende: Hotell i en skyskrapa",
+    "guider": "Arbetande hjälpredor: 1 asienguide",
+    "langText":"Välkommen till Asien, en kontinent av överväldigande skönhet, djup historia och en färgrik mångfald av kulturer. Med sina många länder som sträcker sig från fjärran östern till det indiska subkontinenten och Mellanöstern, erbjuder Asien en enastående upplevelse i allt från konst och arkitektur till mat och natur. Asien har en av världens äldsta kulturer med rika historiska rötter som går tusentals år tillbaka. Från de antika civilisationerna i Mesopotamien till Kinas dynastier, Indiens mångfaldiga riken och Japans shogunater, har Asien format mänsklighetens gång genom tiden. Kontinenten är hem för enastående arkitektur, från Kinas kejsarpalats till Indiens majestätiska tempel och Japans traditionella byggnader. Moderna landmärken som Dubais futuristiska skyskrapor visar Asiens framtid och kontinuerliga strävan mot innovation. Asiens landskap är lika varierande som dess kulturer. Från Himalayas mäktiga berg till Japans frodiga grönska och Thailands turkosblåa stränder, erbjuder kontinenten en otrolig skönhet och mångfald. Djurlivet i Asien är lika varierande med arter som tigrar, elefanter, pandor och orangutanger. De frodiga skogarna och nationalparkerna är hem för en otrolig flora och fauna, och Korallreven i Stora barriärrevet är en av de sju underverken i världen. Asiens matkultur är en fantastisk resa av smaker och dofter. Från det kryddiga indiska köket till det delikata japanska sukiyaki, och det mångsidiga kinesiska dim sum, finns det något för alla smaklökar. Konsten att wokstekning, sushi-rullning, och currylagning har förfinats under generationer och är en viktig del av Asiens kulinariska arv. Utforska Asien är som att upptäcka en värld i sig själv. Varje land har sin unika charm och erbjuder en oändlig skatt av upplevelser. En resa genom Asien är som en resa genom tid och kultur, och det är en resa värd att tas.",
+    "pris": 2800
 },
 {
     "id": 3,
