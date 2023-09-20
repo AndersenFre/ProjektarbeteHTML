@@ -371,6 +371,30 @@ img {
         grid-column: 1 /span 2;
         grid-row: 4;
     }
+    .item26{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .item27{
+        grid-column: 2;
+        grid-row: 5;
+    }
+    .item28{
+        grid-column: 1 /span 2;
+        grid-row: 6;
+    }
+    .item29{
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .item30{
+        grid-column: 2;
+        grid-row: 7;
+    }
+    .item31{
+        grid-column: 1 /span 2;
+        grid-row: 8;
+    }
 
 
 }
