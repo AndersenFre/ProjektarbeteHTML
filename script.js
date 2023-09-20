@@ -44,6 +44,7 @@ const kundvagnApp = Vue.createApp({
             produkter: [],
             vagn: [],
             cartCount: 0,
+            isCartPopupOpen: false,
         };       
     },
     created () {
@@ -94,7 +95,17 @@ const kundvagnApp = Vue.createApp({
         // Omvandlar innehållet i vagn till JSON string, iom att localStorage bara sparar string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
-        }
+        },
+        openCartWindow() {
+            // Kopiera
+            const cartWindow = document.getElementById('cartWindow');
+            cartWindow.style.display = 'block';
+        },
+        closeCartWindow() {
+            // Kopiera
+            const cartWindow = document.getElementById('cartWindow');
+            cartWindow.style.display = 'none';
+        },
     },
 });
 // Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
@@ -128,8 +139,6 @@ prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
 });
-
-
 
 // Visar bilden 
 showImage(currentIndex);

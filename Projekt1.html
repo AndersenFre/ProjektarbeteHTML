@@ -22,12 +22,26 @@
                     <li><a href="Kontakt.html">Kontakt</a></li>
                     <li><a href="Kundvagn.html">Kundvagn</a></li>
                     <li>
+                        <!-- Kopiera hela denna koden -->
                         <div id="kundvagnApp">
-                            <a href="Kundvagn.html">
-                              <i class="fa fa-shopping-cart"></i>
-                              <span id="cart-counter">{{ cartCount }}</span>
-                            </a>
-                          </div>
+                                <i class="fa fa-shopping-cart"></i>
+                                <span id="cart-counter">{{ cartCount }}</span>
+                                <button @click="openCartWindow">Open Cart</button>
+                                <div id="cartWindow">
+                                    <h2>Kundvagn</h2>
+                                    <ul>
+                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                            <div class="cart-item-details">
+                                                <h3>{{ item.titel }}</h3>
+                                                <p>Pris: {{ item.pris }} sek</p>
+                                            </div>
+                                            <button @click="removeFromVagn(index)">Ta bort</button>
+                                        </li>
+                                    </ul>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    <button @click="closeCartWindow">Stäng</button>
+                                </div>    
+                        </div>
                     </li>
                 </ul>
             </nav>

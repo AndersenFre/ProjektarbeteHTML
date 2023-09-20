@@ -270,9 +270,42 @@ img {
   }
  
 }
-
 #produktLista{
     padding: 0.5em;
+}
+#cartWindow {
+    position: fixed;
+    top: 6em;
+    left: 7em;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 400px; /* Justera den maximala bredden efter ditt behov */
+    background-color: rgb(33, 106, 62);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Dölj varukorgsfönstret från början */
+    overflow-y: auto; /* Aktivera vertikal rullning vid behov */
+    max-height: 130px; /* Justera den maximala höjden efter ditt behov */
+    margin: 0 auto;
+    padding: 5px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    font-size: 14px; /* Reduce the font size */
+}
+
+.cart-item button {
+    font-size: 12px; /* Reduce the font size for the "Ta bort" button */
 }
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
@@ -394,6 +427,14 @@ img {
     .item32{
         grid-column: 1/span 2;
         grid-row: 9;
+    }
+    .item41{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item42{
+        grid-column: 1;
+        grid-row: 2;
     }
     #produktLista{
         font-size: 1.5em;
