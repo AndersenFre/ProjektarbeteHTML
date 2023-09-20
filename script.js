@@ -16,6 +16,7 @@ const personApp = Vue.createApp({
     }
 });
 
+// Tillåter Vue att genom mount förändra HTML-element med ID 'personApp'.
 personApp.mount('#personApp');
 
 const produktApp = Vue.createApp({
@@ -33,6 +34,7 @@ const produktApp = Vue.createApp({
         })
     }
 });
+// Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
 
 
@@ -50,23 +52,32 @@ const kundvagnApp = Vue.createApp({
             this.produkter = response.data;
         });
        
-    // Retrieve the cart data from local storage
+    // Skapar savedCart, fyller den med cart som är localStorage. 
+    // Om savedCart har värde, spara savedCart i array vagn. 
+    // Sätter cartCount som längden av array vagn. 
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
       this.vagn = JSON.parse(savedCart);
       this.cartCount = this.vagn.length;
     }
    },
+    // Funktion som "lyssnar" efter förändringar i array vagn.
+    // Reduce itererar genom antal objekt i array samt sammanställer antal, 
+    // pris per objekt samt totalpris i vagn. 
     computed: {
         vagnTotal() {
             return this.vagn.reduce((total, item) => total + item.pris, 0);
         },
     },
+    // Funktioner för att lägga till och ta bort objekt i array vagn.
+    // Uppdaterar cartCount som syns i meny så rätt antal visas.
+    // Validerar så att cartCount inte kan bli ett negativt värde. 
+    // Uppdaterar även Storage Item med nyckel 'cart' i localStorage.
     methods: {
         addToVagn(produkt) {
             this.vagn.push({ titel: produkt.titel, pris: produkt.pris });
             this.cartCount++;
-            this.saveCartToLocalStorage(); // Save the cart to local storage
+            this.saveCartToLocalStorage();
 
         },
         removeFromVagn(index) {
@@ -75,16 +86,18 @@ const kundvagnApp = Vue.createApp({
             {
                 this.cartCount--;
             }
-            this.saveCartToLocalStorage(); // Save the cart to local storage
+            this.saveCartToLocalStorage();
 
         },
+        // Sparar till localStorage.
+        // Skapar ett Storage Item med nyckel 'cart'.
+        // Omvandlar innehållet i vagn till JSON string, iom att localStorage bara sparar string.
         saveCartToLocalStorage() {
-            // Save the cart to local storage as a JSON string
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         }
     },
 });
-// Mount the Vue app on the element with id "app"
+// Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
 kundvagnApp.mount('#kundvagnApp');
 
 // JavaScript kode för bildspelsnavigation
