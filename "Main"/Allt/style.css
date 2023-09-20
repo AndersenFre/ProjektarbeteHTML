@@ -280,7 +280,7 @@ img {
   }
  
 }
-
+/* kopiera allt från hit*/
 #cartWindow {
     position: fixed;
     top: 40%;
@@ -315,7 +315,9 @@ img {
 .cart-item button {
     font-size: 12px; /* Reduce the font size for the "Ta bort" button */
 }
-  
+
+/* Till hit*/
+
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
     .item1 {

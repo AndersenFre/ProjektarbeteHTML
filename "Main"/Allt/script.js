@@ -41,7 +41,7 @@ const kundvagnApp = Vue.createApp({
             produkter: [],
             vagn: [],
             cartCount: 0,
-            isCartPopupOpen: false,
+            isCartPopupOpen: false, //Nytt kopiera
         };       
     },
     created () {
@@ -83,12 +83,12 @@ const kundvagnApp = Vue.createApp({
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
         openCartWindow() {
-            // Show the cart window
+            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'block';
         },
         closeCartWindow() {
-            // Close the cart window
+            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'none';
         },
