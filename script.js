@@ -37,6 +37,20 @@ const produktApp = Vue.createApp({
 // Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
 
+const infoApp = Vue.createApp({
+    data(){
+        return{
+            foretagsInfo: []
+        }
+    },
+    created () {
+        axios.get('foretagsInfo.json')
+        .then((response) => {
+            this.foretagsInfo = response.data;
+        })
+    }
+});
+infoApp.mount('#infoApp');
 
 const kundvagnApp = Vue.createApp({
     data() {

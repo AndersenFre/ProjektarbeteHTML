@@ -18,13 +18,14 @@
     
         <div id="vagn">
                     <h2>Kundvagn</h2>
+                    <p>Totalt: {{ vagnTotal }} sek</p>
                     <ul>
                         <li v-for="(item, index) in vagn" :key="index">
                             {{ item.titel }} - {{ item.pris }}
                             <button @click="removeFromVagn(index)">Ta bort</button>
                         </li>
                     </ul>
-                    <p>Totalt: {{ vagnTotal }} sek</p>
+                    
         </div>
     </div>    
 </body>

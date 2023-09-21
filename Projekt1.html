@@ -17,18 +17,21 @@
             <nav>
                 <ul id="menu">
                     <!-- Länkar ska in här -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="Projekt1.html">Hem</a></li>
+                    <li><a href="Produkt.html">Webbshop</a></li>
+                    <li><a href="#infoApp">Om oss</a></li>
                     <li><a href="Kontakt.html">Kontakt</a></li>
-                    <li><a href="Kundvagn.html">Kundvagn</a></li>
+                    
                     <li>
                         <!-- Kopiera hela denna koden -->
                         <div id="kundvagnApp">
-                                <i class="fa fa-shopping-cart"></i>
+                            <div id="cartIcon">
+                                <i  class="fa fa-shopping-cart"></i>
                                 <span id="cart-counter">{{ cartCount }}</span>
                                 <button @click="openCartWindow">Open Cart</button>
                                 <div id="cartWindow">
                                     <h2>Kundvagn</h2>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
                                     <ul>
                                         <li v-for="(item, index) in vagn" :key="index" class="cart-item">
                                             <div class="cart-item-details">
@@ -38,9 +41,11 @@
                                             <button @click="removeFromVagn(index)">Ta bort</button>
                                         </li>
                                     </ul>
-                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    
                                     <button @click="closeCartWindow">Stäng</button>
-                                </div>    
+                                    <button id="kassaKnapp">Till kassan</button>
+                                </div>
+                            </div>    
                         </div>
                     </li>
                 </ul>
@@ -79,7 +84,17 @@
             </div>
 
             <div class="grid-item item3">
-                <h2>Våra guider</h2>
+                <div id="infoApp">
+                    <div v-for="info in foretagsInfo">
+                        <div v-if="info.id === 1">
+
+                            <h2> Vilka Är Vi?</h2>
+                            <br>
+                            <p> {{info.beskrivning}}</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Möt Våra Guider</h2>
             </div>
             <div class="grid-item item4">
                 <div id="personApp">
@@ -94,7 +109,7 @@
                                         <h3> {{person.titel}} </h3>
                                         <br>
                                         <p> {{person.kortText}} </p>
-                                        <a href="Personal.html?varde=1"> Läs mer</a>
+                                        <a href="Simon.html"> Läs mer</a>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +123,7 @@
                                                     <h3> {{person.titel}} </h3>
                                                     <br>
                                                     <p> {{person.kortText}} </p>
-                                                    <a href="Personal.html?varde=2">Läs mer!</a>
+                                                    <a href="Måns.html">Läs mer!</a>
                                                 </div>
                                             </div>
                                     </div>
@@ -122,7 +137,7 @@
                                                 <h3> {{person.titel}} </h3>
                                                 <br>
                                                 <p> {{person.kortText}} </p>
-                                                <a href="Personal.html?varde=3">Läs mer!</a>
+                                                <a href="Fredrik.html">Läs mer!</a>
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +151,7 @@
                                                 <h3> {{person.titel}} </h3>
                                                 <br>
                                                 <p> {{person.kortText}} </p>
-                                                <a href="Personal.html?varde=4">Läs mer!</a>
+                                                <a href="Felix.html">Läs mer!</a>
                                             </div>
                                         </div>
                                     </div>
@@ -211,16 +226,17 @@
             </div>   
             <div class="grid-item item8">
                 <div class="contact">
-                    <h3>Contact Information</h3>
-                    <p>Email: info@example.com</p>
-                    <p>Phone: (123) 456-7890</p>
-                    <p>Address: 123 Main Street, City</p>
+                    <h3>Kontakt Information</h3>
+                    <p>BeyondBoundsAdventure@xtreme.com</p>
+                    <p>Telefon: (+46) 456-7890</p>
+                    <p>Address: Drottninggatan 3, Örebro</p>
                     <br>
                 </div>
                 <footer>
-                    <p>&copy; 2023 Your Website</p>
+                    <p>&copy; 2023 Beyond Bounds Adventure</p>
                 </footer>
             </div>
+    </div>
         
 </body>
 </html>

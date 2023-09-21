@@ -114,12 +114,14 @@ nav ul li a {
 }
 
 .contact h3 {
-    font-size: 20px;
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0 0 0.2em 0;
 }
 
 .contact p {
-    font-size: 16px;
-    margin: 0 0 1em 0;
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
    
 }
 
@@ -166,6 +168,12 @@ img {
 .thumbProdukt {
     width: 30em;
     height: 30em;
+    
+}
+.thumbPersonal {
+    width: 30em;
+    height: 30em;
+    margin-left: 30%;
 }
 .item3
 {
@@ -205,9 +213,9 @@ img {
 .bar
 {
   color:#000000;
-  letter-spacing: 1px;
-  font-weight: 500;
-  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400px;
+  font-size: 18px;
   position:relative;
 }
 
@@ -216,11 +224,11 @@ img {
 {
   position:relative;
   display: inline-block;
-  margin-bottom: 15px;
-  width: 100%;
-  height: 25px;
+  margin-bottom: 30px;
+  width: 130%;
+  height: 20px;
   background: #000000db;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 /* stil och animation för de animerade barsen*/
@@ -230,37 +238,174 @@ img {
   content:'';
   top: 6px;
   left: 5px;
-  width: 80%;
+  width: 100%;
   height: 50%;
-  background: linear-gradient(to left, rgb(155, 155, 159), rgb(231, 230, 227));
-  border-radius: 50px;
-  animation: bar 4s ease;
+  background: linear-gradient(to left, rgb(202, 8, 8), rgb(78, 219, 216));
+  border-radius: 30px;
+  animation: bar 8s ease;
 }
 
 /* hur stor bar 1 ska bli*/
-.bar:nth-child(1) span:before
+#bar1:nth-child(1) span:before
 {
-  width:60%;
+  width:85%;
 }
 
 /* hur stor bar 2 ska bli*/
-.bar:nth-child(2) span:before
+#bar2:nth-child(2) span:before
+{
+  width:70%;
+}
+
+/* hur stor bar 3 ska bli*/
+#bar3:nth-child(3) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 4 ska bli*/
+#bar4:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar5:nth-child(1) span:before
+{
+  width:20%;
+}
+#bar6:nth-child(2) span:before
+{
+  width:60%;
+}
+#bar7:nth-child(3) span:before
+{
+  width:20%;
+}
+#bar8:nth-child(4) span:before
+{
+  width:85%;
+}
+#bar9:nth-child(1) span:before
+{
+  width:40%;
+}
+#bar10:nth-child(2) span:before
+{
+  width:5%;
+}
+#bar11:nth-child(3) span:before
+{
+  width:60%;
+}
+#bar12:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar13:nth-child(1) span:before
+{
+  width:25%;
+}
+#bar14:nth-child(2) span:before
+{
+  width:95%;
+}
+#bar15:nth-child(3) span:before
+{
+  width:80%;
+}
+#bar16:nth-child(4) span:before
+{
+  width:40%;
+}
+#barFredrik1:nth-child(1) span:before
+{
+  width:15%;
+}
+#barFredrik2:nth-child(2) span:before
 {
   width:80%;
 }
 
 /* hur stor bar 3 ska bli*/
-.bar:nth-child(3) span:before
+#barFredrik3:nth-child(3) span:before
 {
-  width:50%;
+  width:98%;
 }
 
 /* hur stor bar 4 ska bli*/
-.bar:nth-child(4) span:before
+#barFredrik4:nth-child(4) span:before
+{
+  width:0%;
+}
+/* hur stor bar 1 ska bli*/
+#barMåns1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barMåns2:nth-child(2) span:before
 {
   width:90%;
 }
 
+/* hur stor bar 3 ska bli*/
+#barMåns3:nth-child(3) span:before
+{
+  width:50%;
+  
+}
+
+/* hur stor bar 4 ska bli*/
+#barMåns4:nth-child(4) span:before
+{
+  width:20%;
+}
+/* hur stor bar 1 ska bli*/
+#barFelix1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barFelix2:nth-child(2) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barFelix3:nth-child(3) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 4 ska bli*/
+#barFelix4:nth-child(4) span:before
+{
+  width:20%;
+}
+/* hur stor bar 1 ska bli*/
+#barSimon1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barSimon2:nth-child(2) span:before
+{
+  width:30%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barSimon3:nth-child(3) span:before
+{
+  width:15%;
+}
+
+/* hur stor bar 4 ska bli*/
+#barSimon4:nth-child(4) span:before
+{
+  width:80%;
+}
 /* för att möjligöra animationen */
 @keyframes bar
 {
@@ -306,6 +451,38 @@ img {
 
 .cart-item button {
     font-size: 12px; /* Reduce the font size for the "Ta bort" button */
+}
+#kassaKnapp{
+    margin-left: 4em;
+}
+#name{
+    width: 14em;
+}
+#email{
+    width: 14em;
+}
+#telefon{
+    width: 14em;
+}
+#meddelande{
+    margin: 0.5em 0 0 0;
+}
+#namnRuta {
+    margin: 0.5em 0 0 0;
+}
+#epostRuta {
+    margin: 0.5em 0 0 0;
+}
+#telefonRuta {
+    margin: 10em 0 0 0;
+}
+#infoApp {
+    border: 2px solid #393939;
+    padding: 10px; 
+    margin: 20px 0; 
+    text-align: center;
+    max-width: 850px;
+    margin: 20px auto; 
 }
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
@@ -357,21 +534,25 @@ img {
     }
     
     .item12 {
-        grid-column: 1;
+        grid-column: 1 / span 2;
         grid-row: 3;
     }
     .item13 {
-        grid-column: 2;
-        grid-row: 3;
+        grid-column: 1  / span 2;
+        grid-row: 4;
  
     }
     .item14 {
         grid-column: 1 /span 2;
-        grid-row: 4;
+        grid-row: 5;
     }
     .item15 {
         grid-column: 1 / span 2;
-        grid-row: 5;
+        grid-row: 6;
+    }
+    .item16{
+        grid-column: 1 / span 2;
+        grid-row: 7;
     }
     .item20{
         grid-column: 1;
@@ -436,6 +617,22 @@ img {
         grid-column: 1;
         grid-row: 2;
     }
+    .item50 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item51 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .item52 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item53 {
+        grid-column: 1;
+        grid-row: 4;
+    }
     #produktLista{
         font-size: 1.5em;
         padding: 0.5em;
@@ -449,5 +646,16 @@ img {
     #varukorgKnapp{
         font-size: 1.5em;
         margin-left: -15em;
+    }
+    #meddelande{
+        width: 30em;
+        height: 10em;
+        text-align: top;
+    }
+    #menu{
+        text-align: right;
+    }
+    #cartIcon{
+        text-align: left;
     }
 }

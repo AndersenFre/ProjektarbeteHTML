@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Anställd</title>
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="scriptKontakt.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <!-- Länkar ska in här -->
+                <li><a href="Projekt1.html">Hem</a></li>
+                <li><a href="Produkt.html">Webbshop</a></li>
+                <li><a href="Projekt1.html">Om oss</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li>
+                    <!-- Kopiera hela denna koden -->
+                    <div id="kundvagnApp">
+                        <div id="cartIcon">
+                            <i  class="fa fa-shopping-cart"></i>
+                            <span id="cart-counter">{{ cartCount }}</span>
+                            <button @click="openCartWindow">Open Cart</button>
+                            <div id="cartWindow">
+                                <h2>Kundvagn</h2>
+                                <p>Totalt: {{ vagnTotal }} sek</p>
+                                <ul>
+                                    <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                        <div class="cart-item-details">
+                                            <h3>{{ item.titel }}</h3>
+                                            <p>Pris: {{ item.pris }} sek</p>
+                                        </div>
+                                        <button @click="removeFromVagn(index)">Ta bort</button>
+                                    </li>
+                                </ul>
+                                
+                                <button @click="closeCartWindow">Stäng</button>
+                                <button id="kassaKnapp">Till kassan</button>
+                            </div>
+                        </div>    
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <div class="grid-container">
+        <div class="grid-item item10">
+            <div class="rubrik">
+            <h1> Beyond Bounds Adventure</h1>
+            <h3> Här väntar ditt nästa äventyr </h3>
+        </div>
+        </div>
+
+            <div class="grid-item item11">
+                <h1>Fredrik Andersen (VD)</h1>
+            </div>
+            <div class="grid-item item12">
+                   <img src="PorträttFredrik.png" alt="Bild på fredde grädde" class="thumbPersonal"> 
+            </div>
+        <div class="grid-item item13">
+            <p>Fredrik, Nordpolen-guiden, är en erfaren och kunnig individ som är specialiserad på att leda och guida besökare genom den extraordinära och extrema miljön vid Nordpolen. Han besitter djup kunskap om Arktis, inklusive dess geografi, klimat, ekosystem och säkerhetsaspekter. Fredrik har förmågan att dela denna kunskap med andra på ett informativt och engagerande sätt.
+                
+                I rollen som guide fungerar Fredrik som en expert på platsen och är utrustad med färdigheter för att navigera genom det kyliga landskapet, vilket inkluderar isfält, havsisar och snö. Han är medveten om de risker och faror som kan uppstå i denna extrema miljö och har förmågan att hantera nödsituationer och ge säkerhetsriktlinjer till besökarna.
+                
+                Fredrik kan planera och genomföra expeditioner och äventyr till Nordpolen, inklusive isvandringar, hundspannsturer, skidåkning eller besök på isflak. Han är ansvarig för att organisera logistik, säkerhetsåtgärder och säkerställa att besökarna har rätt utrustning och förberedelser för att möta de utmaningar som den extrema kylan och den svåra terrängen innebär.
+                
+                Utöver att vara en skicklig navigator är Fredrik ofta även en berättare och historieberättare.</p>
+        </div>
+        <div class="grid-item item14">
+            <h1>Upplevelser</h1>
+            <p>Det var en isande kall morgon när vi, en grupp äventyrslystna exploratörer, gav oss ut på en expedition till Nordpolen med vår guide, den erfarna och modige Fredrik. Vår målsättning var tydlig: att nå den yttersta punkten på vår planet och ta del av dess skönhet och mystik.
+
+                Den kyliga vinden slet i våra ansikten när vi började vår isvandring över de frusna havsytorna. Fredrik ledde oss med skicklighet genom det utmanande landskapet av is och snö. Han var som en fackla i mörkret, vägledande oss genom den oändliga vidd av vitt.
+                
+                Plötsligt möttes vi av en oväntad prövning. Ett oväder rullade in snabbt, och temperaturen föll ännu mer. Fredrik reagerade snabbt och ledde oss till ett säkert tillhåll, där vi kunde stå emot naturens raseri. Vi insåg då hur viktigt det var att ha en kunnig guide vid vår sida.
+                
+                Efter att stormen avklingat fortsatte vi vår resa mot Nordpolen. Dagarna gick, och vi mötte en rad utmaningar - från att navigera genom djupa sprickor i isen till att övervinna den fysiska utmattningen av den extrema kylan. Fredrik höll vårt mod uppe och motiverade oss att fortsätta, även när utmaningarna tycktes överväldigande.
+                
+                Till sist nådde vi vårt mål, Nordpolen. Känslan av att stå där, vid världens nordligaste punkt, var överväldigande. Vi reflekterade över våra prövningar och insåg att det var vårt samarbete och Fredriks expertis som hade fört oss hit.
+                
+                Fredrik hade inte bara varit en guide; han hade varit vår mentor och beskyddare genom detta isiga äventyr. Hans erfarenhet och kunskap hade gjort denna expedition till en resa av livet. Vi hade erövrat Nordpolen, och det var en bedrift som vi skulle minnas för alltid.</p>
+        </div>
+        <div class="grid-item item15">
+            <div class="wrap">
+                <div class="bar" id="barFredrik1">
+                    <h3> Mod </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barFredrik2">
+                    <h3> Pingvintämjning </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barFredrik3">
+                    <h3> Kyla </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barFredrik4">
+                    <h3> Lokalsinne </h3>
+                    <span> </span>
+                </div>
+         
+            </div>
+        </div>
+        <div class="grid-item item16">
+            <div class="contact">
+                    <h3>Kontakt Information</h3>
+                    <p>BeyondBoundsAdventure@xtreme.com</p>
+                    <p>Telefon: (+46) 456-7890</p>
+                    <p>Address: Drottninggatan 3, Örebro</p>
+                    <br>
+                </div>
+                <footer>
+                    <p>&copy; 2023 Beyond Bounds Adventure</p>
+                </footer>
+            </div>
+         </div>
+        </div>
+    
+    
+    </body>
+    </html>
