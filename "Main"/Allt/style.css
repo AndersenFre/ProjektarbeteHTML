@@ -280,7 +280,6 @@ img {
   }
  
 }
-/* kopiera allt från hit*/
 #cartWindow {
     position: fixed;
     top: 40%;
@@ -288,7 +287,7 @@ img {
     transform: translate(-50%, -50%);
     width: 200px;
     padding: 5px;
-    background-color: rgb(33, 106, 62);
+    background-color: #636262;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -316,7 +315,20 @@ img {
     font-size: 12px; /* Reduce the font size for the "Ta bort" button */
 }
 
-/* Till hit*/
+/* ny kod */
+
+#infoApp {
+    border: 2px solid #393939;
+    padding: 10px; 
+    margin: 20px 0; 
+    text-align: center;
+    max-width: 850px;
+    margin: 20px auto; 
+}
+
+/* slut ny idiot */
+
+
 
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {

@@ -21,9 +21,7 @@ personApp.mount('#personApp');
 const produktApp = Vue.createApp({
     data(){
         return{
-            produkter: [
-
-            ]
+            produkter: []
         }
     },
     created () {
@@ -35,13 +33,32 @@ const produktApp = Vue.createApp({
 });
 produktApp.mount('#produktApp');
 
+// denna kod är ny
+
+const infoApp = Vue.createApp({
+    data(){
+        return{
+            företagsInfo: []
+        }
+    },
+    created () {
+        axios.get('företagsInfo.json')
+        .then((response) => {
+            this.företagsInfo = response.data;
+        })
+    }
+});
+infoApp.mount('#infoApp');
+
+// slut
+
 const kundvagnApp = Vue.createApp({
     data() {
         return {
             produkter: [],
             vagn: [],
             cartCount: 0,
-            isCartPopupOpen: false, //Nytt kopiera
+            isCartPopupOpen: false, 
         };       
     },
     created () {

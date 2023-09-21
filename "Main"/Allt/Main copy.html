@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Website</title>
-    <!-- You can link your CSS file here -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script defer src="https://unpkg.com/vue@3"></script>
@@ -11,17 +10,14 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-        <!-- Header with Menu -->
         <header>
             <nav>
                 <ul id="menu">
-                    <!-- Länkar ska in här -->
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="Kontakt.html">Kontakt</a></li>
                     <li><a href="Kundvagn.html">Kundvagn</a></li>
                     <li>
-                        <!-- Kopiera hela denna koden -->
                         <div id="kundvagnApp">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span id="cart-counter">{{ cartCount }}</span>
@@ -78,12 +74,23 @@
                 </section>
             </div>
 
+            <!-- ersätt denna kod -->
             <div class="grid-item item3">
-                <h2>Våra guider</h2>
+                <div id="infoApp">
+                    <div v-for="info in företagsInfo">
+                        <div v-if="info.id === 1">
+                            <h2> Vilka Är Vi?</h2>
+                            <br>
+                            <p> {{info.beskrivning}}</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Möt Våra Guider</h2>
             </div>
+            <!-- till hit -->
+       
             <div class="grid-item item4">
                 <div id="personApp">
-                    <!-- Innehåll personer med flexbox -->
                     <div class="flexcontainer">
                         <div class="flex-item">
                             <div class="projectColumn">
