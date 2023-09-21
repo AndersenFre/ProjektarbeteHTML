@@ -2,6 +2,7 @@
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    font-family: 'Questrial', sans-serif
 }
 
 /* Style the header and navigation menu */
@@ -102,18 +103,6 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Style the flexbox section */
-/* .flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 20px;
-} */
-
-
-
 /* Style the contact section */
 .contact {
     background-color: #333;
@@ -174,6 +163,10 @@ img {
 .thumb {
     width: 100%;
 }
+.thumbProdukt {
+    width: 30em;
+    height: 30em;
+}
 .item3
 {
     text-align: center;
@@ -194,7 +187,9 @@ img {
     text-align: center;
     margin: 1em 0 0 0;
 }
-.error-message {
+/* Visar felmeddelande i kontakt */
+.error-message 
+{
     color: red;
     font-size: 14px;
 }
@@ -204,15 +199,16 @@ img {
 {
   max-width: 60%;
   margin: 150px auto 0; 
+  scale: 75%;
 }
 
 /* stil för barsen*/
 .bar
 {
   color:#000000;
-  letter-spacing: 1px;
-  font-weight: 500;
-  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400px;
+  font-size: 18px;
   position:relative;
 }
 
@@ -221,11 +217,11 @@ img {
 {
   position:relative;
   display: inline-block;
-  margin-bottom: 15px;
-  width: 100%;
-  height: 25px;
+  margin-bottom: 30px;
+  width: 130%;
+  height: 20px;
   background: #000000db;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 /* stil och animation för de animerade barsen*/
@@ -235,37 +231,84 @@ img {
   content:'';
   top: 6px;
   left: 5px;
-  width: 80%;
+  width: 100%;
   height: 50%;
-  background: linear-gradient(to left, rgb(155, 155, 159), rgb(231, 230, 227));
-  border-radius: 50px;
-  animation: bar 4s ease;
+  background: linear-gradient(to left, rgb(202, 8, 8), rgb(78, 219, 216));
+  border-radius: 30px;
+  animation: bar 8s ease;
 }
 
 /* hur stor bar 1 ska bli*/
-.bar:nth-child(1) span:before
+#bar1:nth-child(1) span:before
 {
-  width:60%;
+  width:85%;
 }
 
 /* hur stor bar 2 ska bli*/
-.bar:nth-child(2) span:before
+#bar2:nth-child(2) span:before
 {
-  width:80%;
+  width:70%;
 }
 
 /* hur stor bar 3 ska bli*/
-.bar:nth-child(3) span:before
-{
-  width:50%;
-}
-
-/* hur stor bar 4 ska bli*/
-.bar:nth-child(4) span:before
+#bar3:nth-child(3) span:before
 {
   width:90%;
 }
 
+/* hur stor bar 4 ska bli*/
+#bar4:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar5:nth-child(1) span:before
+{
+  width:20%;
+}
+#bar6:nth-child(2) span:before
+{
+  width:60%;
+}
+#bar7:nth-child(3) span:before
+{
+  width:20%;
+}
+#bar8:nth-child(4) span:before
+{
+  width:85%;
+}
+#bar9:nth-child(1) span:before
+{
+  width:40%;
+}
+#bar10:nth-child(2) span:before
+{
+  width:5%;
+}
+#bar11:nth-child(3) span:before
+{
+  width:60%;
+}
+#bar12:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar13:nth-child(1) span:before
+{
+  width:25%;
+}
+#bar14:nth-child(2) span:before
+{
+  width:95%;
+}
+#bar15:nth-child(3) span:before
+{
+  width:80%;
+}
+#bar16:nth-child(4) span:before
+{
+  width:40%;
+}
 /* för att möjligöra animationen */
 @keyframes bar
 {
@@ -274,6 +317,43 @@ img {
     width:0; 
   }
  
+}
+#produktLista{
+    padding: 0.5em;
+}
+#cartWindow {
+    position: fixed;
+    top: 6em;
+    left: 7em;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 400px; /* Justera den maximala bredden efter ditt behov */
+    background-color: rgb(33, 106, 62);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Dölj varukorgsfönstret från början */
+    overflow-y: auto; /* Aktivera vertikal rullning vid behov */
+    max-height: 130px; /* Justera den maximala höjden efter ditt behov */
+    margin: 0 auto;
+    padding: 5px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    font-size: 14px; /* Reduce the font size */
+}
+
+.cart-item button {
+    font-size: 12px; /* Reduce the font size for the "Ta bort" button */
 }
 /* CSS for 1280px and more */
 @media only screen and (min-width: 1280px) {
@@ -307,6 +387,10 @@ img {
         grid-column: 1 / span 4;
         grid-row: 9;
     }
+    .item8 {
+        grid-column: 1 / span 4;
+        grid-row: 10;
+    }
     img {
         width: 35vw;
     }
@@ -337,5 +421,81 @@ img {
         grid-column: 1 / span 2;
         grid-row: 5;
     }
-
+    .item20{
+        grid-column: 1;
+        grid-row: 1;
+    }
+       
+    .item21{
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+    .item22{
+        grid-column:1 /span 2;
+        grid-row: 2;
+        
+    }
+    .item23{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item24{
+        grid-column: 2;
+        grid-row: 3;
+    } 
+    .item25{
+        grid-column: 1 /span 2;
+        grid-row: 4;
+    }
+    .item26{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .item27{
+        grid-column: 2;
+        grid-row: 5;
+    }
+    .item28{
+        grid-column: 1 /span 2;
+        grid-row: 6;
+    }
+    .item29{
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .item30{
+        grid-column: 2;
+        grid-row: 7;
+    }
+    .item31{
+        grid-column: 1 /span 2;
+        grid-row: 8;
+    }
+    .item32{
+        grid-column: 1/span 2;
+        grid-row: 9;
+    }
+    .item41{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item42{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #produktLista{
+        font-size: 1.5em;
+        padding: 0.5em;
+        margin-left: -15em;
+        font-family: 'Questrial', sans-serif
+    }
+    #langTexter{
+        padding: 1em;
+        font-size: 1.5em;
+    }
+    #varukorgKnapp{
+        font-size: 1.5em;
+        margin-left: -15em;
+    }
 }

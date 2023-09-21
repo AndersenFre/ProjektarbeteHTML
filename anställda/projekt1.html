@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Your Website</title>
     <!-- You can link your CSS file here -->
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script defer src="https://unpkg.com/vue@3"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="script1.js"></script>
-    
+    <script defer src="script.js"></script>
 </head>
 <body>
         <!-- Header with Menu -->
@@ -20,6 +21,28 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="Kontakt.html">Kontakt</a></li>
                     <li><a href="Kundvagn.html">Kundvagn</a></li>
+                    <li>
+                        <!-- Kopiera hela denna koden -->
+                        <div id="kundvagnApp">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span id="cart-counter">{{ cartCount }}</span>
+                                <button @click="openCartWindow">Open Cart</button>
+                                <div id="cartWindow">
+                                    <h2>Kundvagn</h2>
+                                    <ul>
+                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                            <div class="cart-item-details">
+                                                <h3>{{ item.titel }}</h3>
+                                                <p>Pris: {{ item.pris }} sek</p>
+                                            </div>
+                                            <button @click="removeFromVagn(index)">Ta bort</button>
+                                        </li>
+                                    </ul>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    <button @click="closeCartWindow">Stäng</button>
+                                </div>    
+                        </div>
+                    </li>
                 </ul>
             </nav>
             
@@ -61,33 +84,31 @@
             <div class="grid-item item4">
                 <div id="personApp">
                     <!-- Innehåll personer med flexbox -->
-                        <div class="flexcontainer">
-                                <div class="flex-item">
-                                    <div class="projectColumn">
-                                        <h3 id="namnRubrik">Simon</h3>
-                                        <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
-                                        <div id="personApp">
-                                            <div v-for="person in personer" :key="person.id" class="person-info">
-                                                <h3> {{ person.id }}</h3>
-                                                <h3>{{ person.namn }}</h3>
-                                                <h4>{{ person.titel }}</h4>
-                                                <p>{{ person.kortText }}</p>
-                                                <a :href="'Personal.html?id=' + person.id">Läs mer</a>
-                                            </div>
-                                        </div>
-                                        </div>
+                    <div class="flexcontainer">
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Simon</h3>
+                                <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 1">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <a href="Personal.html"> Läs mer</a>
                                     </div>
                                 </div>
-                                <div class="flex-item">
-                                    <div class="projectColumn">
-                                        <h3 id="namnRubrik">Måns</h3>
-                                        <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 id="namnRubrik">Måns</h3>
+                                <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
                                             <div v-for="person in personer">
                                                 <div v-if="person.id === 2">
                                                     <h3> {{person.titel}} </h3>
                                                     <br>
                                                     <p> {{person.kortText}} </p>
-                                                    <a href="Personal.html?id=2">Läs mer!</a>
+                                                    <a href="Personal.html?varde=2">Läs mer!</a>
                                                 </div>
                                             </div>
                                     </div>
@@ -101,7 +122,7 @@
                                                 <h3> {{person.titel}} </h3>
                                                 <br>
                                                 <p> {{person.kortText}} </p>
-                                                <a href="Personal.html?id=3">Läs mer!</a>
+                                                <a href="Personal.html?varde=3">Läs mer!</a>
                                             </div>
                                         </div>
                                     </div>
@@ -115,16 +136,17 @@
                                                 <h3> {{person.titel}} </h3>
                                                 <br>
                                                 <p> {{person.kortText}} </p>
-                                                <a href="Personal.html?id=4">Läs mer!</a>
+                                                <a href="Personal.html?varde=4">Läs mer!</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
                 </div>
+            </div>
                 <div class="grid-item item5">
                     <h2>Våra resor</h2>
+                    
                 </div>
 
                 <div class="grid-item item6">
@@ -184,21 +206,22 @@
                             </div>
                         </div>
                 </div> 
-            </div>   
+            </div>
             <div class="grid-item item7">
-                    <div class="contact">
+                <h2><a href="produkt.html">Gå till våra resor</a></h2>
+            </div>   
+            <div class="grid-item item8">
+                <div class="contact">
                     <h3>Contact Information</h3>
                     <p>Email: info@example.com</p>
                     <p>Phone: (123) 456-7890</p>
                     <p>Address: 123 Main Street, City</p>
                     <br>
-                    </div>
-                    <footer>
-                        <p>&copy; 2023 Your Website</p>
-                    </footer>
+                </div>
+                <footer>
+                    <p>&copy; 2023 Your Website</p>
+                </footer>
             </div>
-
-
-
+        
 </body>
 </html>
