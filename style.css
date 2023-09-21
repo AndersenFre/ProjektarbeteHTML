@@ -395,6 +395,10 @@ img {
         grid-column: 1 /span 2;
         grid-row: 8;
     }
+    .item32{
+        grid-column: 1 /span 2;
+        grid-row: 9;
+    }
 
 
 }
