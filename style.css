@@ -636,8 +636,11 @@ img {
     #produktLista{
         font-size: 1.5em;
         padding: 0.5em;
-        margin-left: -15em;
+        margin-left: -10em;
         font-family: 'Questrial', sans-serif
+    }
+    #barProdukt{
+        margin: 5em 0 0 -15em;
     }
     #langTexter{
         padding: 1em;
@@ -645,7 +648,7 @@ img {
     }
     #varukorgKnapp{
         font-size: 1.5em;
-        margin-left: -15em;
+        margin-left: -10em;
     }
     #meddelande{
         width: 30em;
@@ -658,4 +661,5 @@ img {
     #cartIcon{
         text-align: left;
     }
+    
 }
