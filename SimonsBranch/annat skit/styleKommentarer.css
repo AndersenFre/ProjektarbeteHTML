@@ -1,0 +1,660 @@
+/* Reset some default styles for the entire page */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif
+}
+
+/* Style the header and navigation menu */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 0.5em 0.5em;
+    margin: 0 0 -1em 0;
+    background-attachment: fixed;
+    
+}
+.rubrik{
+        background-color: #333;
+        color: #fff;
+        text-align: center; 
+        margin: 0 -1em 0 -1em;
+        padding: 0.5em; 
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.rubrik 
+{
+    text-align: center;
+}
+.rubrik h3
+{
+    margin-top: 0.2em;
+}
+/* Style the large gallery section */
+.gallery {
+    padding: 10px;
+    text-align: center;
+}
+/* Slideshow Container */
+.slideshow {
+    display: flex; /* Display images in a row */
+    animation: slide 35s linear infinite; /* Adjust the duration as needed */
+}
+
+/* Style the individual slides */
+.gallery-image {
+    display: none;
+    height: 60%;
+    width: 75%; /* Adjust the width to your desired size */
+    margin: 0 auto; /* Center the image horizontally */
+}
+#prevBtn {
+    float:left;
+
+}
+
+#nextBtn {
+    float: right;
+}
+
+.controls button {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 45%;
+    font-size: 1em;
+}
+
+/* Style the text section */
+.text {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+}
+
+/* Style the contact section */
+.contact {
+    background-color: #333;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center; 
+    margin: 0 -1em 0 -1em;
+    
+}
+
+.contact h3 {
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0 0 0.2em 0;
+}
+
+.contact p {
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
+   
+}
+
+/* Style the footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin: -1em -1em 0 -1em;
+}
+
+
+.grid-container {
+    display: grid;
+    
+}
+.grid-item {
+    
+    margin: 1em 1em 0 1em;
+    
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1em;
+    align-self: center;
+}
+.projectColumn {
+    width: 295px;
+}
+.projectColumn h3 {
+    text-align: center;
+    }
+
+img {
+    width: 100%;
+}
+.thumb {
+    width: 100%;
+}
+.thumbProdukt {
+    width: 30em;
+    height: 30em;
+    
+}
+.thumbPersonal {
+    width: 30em;
+    height: 30em;
+    margin-left: 30%;
+}
+.item3
+{
+    text-align: center;
+}
+.item10{
+    background-color: #333;
+    text-align: center;
+    margin: 1em 0 -1em 0;
+}
+.item11 {
+    text-align: center;
+}
+.item14{
+    text-align: center;
+}
+#namnRubrik
+{
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+/* Visar felmeddelande i kontakt */
+.error-message 
+{
+    color: red;
+    font-size: 14px;
+}
+
+/* centrerar sliderbaren på sidan */
+.wrap
+{
+  max-width: 60%;
+  margin: 150px auto 0; 
+}
+
+/* stil för barsen*/
+.bar
+{
+  color:#000000;
+  letter-spacing: 3px;
+  font-weight: 400px;
+  font-size: 18px;
+  position:relative;
+}
+
+/* stil för själva bars-elementen*/ 
+.bar span
+{
+  position:relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 130%;
+  height: 20px;
+  background: #000000db;
+  border-radius: 30px;
+}
+
+/* stil och animation för de animerade barsen*/
+.bar span:before
+{
+  position: absolute;
+  content:'';
+  top: 6px;
+  left: 5px;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to left, rgb(202, 8, 8), rgb(78, 219, 216));
+  border-radius: 30px;
+  animation: bar 8s ease;
+}
+
+/* hur stor bar 1 ska bli*/
+#bar1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#bar2:nth-child(2) span:before
+{
+  width:70%;
+}
+
+/* hur stor bar 3 ska bli*/
+#bar3:nth-child(3) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 4 ska bli*/
+#bar4:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar5:nth-child(1) span:before
+{
+  width:20%;
+}
+#bar6:nth-child(2) span:before
+{
+  width:60%;
+}
+#bar7:nth-child(3) span:before
+{
+  width:20%;
+}
+#bar8:nth-child(4) span:before
+{
+  width:85%;
+}
+#bar9:nth-child(1) span:before
+{
+  width:40%;
+}
+#bar10:nth-child(2) span:before
+{
+  width:5%;
+}
+#bar11:nth-child(3) span:before
+{
+  width:60%;
+}
+#bar12:nth-child(4) span:before
+{
+  width:30%;
+}
+#bar13:nth-child(1) span:before
+{
+  width:25%;
+}
+#bar14:nth-child(2) span:before
+{
+  width:95%;
+}
+#bar15:nth-child(3) span:before
+{
+  width:80%;
+}
+#bar16:nth-child(4) span:before
+{
+  width:40%;
+}
+#barFredrik1:nth-child(1) span:before
+{
+  width:15%;
+}
+#barFredrik2:nth-child(2) span:before
+{
+  width:80%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barFredrik3:nth-child(3) span:before
+{
+  width:98%;
+}
+
+/* hur stor bar 4 ska bli*/
+#barFredrik4:nth-child(4) span:before
+{
+  width:0%;
+}
+/* hur stor bar 1 ska bli*/
+#barMåns1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barMåns2:nth-child(2) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barMåns3:nth-child(3) span:before
+{
+  width:50%;
+  
+}
+
+/* hur stor bar 4 ska bli*/
+#barMåns4:nth-child(4) span:before
+{
+  width:20%;
+}
+/* hur stor bar 1 ska bli*/
+#barFelix1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barFelix2:nth-child(2) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barFelix3:nth-child(3) span:before
+{
+  width:90%;
+}
+
+/* hur stor bar 4 ska bli*/
+#barFelix4:nth-child(4) span:before
+{
+  width:20%;
+}
+/* hur stor bar 1 ska bli*/
+#barSimon1:nth-child(1) span:before
+{
+  width:85%;
+}
+
+/* hur stor bar 2 ska bli*/
+#barSimon2:nth-child(2) span:before
+{
+  width:30%;
+}
+
+/* hur stor bar 3 ska bli*/
+#barSimon3:nth-child(3) span:before
+{
+  width:15%;
+}
+
+/* hur stor bar 4 ska bli*/
+#barSimon4:nth-child(4) span:before
+{
+  width:80%;
+}
+/* för att möjligöra animationen */
+@keyframes bar
+{
+  from
+  {
+    width:0; 
+  }
+ 
+}
+#produktLista{
+    padding: 0.5em;
+}
+#cartWindow {
+    position: fixed;
+    top: 6em;
+    left: 7em;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 400px; /* Justera den maximala bredden efter ditt behov */
+    background-color: rgb(33, 106, 62);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Dölj varukorgsfönstret från början */
+    overflow-y: auto; /* Aktivera vertikal rullning vid behov */
+    max-height: 130px; /* Justera den maximala höjden efter ditt behov */
+    margin: 0 auto;
+    padding: 5px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    font-size: 14px; /* Reduce the font size */
+}
+
+.cart-item button {
+    font-size: 12px; /* Reduce the font size for the "Ta bort" button */
+}
+#kassaKnapp{
+    margin-left: 4em;
+}
+#name{
+    width: 14em;
+}
+#email{
+    width: 14em;
+}
+#telefon{
+    width: 14em;
+}
+#meddelande{
+    margin: 0.5em 0 0 0;
+}
+#namnRuta {
+    margin: 0.5em 0 0 0;
+}
+#epostRuta {
+    margin: 0.5em 0 0 0;
+}
+#telefonRuta {
+    margin: 10em 0 0 0;
+}
+#infoApp {
+    border: 2px solid #393939;
+    padding: 10px; 
+    margin: 20px 0; 
+    text-align: center;
+    max-width: 850px;
+    margin: 20px auto; 
+}
+/* CSS for 1280px and more */
+@media only screen and (min-width: 1280px) {
+    .item1 {
+        grid-column: 1 / span 4;
+        grid-row: 1;
+    }
+    .item2 {
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 2;
+    }
+    
+    .item3 {
+        grid-column: 1 / span 4;
+        grid-row: 4;
+    }
+    .item4 {
+        grid-column: 1 / span 4;
+        grid-row:  5/ span 2;
+    }
+    .item5 {
+        grid-column: 1 / span 4;
+        grid-row: 7;
+    }
+    
+    .item6 {
+        grid-column: 1 / span 4;
+        grid-row: 8;
+    }
+    .item7 {
+        grid-column: 1 / span 4;
+        grid-row: 9;
+    }
+    .item8 {
+        grid-column: 1 / span 4;
+        grid-row: 10;
+    }
+    img {
+        width: 35vw;
+    }
+    .item10{
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .item11 {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    
+    .item12 {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+    .item13 {
+        grid-column: 1  / span 2;
+        grid-row: 4;
+ 
+    }
+    .item14 {
+        grid-column: 1 /span 2;
+        grid-row: 5;
+    }
+    .item15 {
+        grid-column: 1 / span 2;
+        grid-row: 6;
+    }
+    .item16{
+        grid-column: 1 / span 2;
+        grid-row: 7;
+    }
+    .item20{
+        grid-column: 1;
+        grid-row: 1;
+    }
+       
+    .item21{
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+    .item22{
+        grid-column:1 /span 2;
+        grid-row: 2;
+        
+    }
+    .item23{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item24{
+        grid-column: 2;
+        grid-row: 3;
+    } 
+    .item25{
+        grid-column: 1 /span 2;
+        grid-row: 4;
+    }
+    .item26{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .item27{
+        grid-column: 2;
+        grid-row: 5;
+    }
+    .item28{
+        grid-column: 1 /span 2;
+        grid-row: 6;
+    }
+    .item29{
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .item30{
+        grid-column: 2;
+        grid-row: 7;
+    }
+    .item31{
+        grid-column: 1 /span 2;
+        grid-row: 8;
+    }
+    .item32{
+        grid-column: 1/span 2;
+        grid-row: 9;
+    }
+    .item41{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item42{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .item50 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item51 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .item52 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item53 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #produktLista{
+        font-size: 1.5em;
+        padding: 0.5em;
+        margin-left: -15em;
+        font-family: 'Questrial', sans-serif
+    }
+    #langTexter{
+        padding: 1em;
+        font-size: 1.5em;
+    }
+    #varukorgKnapp{
+        font-size: 1.5em;
+        margin-left: -15em;
+    }
+    #meddelande{
+        width: 30em;
+        height: 10em;
+        text-align: top;
+    }
+    #menu{
+        text-align: right;
+    }
+    #cartIcon{
+        text-align: left;
+    }
+}
