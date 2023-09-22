@@ -2,7 +2,7 @@
     {
         "id": 1,
         "titel": "Amazonas, en djungel du sent kommer glömma.",
-        "text": "Följ med på äventyr i djupaste Amazonas",
+        "text": "Följ med på äventyr i Amazonas",
         "plats": "Plats: I amazonasdjungeln",
         "tid": "Tid: 1 vecka",
         "boende": "Boende: Små stugor brevid djungeln",
@@ -36,7 +36,7 @@
     },
     {
         "id": 4,
-        "titel": "Afrika, resan du aldrig glömmer.",
+        "titel": "Afrika, resan du aldrig kommer att glömma.",
         "text": "Följ med på äventyr på savannen",
         "plats": "Plats: Afrikas savann",
         "tid": "Tid: 3 vecka",
