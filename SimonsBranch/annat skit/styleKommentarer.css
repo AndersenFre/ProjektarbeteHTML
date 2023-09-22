@@ -1,11 +1,10 @@
-/* Reset some default styles for the entire page */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     font-family: 'Questrial', sans-serif
 }
 
-/* Style the header and navigation menu */
+/* Stil för menyn */
 header {
     background-color: #222;
     color: #fff;
@@ -48,24 +47,22 @@ nav ul li a {
 {
     margin-top: 0.2em;
 }
-/* Style the large gallery section */
+
+/* Stil för bildspelet */
 .gallery {
     padding: 10px;
     text-align: center;
-}
-/* Slideshow Container */
-.slideshow {
-    display: flex; /* Display images in a row */
-    animation: slide 35s linear infinite; /* Adjust the duration as needed */
+    display: flex;
 }
 
-/* Style the individual slides */
 .gallery-image {
     display: none;
     height: 60%;
-    width: 75%; /* Adjust the width to your desired size */
-    margin: 0 auto; /* Center the image horizontally */
+    width: 75%; 
+    margin: 0 auto;
 }
+
+/* Stil för knapparna till bildspelet */
 #prevBtn {
     float:left;
 
@@ -86,7 +83,7 @@ nav ul li a {
     font-size: 1em;
 }
 
-/* Style the text section */
+/* Stil för text */
 .text {
     background-color: #fff;
     padding: 20px;
@@ -102,7 +99,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Style the contact section */
+/* Stil för kontaktsidan */
 .contact {
     background-color: #333;
     color: #fff;
@@ -121,10 +118,8 @@ nav ul li a {
 .contact p {
     font-size: 1em;
     margin: 0 0 0.5em 0;
-   
 }
 
-/* Style the footer */
 footer {
     background-color: #222;
     color: #fff;
@@ -139,9 +134,7 @@ footer {
     
 }
 .grid-item {
-    
-    margin: 1em 1em 0 1em;
-    
+    margin: 1em 1em 0 1em;  
 }
 
 .flexcontainer {
@@ -154,16 +147,21 @@ footer {
 .projectColumn {
     width: 295px;
 }
+
 .projectColumn h3 {
     text-align: center;
-    }
+}
+
+/* stil för bilder */
 
 img {
     width: 100%;
 }
+
 .thumb {
     width: 100%;
 }
+
 .thumbProdukt {
     width: 30em;
     height: 30em;
@@ -174,43 +172,44 @@ img {
     height: 30em;
     margin-left: 30%;
 }
-.item3
-{
+
+.item3 {
     text-align: center;
 }
+
 .item10{
     background-color: #333;
     text-align: center;
     margin: 1em 0 -1em 0;
 }
+
 .item11 {
     text-align: center;
 }
+
 .item14{
     text-align: center;
 }
-#namnRubrik
-{
+
+#namnRubrik {
     text-align: center;
     margin: 1em 0 0 0;
 }
+
 /* Visar felmeddelande i kontakt */
-.error-message 
-{
+.error-message {
     color: red;
     font-size: 14px;
 }
 
 /* centrerar sliderbaren på sidan */
-.wrap
-{
+.wrap {
   max-width: 60%;
   margin: 150px auto 0; 
 }
 
 /* stil för barsen*/
-.bar
-{
+.bar {
   color:#000000;
   letter-spacing: 3px;
   font-weight: 400px;
@@ -219,8 +218,7 @@ img {
 }
 
 /* stil för själva bars-elementen*/ 
-.bar span
-{
+.bar span {
   position:relative;
   display: inline-block;
   margin-bottom: 30px;
@@ -231,8 +229,7 @@ img {
 }
 
 /* stil och animation för de animerade barsen*/
-.bar span:before
-{
+.bar span:before {
   position: absolute;
   content:'';
   top: 6px;
@@ -244,167 +241,136 @@ img {
   animation: bar 8s ease;
 }
 
-/* hur stor bar 1 ska bli*/
-#bar1:nth-child(1) span:before
-{
+/* hur stora barsen ska bli */
+
+#bar1:nth-child(1) span:before {
   width:85%;
 }
 
-/* hur stor bar 2 ska bli*/
-#bar2:nth-child(2) span:before
-{
+#bar2:nth-child(2) span:before {
   width:70%;
 }
 
-/* hur stor bar 3 ska bli*/
-#bar3:nth-child(3) span:before
-{
+#bar3:nth-child(3) span:before {
   width:90%;
 }
 
-/* hur stor bar 4 ska bli*/
-#bar4:nth-child(4) span:before
-{
+#bar4:nth-child(4) span:before {
   width:30%;
 }
-#bar5:nth-child(1) span:before
-{
+
+#bar5:nth-child(1) span:before {
   width:20%;
 }
-#bar6:nth-child(2) span:before
-{
+
+#bar6:nth-child(2) span:before {
   width:60%;
 }
-#bar7:nth-child(3) span:before
-{
+
+#bar7:nth-child(3) span:before {
   width:20%;
 }
-#bar8:nth-child(4) span:before
-{
+
+#bar8:nth-child(4) span:before {
   width:85%;
 }
-#bar9:nth-child(1) span:before
-{
+
+#bar9:nth-child(1) span:before {
   width:40%;
 }
-#bar10:nth-child(2) span:before
-{
+
+#bar10:nth-child(2) span:before {
   width:5%;
 }
-#bar11:nth-child(3) span:before
-{
+
+#bar11:nth-child(3) span:before {
   width:60%;
 }
-#bar12:nth-child(4) span:before
-{
+
+#bar12:nth-child(4) span:before {
   width:30%;
 }
-#bar13:nth-child(1) span:before
-{
+
+#bar13:nth-child(1) span:before {
   width:25%;
 }
-#bar14:nth-child(2) span:before
-{
+
+#bar14:nth-child(2) span:before {
   width:95%;
 }
-#bar15:nth-child(3) span:before
-{
-  width:80%;
-}
-#bar16:nth-child(4) span:before
-{
-  width:40%;
-}
-#barFredrik1:nth-child(1) span:before
-{
-  width:15%;
-}
-#barFredrik2:nth-child(2) span:before
-{
+
+#bar15:nth-child(3) span:before {
   width:80%;
 }
 
-/* hur stor bar 3 ska bli*/
-#barFredrik3:nth-child(3) span:before
-{
+#bar16:nth-child(4) span:before {
+  width:40%;
+}
+
+#barFredrik1:nth-child(1) span:before {
+  width:15%;
+}
+
+#barFredrik2:nth-child(2) span:before {
+  width:80%;
+}
+
+#barFredrik3:nth-child(3) span:before {
   width:98%;
 }
 
-/* hur stor bar 4 ska bli*/
-#barFredrik4:nth-child(4) span:before
-{
+#barFredrik4:nth-child(4) span:before {
   width:0%;
 }
-/* hur stor bar 1 ska bli*/
-#barMåns1:nth-child(1) span:before
-{
+
+#barMåns1:nth-child(1) span:before {
   width:85%;
 }
 
-/* hur stor bar 2 ska bli*/
-#barMåns2:nth-child(2) span:before
-{
+#barMåns2:nth-child(2) span:before {
   width:90%;
 }
 
-/* hur stor bar 3 ska bli*/
-#barMåns3:nth-child(3) span:before
-{
+#barMåns3:nth-child(3) span:before {
   width:50%;
-  
 }
 
-/* hur stor bar 4 ska bli*/
-#barMåns4:nth-child(4) span:before
-{
+#barMåns4:nth-child(4) span:before {
   width:20%;
 }
-/* hur stor bar 1 ska bli*/
-#barFelix1:nth-child(1) span:before
-{
+
+#barFelix1:nth-child(1) span:before {
   width:85%;
 }
 
-/* hur stor bar 2 ska bli*/
-#barFelix2:nth-child(2) span:before
-{
+#barFelix2:nth-child(2) span:before {
   width:90%;
 }
 
-/* hur stor bar 3 ska bli*/
-#barFelix3:nth-child(3) span:before
-{
+#barFelix3:nth-child(3) span:before {
   width:90%;
 }
 
-/* hur stor bar 4 ska bli*/
-#barFelix4:nth-child(4) span:before
-{
+#barFelix4:nth-child(4) span:before {
   width:20%;
 }
-/* hur stor bar 1 ska bli*/
-#barSimon1:nth-child(1) span:before
-{
+
+#barSimon1:nth-child(1) span:before {
   width:85%;
 }
 
-/* hur stor bar 2 ska bli*/
-#barSimon2:nth-child(2) span:before
-{
+#barSimon2:nth-child(2) span:before {
   width:30%;
 }
 
-/* hur stor bar 3 ska bli*/
-#barSimon3:nth-child(3) span:before
-{
+#barSimon3:nth-child(3) span:before {
   width:15%;
 }
 
-/* hur stor bar 4 ska bli*/
-#barSimon4:nth-child(4) span:before
-{
+#barSimon4:nth-child(4) span:before {
   width:80%;
 }
+
 /* för att möjligöra animationen */
 @keyframes bar
 {
@@ -416,6 +382,8 @@ img {
 }
 #produktLista{
     padding: 0.5em;
+
+/* Stil för kundvagnsfönstret */
 }
 #cartWindow {
     position: fixed;
@@ -423,17 +391,19 @@ img {
     left: 7em;
     transform: translate(-50%, -50%);
     width: 200px;
-    max-width: 400px; /* Justera den maximala bredden efter ditt behov */
+    max-width: 400px;
     background-color: rgb(33, 106, 62);
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    display: none; /* Dölj varukorgsfönstret från början */
-    overflow-y: auto; /* Aktivera vertikal rullning vid behov */
-    max-height: 130px; /* Justera den maximala höjden efter ditt behov */
+    display: none; 
+    overflow-y: auto;
+    max-height: 130px; 
     margin: 0 auto;
     padding: 5px;
 }
+
+/* Så att kundvagnen får struktur */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -445,36 +415,47 @@ img {
 
 .cart-item-details {
     flex-grow: 1;
-    font-size: 14px; /* Reduce the font size */
+    font-size: 14px; 
 }
 
 .cart-item button {
-    font-size: 12px; /* Reduce the font size for the "Ta bort" button */
+    font-size: 12px; 
 }
+
 #kassaKnapp{
     margin-left: 4em;
 }
+
+/* Stil för kontaktsidan */
 #name{
     width: 14em;
 }
+
 #email{
     width: 14em;
 }
+
 #telefon{
     width: 14em;
 }
+
 #meddelande{
     margin: 0.5em 0 0 0;
 }
+
 #namnRuta {
     margin: 0.5em 0 0 0;
 }
+
 #epostRuta {
     margin: 0.5em 0 0 0;
 }
+
 #telefonRuta {
     margin: 10em 0 0 0;
 }
+
+/* Stil för företagsinformationsrutan */
 #infoApp {
     border: 2px solid #393939;
     padding: 10px; 
@@ -483,7 +464,8 @@ img {
     max-width: 850px;
     margin: 20px auto; 
 }
-/* CSS for 1280px and more */
+
+/* CSS för 1280px och större upplösning */
 @media only screen and (min-width: 1280px) {
     .item1 {
         grid-column: 1 / span 4;
