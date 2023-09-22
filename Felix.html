@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anställd</title>
     <script defer src="https://unpkg.com/vue@3"></script>
-    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
 </head>
 <body>
     <header>
@@ -22,6 +24,7 @@
             </ul>
         </nav>
         </header>
+        <div id="personApp">
         <div class="grid-container">
         <div class="grid-item item10">
             <div class="rubrik">
@@ -34,61 +37,93 @@
                 <h1>Felix Lundqvist</h1>
             </div>
             <div class="grid-item item12">
-                <img src="" alt="Bild på Felix" class="thumb">
+                <img src="" alt="Bild på Felix" class="thumbPersonal">
             </div>
-        <div class="grid-item item13">
-            <p>Felix är en erfaren och skicklig guide som specialiserar sig på att leda expeditioner genom de vidsträckta och fascinerande savannerna i Afrika. Hans kärlek till naturen och djurlivet är uppenbar i varje steg han tar och i varje ord han delar med dem som följer honom på äventyren.
-
-                Med sin djupa kunskap om savannens ekosystem och dess olika arter har Felix förmågan att ge detaljerade och engagerande berättelser om det vilda livets beteende, överlevnadstaktik och betydelse i den stora balans som utgör denna unika miljö.
-                
-                Felix är inte bara en kunnig guide; han är också en fantastisk berättare och observatör. Han kan upptäcka tecken på djurliv på avstånd och guida gruppen till de mest spännande platserna för att se de majestätiska djuren i deras naturliga habitat.
-                
-                Hans lugna och ansvarsfulla natur gör honom till en säkerhetsmedveten guide. Han betonar vikten av att respektera djuren och deras livsmiljö, vilket skapar en atmosfär av medvetenhet och hållbarhet bland resenärerna.
-                
-                Felix är också en förespråkare för att främja ekoturism och bevarandeinsatser i samhällena runt savannen. Han strävar efter att skapa medvetenhet om vildlivets skydd och ekologiska balans bland resenärerna för att säkerställa att denna otroliga miljö förblir orörd för kommande generationer.
-                
-                Sammanfattningsvis är Felix den typ av guide som förhöjer safariupplevelsen genom att dela med sig av sin passion, sin kunskap och sin respekt för savannens skönhet och dess invånare. Han skapar minnen som varar livet ut och bidrar till att bevara detta fantastiska ekosystem.</p>
-        </div>
+            <div class="grid-item item13">
+                <div class="wrap">
+                    <div class="bar" id="barFelix1">
+                        <h3> Varmt klimat </h3>
+                        <span> </span>
+                    </div>
+                    <div class="bar" id="barFelix2">
+                        <h3> Lejonbrottning </h3>
+                        <span> </span>
+                    </div>
+                    <div class="bar" id="barFelix3">
+                        <h3> Lokalsinne </h3>
+                        <span> </span>
+                    </div>
+                    <div class="bar" id="barFelix4">
+                        <h3> Djurupplevelse </h3>
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
         <div class="grid-item item14">
-            <h1>Upplevelser</h1>
-            <p>Månens bleka sken föll över savannen när vi började vår nattliga safari med guiden Felix. Det var en kylig kväll, vinden susade genom träden och skapade en suggestiv melodi. Vi kände en nervositet i luften, en känsla av att det fanns något outgrundligt runt hörnet.
-
-                Felix, en erfaren guide med en lugn och metodisk natur, ledde vår lilla grupp genom det mörka landskapet. Vi visste att nattens tystnad dolde en värld av dolda faror och spännande möten. Felix påminde oss att vara försiktiga och följa hans anvisningar till punkt och pricka.
-                
-                Efter en stund hörde vi plötsligt ett ovanligt ljud - ett lågt, dovt muller som tycktes komma från skuggorna. Felix stannade upp och bad oss vara tysta. Han pekade framåt och där, i ljuset från månen, såg vi konturerna av två glödande ögon som stirrade på oss från mörkret.
-                
-                Hjärtana började bulta snabbare när Felix informerade oss att det var en leopard som vi hade stött på. Denna stora, smidiga rovdjur hade sin blick fäst på oss. Felix insåg vikten av att inte hota eller skrämma djuret. Han bad oss att lugnt backa, hålla oss tysta och inte göra plötsliga rörelser.
-                
-                Vi gick långsamt bakåt medan vi höll ögonen på leoparden. Vår puls rusade när vi insåg att vi befann oss i en delikat situation. Felix visade en osviklig lugn och kyla. Han försäkrade oss om att allt skulle gå bra om vi bara följde hans instruktioner.
-                
-                Efter en nervkittlande stund valde leoparden att låta oss gå. Den smög sig iväg in i nattens mörker, och våra lättnadens suckar fylldes med aha-upplevelser. Vi insåg hur viktigt det var att ha en kunnig guide som Felix vid vår sida, någon som kunde hantera de oväntade situationerna och säkerställa vår säkerhet.
-                
-                Den nattliga safariupplevelsen med Felix kommer för alltid att vara inristad i våra minnen. Det var både skrämmande och fängslande, en påminnelse om naturens skönhet och dess oberäknelighet. Felix ledde oss genom farorna och skapade en oförglömlig och äventyrlig natt i savannens hjärta.</p>
-        </div>
-        <div class="grid-item item15">
-            <div class="wrap">
-                <div class="bar" id="barFelix1">
-                    <h3> Varmt klimat </h3>
-                    <span> </span>
+            <div v-for="person in personer">
+                <div v-if="person.id === 4">
+                    <p> {{person.omGuide}} </p>
                 </div>
-                <div class="bar" id="barFelix2">
-                    <h3> Lejonbrottning </h3>
-                    <span> </span>
-                </div>
-                <div class="bar" id="barFelix3">
-                    <h3> Lokalsinne </h3>
-                    <span> </span>
-                </div>
-                <div class="bar" id="barFelix4">
-                    <h3> Djurupplevelse </h3>
-                    <span> </span>
-                </div>
-         
             </div>
         </div>
+        
+        <div class="grid-item item15">
+            <h2>Tidigare projekt</h2>
+        </div>
+
         <div class="grid-item item16">
+            <img src="" alt="Från en resa" class="thumbPersonal">
+        </div>
+
+        <div class="grid-item item170">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="grid-item item171">
+            <img src="" alt="Från en resa" class="thumbPersonal">
+        </div>
+
+        <div class="grid-item item172">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="grid-item item173">
+            <img src="" alt="Från en resa" class="thumbPersonal">
+        </div>
+
+        <div class="grid-item item174">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="grid-item item175">
+            <img src="" alt="Från en resa" class="thumbPersonal">
+        </div>
+
+        <div class="grid-item item176">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        
+
+        <div class="grid-item item177">
+            <img src="" alt="Från en resa" class="thumbPersonal">
+        </div>
+
+        <div class="grid-item item178">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="grid-item item179">
             <!-- Innehåll kontakt -->
-                <!-- <section class="contact"> -->
                     <div class="contact">
                         <h3>Kontakt Information</h3>
                         <p>Email: info@example.com</p>
@@ -98,9 +133,9 @@
                         </div>
                         <footer>
                             <p>&copy; 2023 Your Website</p>
-                        </footer>
-                    <!-- </section> -->
+                        </footer> 
                 </div>
+        </div>
         </div>
     
     
