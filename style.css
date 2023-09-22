@@ -15,15 +15,44 @@ header {
     padding: 0.5em 0.5em;
     margin: 0 0 -1em 0;
     background-attachment: fixed;
+    text-align: right;
     
 }
 .rubrik{
-        background-color: #333;
-        color: #fff;
-        text-align: center; 
-        margin: 0 -1em 0 -1em;
-        padding: 0.5em;
-        text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: center; 
+    margin: 0 -1em 0 -1em;
+    padding: 0.5em;
+    text-align: center;
+}
+#menu {
+    display: none;
+    text-align: right;
+
+}
+#menu-toggle:checked ~ #menu {
+    display: block;
+}
+#menu li {
+    display: block;
+    text-align: right;
+    
+}
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+#menu a:hover {
+    background-color: white;
+    color: #000000;
+}
+.smooth {
+    transition: all 0.4s ease-in-out;
+}
+#menu-toggle {
+    display: none;
 }
 
 nav ul {
@@ -37,12 +66,6 @@ nav ul li {
 
 nav ul li:last-child {
     margin-right: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
 }
 .rubrik h3
 {
@@ -128,8 +151,6 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
-
-
 .grid-container {
     display: grid;
     
@@ -139,25 +160,34 @@ footer {
 }
 
 .flexcontainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap:1em;
-    align-self: center;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    margin: 2em; 
 }
+
 .projectColumn {
     width: 265px;
     border: 2px solid #393939;
-    padding: 10px; 
-    margin: 20px 0; 
+    padding: 10px;  
     text-align: center;
-    margin: 20px auto; 
 }
-
+.flex-item {
+    margin: 0 10px;
+}
 .projectColumn h3 {
     text-align: center;
 }
-
+.projectColumn a {
+    text-align: center;
+    color:#000000;
+    text-decoration: none;
+}
+.projectColumn a:hover {
+    background-color: #333;
+    color: white;
+    padding: 0.3em;
+}
 /* stil för bilder */
 
 img {
@@ -424,7 +454,9 @@ img {
     margin: 0 auto;
     padding: 5px;
 }
-
+#cartIcon {
+    text-align: left;
+}
 /* Så att kundvagnen får struktur */
 .cart-item {
     display: flex;
@@ -640,6 +672,15 @@ img {
         grid-column: 1;
         grid-row: 4;
     }
+    #menu {
+        display: block;
+    }
+    #menu li {
+        display: inline;
+    }
+    #menuIcon {
+        display: none;
+    }
     #produktLista{
         font-size: 1.5em;
         padding: 0.5em;
@@ -665,7 +706,15 @@ img {
     #menu{
         text-align: right;
     }
+    #menu a {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    #menu a:hover {
+        padding: 1em;
+    }
     #cartIcon{
         text-align: left;
+        font-size: 1em;
     }
 }
