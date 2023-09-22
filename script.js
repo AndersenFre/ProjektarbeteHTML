@@ -1,10 +1,8 @@
+// En Vue app för att hämta information om personal från JSON
 const personApp = Vue.createApp({
     data(){
         return {
-            personer: [
-                
-            ]
-            
+            personer: []            
         }
     },
     created () {
@@ -15,16 +13,14 @@ const personApp = Vue.createApp({
         })
     }
 });
-
 // Tillåter Vue att genom mount förändra HTML-element med ID 'personApp'.
 personApp.mount('#personApp');
 
+// En Vue app för att hämta information om produkter från JSON
 const produktApp = Vue.createApp({
     data(){
         return{
-            produkter: [
-
-            ]
+            produkter: []
         }
     },
     created () {
@@ -37,6 +33,7 @@ const produktApp = Vue.createApp({
 // Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
 
+// En Vue app för att hämta information om personal från JSON
 const infoApp = Vue.createApp({
     data(){
         return{
@@ -50,8 +47,11 @@ const infoApp = Vue.createApp({
         })
     }
 });
+// Tillåter Vue att genom mount förändra HTML-element med ID 'InfoApp'.
 infoApp.mount('#infoApp');
 
+// En Vue app för att skapa en kundvagn för våra produkter.
+// Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
     data() {
         return {
@@ -67,8 +67,8 @@ const kundvagnApp = Vue.createApp({
             this.produkter = response.data;
         });
        
-    // Skapar savedCart, fyller den med cart som är localStorage. 
-    // Om savedCart har värde, spara savedCart i array vagn. 
+    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage. 
+    // Om savedCart har värde, spara savedCart i vår array vagn. 
     // Sätter cartCount som längden av array vagn. 
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -102,21 +102,19 @@ const kundvagnApp = Vue.createApp({
                 this.cartCount--;
             }
             this.saveCartToLocalStorage();
-
         },
         // Sparar till localStorage.
         // Skapar ett Storage Item med nyckel 'cart'.
-        // Omvandlar innehållet i vagn till JSON string, iom att localStorage bara sparar string.
+        // Omvandlar innehållet i vagn till JSON string, 
+        // iom att localStorage bara sparar string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
         openCartWindow() {
-            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'block';
         },
         closeCartWindow() {
-            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'none';
         },

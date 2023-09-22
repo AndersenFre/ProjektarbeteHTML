@@ -20,25 +20,26 @@
                         <li><a href="Projekt1.html">Om oss</a></li>
                         <li><a href="Kontakt.html">Kontakt</a></li>
                         <li>
+
                             <div id="cartIcon">
                                 <i  class="fa fa-shopping-cart"></i>
                                 <span id="cart-counter">{{ cartCount }}</span>
                                 <button @click="openCartWindow">Open Cart</button>
-                                    <div id="cartWindow">
-                                        <h2>Kundvagn</h2>
-                                        <p>Totalt: {{ vagnTotal }} sek</p>
-                                        <ul>
-                                            <li v-for="(item, index) in vagn" :key="index" class="cart-item">
-                                                <div class="cart-item-details">
-                                                    <h3>{{ item.titel }}</h3>
-                                                    <p>Pris: {{ item.pris }} sek</p>
-                                                </div>
-                                                <button @click="removeFromVagn(index)">Ta bort</button>
-                                            </li>
-                                        </ul>
-                                        <button @click="closeCartWindow">Stäng</button>
-                                        <button id="kassaKnapp">Till kassan</button>
-                                    </div>
+                                <div id="cartWindow">
+                                    <h2>Kundvagn</h2>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    <ul>
+                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                            <div class="cart-item-details">
+                                                <h3>{{ item.titel }}</h3>
+                                                <p>Pris: {{ item.pris }} sek</p>
+                                            </div> 
+                                            <button @click="removeFromVagn(index)">Ta bort</button>
+                                        </li>
+                                    </ul>
+                                    <button @click="closeCartWindow">Stäng</button>
+                                    <button id="kassaKnapp">Till kassan</button>
+                                </div>
                             </div>    
                         </li>
                     </ul>
@@ -46,9 +47,15 @@
             </header>
             <div class="grid-container">
                 <div class="grid-item item20">
-                    <img src="Guide.png" alt="Simon som upptäcker djungeln" class="thumbProdukt">
+                    <div class="rubrik">
+                        <h1> Beyond Bounds Adventure</h1>
+                        <h3> Här väntar ditt nästa äventyr </h3>
+                    </div>
                 </div>
                 <div class="grid-item item21">
+                    <img src="Guide.png" alt="Simon som upptäcker djungeln" class="thumbProdukt">
+                </div>
+                <div class="grid-item item22">
                     <div v-for="(produkt, index) in produkter" :key="index">
                         <div v-if="produkt.id === 1">
                             <div id="produktLista">
@@ -82,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item22">
+                <div class="grid-item item23">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 1">
                             <h2> {{produkt.titel}} </h2>
@@ -94,10 +101,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item23">
+                <div class="grid-item item24">
                     <img src="Mur.png" alt="Kinesiska Muren" class="thumbProdukt">
                 </div>
-                <div class="grid-item item24">
+                <div class="grid-item item25">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 2">
                             <div id="produktLista">
@@ -131,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item25">
+                <div class="grid-item item26">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 2">
                             <h2> {{ produkt.titel }} </h2>
@@ -143,10 +150,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item26">
+                <div class="grid-item item27">
                     <img src="Pingvin.png" alt="Jättepingviner på arktis" class="thumbProdukt">
                 </div>
-                <div class="grid-item item27">
+                <div class="grid-item item28">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 3">
                             <div id="produktLista">
@@ -180,7 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item28">
+                <div class="grid-item item29">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 3">
                             <h2>{{produkt.titel}} </h2>
@@ -192,10 +199,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item29">
+                <div class="grid-item item30">
                     <img src="Safari.png" alt="Felix som står vid sin jeep" class="thumbProdukt">
                 </div>
-                <div class="grid-item item30">
+                <div class="grid-item item31">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 4">
                             <div id="produktLista">
@@ -229,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item31">
+                <div class="grid-item item32">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 4">
                             <h2> {{produkt.titel}} </h2>
@@ -241,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item item32">
+                <div class="grid-item item33">
                     <div class="contact">
                         <h3>Kontakt Information</h3>
                         <p>BeyondBoundsAdventure@xtreme.com</p>
