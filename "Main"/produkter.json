@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "titel": "Amazonas, en djungel du sent kommer glömma.",
+        "text": "Följ med på äventyr i djupaste Amazonas",
+        "plats": "Plats: I amazonasdjungeln",
+        "tid": "Tid: 1 vecka",
+        "boende": "Boende: Små stugor brevid djungeln",
+        "guider": "Arbetande hjälpredor: 1 djungelguide och 2 assistenter",
+        "pris": 10000,
+        "langText":"Utforska djupet av Amazonas regnskogar på spännande vandringar och kanotturer. Möte med lokala stammar för att lära och förstå deras livsstil och unika sätt att leva i symbios med naturen. Dyk ner i det tropiska paradiset med guidade utflykter för att få en närbild av exotiska djur och fåglar som bara finns här. Njut av oförglömliga kvällar med nattvandringar där skogens ljud och mysterier blir till liv under stjärnhimlen. Besök av avlägsna byar för att uppleva äkta gästfrihet och känna pulsen i det ursprungliga Amazonas., Förundras över den fantastiska flora och fauna som Amazonas har att erbjuda från majestätiska träd till färggranna orkidéer. Smaka på de läckra och autentiska smakerna av lokala rätter och traditionell matlagning."
+    },
+    {
+        "id": 2,
+        "titel": "Asien, kontinenten där det finns mycket att se.",
+        "text": "Följ med på äventyr på muren",
+        "plats": "Plats: Stora länderna i Asien",
+        "tid": "Tid: 2 veckor",
+        "boende": "Boende: Hotell i en skyskrapa",
+        "guider": "Arbetande hjälpredor: 1 asienguide",
+        "pris": 13000,
+        "langText":"Välkommen till Asien, en kontinent av överväldigande skönhet, djup historia och en färgrik mångfald av kulturer. Med sina många länder som sträcker sig från fjärran östern till det indiska subkontinenten och Mellanöstern, erbjuder Asien en enastående upplevelse i allt från konst och arkitektur till mat och natur. Asien har en av världens äldsta kulturer med rika historiska rötter som går tusentals år tillbaka. Från de antika civilisationerna i Mesopotamien till Kinas dynastier, Indiens mångfaldiga riken och Japans shogunater, har Asien format mänsklighetens gång genom tiden. Kontinenten är hem för enastående arkitektur, från Kinas kejsarpalats till Indiens majestätiska tempel och Japans traditionella byggnader. Moderna landmärken som Dubais futuristiska skyskrapor visar Asiens framtid och kontinuerliga strävan mot innovation. Asiens landskap är lika varierande som dess kulturer. Från Himalayas mäktiga berg till Japans frodiga grönska och Thailands turkosblåa stränder, erbjuder kontinenten en otrolig skönhet och mångfald. Djurlivet i Asien är lika varierande med arter som tigrar, elefanter, pandor och orangutanger. De frodiga skogarna och nationalparkerna är hem för en otrolig flora och fauna, och Korallreven i Stora barriärrevet är en av de sju underverken i världen. Asiens matkultur är en fantastisk resa av smaker och dofter. Från det kryddiga indiska köket till det delikata japanska sukiyaki, och det mångsidiga kinesiska dim sum, finns det något för alla smaklökar. Konsten att wokstekning, sushi-rullning, och currylagning har förfinats under generationer och är en viktig del av Asiens kulinariska arv. Utforska Asien är som att upptäcka en värld i sig själv. Varje land har sin unika charm och erbjuder en oändlig skatt av upplevelser. En resa genom Asien är som en resa genom tid och kultur, och det är en resa värd att tas."
+        
+    },
+    {
+        "id": 3,
+        "titel": "Nordpolen, resan du alltid drömt om. ",
+        "text": "Följ med på äventyr på isarna",
+        "plats": "Plats: Glacieärerna på nordpolen",
+        "tid": "Tid: 1 vecka",
+        "boende": "Boende: Själv byggda igloos",
+        "guider": "Arbetande hjälpredor: 1 nordpolenexpert och 1 vapenbärare ",
+        "pris": 25000,
+        "langText": "Välkommen till den isiga världen vid Nordpolen, en plats som fascinerat och utmanat människor i århundraden. Nordpolen är en symbol för äventyr och upptäckt, ett land av is och snö där modiga själar sökt kunskap och äventyr. Utforska denna frusna värld och låt dig förtrollas av dess skönhet och extrema omgivning. Nordpolen är belägen mitt i Arktis, omgiven av Norra ishavet. Den är den nordligaste punkten på jorden och utgör den geografiska norra änden på jordaxeln. Klimatet vid Nordpolen är extremt kallt och ogästvänligt, med temperaturer som sjunker långt under noll grader Celsius. Den arktiska isen täcker området större delen av året och gör det till en utmaning att utforska denna del av världen. Nordpolen har en rik historia av upptäckt och expeditioner. Från de tidiga polarexpeditionerna på 1800-talet till moderna expeditioner med vetenskaplig forskning, har människor alltid sökt att förstå den arktiska regionen och dess betydelse för jordens ekosystem och klimat. Utforska isfälten till fots eller med specialutrustade fordon. Upplev den otroliga känslan av att vandra på en värld av is och snö. Upplev den gamla arktiska traditionen med hundspann och glid fram över isen med dessa starka och vänliga djur som guider. Få chansen att bevittna det fantastiska norrskenet dansa över den arktiska himlen. Det är en oförglömlig naturskådespel som bara kan upplevas här. En resa till Nordpolen är en resa till en av jordens mest ogästvänliga platser, men det är också en resa till en unik och fascinerande del av vår planet. Att stå vid Nordpolen är att vara vid en av världens mest symboliska platser och känna dess storhet och mystik."
+        
+    },
+    {
+        "id": 4,
+        "titel": "Afrika, resan du aldrig kommer att glömma.  ",
+        "text": "Följ med på äventyr på savannen",
+        "plats": "Plats: Afrikas savann",
+        "tid": "Tid: 3 vecka",
+        "boende": "Boende: Trädkojor på savannen",
+        "guider": "Arbetande hjälpredor: 1 savannguide och 1 förare",
+        "pris": 35000,
+        "langText":"Välkommen till Afrika, den förtrollande kontinenten där äventyr och mångfald möter dig vid varje vändning. Afrika är en plats av skönhet och kontraster, från Saharaöknen till Serengetis slätter, från de majestätiska Kilimanjaro-bergen till de häpnadsväckande Victoriafallen. Det är en kontinent rik på kultur, historia och djurliv, där varje land bär på sin unika berättelse och charm. Afrika är belägen söder om Europa och Asien och är den näst största kontinenten till ytan i världen. Den sträcker sig från Medelhavets kust i norr till Kap Agulhas i söder, och från Atlanten i väster till Indiska oceanen i öster. Kontinenten har en oerhörd biologisk mångfald med enastående ekosystem. Från Saharaöknen till regnskogarna i Centralafrika, från savannerna i öst till kusterna i väst - Afrika rymmer ett imponerande spektrum av liv och landskap. Afrika har en uråldrig historia som sträcker sig tusentals år tillbaka. Det var platsen för några av mänsklighetens tidigaste civilisationer, inklusive Egypten och Nubien. Genom århundraden har kontinenten sett imperier och kungariken komma och gå, och dess historia är vävda med mångfaldiga kulturer och traditioner. Afrikas kultur är lika mångfaldig som dess landskap. Med över 3 000 etniska grupper talar man över 2 000 olika språk. Musik, dans, konst och mat är centrala delar av afrikansk kultur och varierar över hela kontinenten. Upptäck Afrikas vilda djur på en safariäventyr genom dess nationalparker och reservat. Skåda lejonen som stryker över savannen, elefanterna som trampar genom skogen och de majestätiska girafferna i deras naturliga livsmiljö. Bege dig ut på äventyrsvandringar genom Afrikas varierande terräng, från vandringsleder på Kilimanjaro till vandringar genom Drakensbergen. Varje steg är en möjlighet att utforska det omgivande landskapet och känna kontinentens puls. Dyka in i Afrikas kulturarv genom att besöka historiska platser, möta lokalbefolkningen och delta i traditionella ceremonier. Lär dig om deras historia, seder och matlagning för en djupare förståelse av detta mångfacetterade kontinent. Afrika är en kontinent som berör hjärtat och själen. Det är en plats där äventyr väntar vid varje horisont, där kultur och historia smälter samman till en rik väv av mänsklig erfarenhet. Att utforska Afrika är att omfamna mångfalden och upptäcka skönheten i denna världsdelen som aldrig upphör att förtrolla och inspirera."
+        
+    }
+    ] 

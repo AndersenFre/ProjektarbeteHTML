@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Realtidsvalidering</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="https://unpkg.com/vue@3"></script>
+        <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script defer src="scriptKontakt.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                    <li><a href="Projekt1.html">Hem</a></li>
+                    <li><a href="Produkt.html">Webbshop</a></li>
+                    <li><a href="Projekt1.html">Om oss</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li>
+                        <div id="kundvagnApp">
+                            <div id="cartIcon">
+                                <i  class="fa fa-shopping-cart"></i>
+                                <span id="cart-counter">{{ cartCount }}</span>
+                                <button @click="openCartWindow">Open Cart</button>
+                                <div id="cartWindow">
+                                    <h2>Kundvagn</h2>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    <ul>
+                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                            <div class="cart-item-details">
+                                                <h3>{{ item.titel }}</h3>
+                                                <p>Pris: {{ item.pris }} sek</p>
+                                            </div>
+                                            <button @click="removeFromVagn(index)">Ta bort</button>
+                                        </li>
+                                    </ul>
+                                    <button @click="closeCartWindow">Stäng</button>
+                                    <button id="kassaKnapp">Till kassan</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="grid-container">
+            <div class="grid-item item50">
+                <div class="rubrik">
+                    <h1> Beyond Bounds Adventure</h1>
+                    <h3> Här väntar ditt nästa äventyr </h3>
+                </div>
+            </div>
+            <div class="grid-item item51">
+                <form id="myForm">
+                    <div>
+                        <h2>Kontaktformulär</h2>
+                        <label id="namnRuta" for="name">Namn:</label>
+                        <br>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div>
+                        <label id="epostRuta" for="email">E-post:</label>
+                        <br>
+                        <input type="text" id="email" name="email">
+                        <br>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div>
+                        <label id="telefonRuta" for="telefon">Telefon:</label>
+                        <br>
+                        <input type="text" id="telefon" name="telefon">
+                    </div>
+                </form>
+            </div>
+            <div class="grid-item item52">
+                <form id="myForm">
+                    <div>
+                        <p>Meddelande:</p>
+                        <textarea type="text" id="meddelande" name="meddelande"></textarea>
+                        <br>
+                        <button id="skicka">Skicka</button>
+                    </div>
+                </form>
+            </div>
+            <div class="grid-item item53">
+                <div class="contact">
+                    <h3>Kontakt Information</h3>
+                    <p>BeyondBoundsAdventure@xtreme.com</p>
+                    <p>Telefon: (+46) 456-7890</p>
+                    <p>Address: Drottninggatan 3, Örebro</p>
+                    <br>
+                </div>
+                <footer>
+                    <p>&copy; 2023 Beyond Bounds Adventure</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

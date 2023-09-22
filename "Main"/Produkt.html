@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Produkter</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="https://unpkg.com/vue@3"></script>
+        <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div id="kundvagnApp">
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="Projekt1.html">Hem</a></li>
+                        <li><a href="Produkt.html">Webbshop</a></li>
+                        <li><a href="Projekt1.html">Om oss</a></li>
+                        <li><a href="Kontakt.html">Kontakt</a></li>
+                        <li>
+
+                            <div id="cartIcon">
+                                <i  class="fa fa-shopping-cart"></i>
+                                <span id="cart-counter">{{ cartCount }}</span>
+                                <button @click="openCartWindow">Open Cart</button>
+                                <div id="cartWindow">
+                                    <h2>Kundvagn</h2>
+                                    <p>Totalt: {{ vagnTotal }} sek</p>
+                                    <ul>
+                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                            <div class="cart-item-details">
+                                                <h3>{{ item.titel }}</h3>
+                                                <p>Pris: {{ item.pris }} sek</p>
+                                            </div> 
+                                            <button @click="removeFromVagn(index)">Ta bort</button>
+                                        </li>
+                                    </ul>
+                                    <button @click="closeCartWindow">Stäng</button>
+                                    <button id="kassaKnapp">Till kassan</button>
+                                </div>
+                            </div>    
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="grid-container">
+                <div class="grid-item item20">
+                    <div class="rubrik">
+                        <h1> Beyond Bounds Adventure</h1>
+                        <h3> Här väntar ditt nästa äventyr </h3>
+                    </div>
+                </div>
+                <div class="grid-item item21">
+                    <img src="Guide.png" alt="Simon som upptäcker djungeln" class="thumbProdukt">
+                </div>
+                <div class="grid-item item22">
+                    <div v-for="(produkt, index) in produkter" :key="index">
+                        <div v-if="produkt.id === 1">
+                            <div id="produktLista">
+                                <ul>
+                                    <li>{{produkt.plats}}</li>
+                                    <li>{{produkt.tid}}</li>
+                                    <li>{{produkt.boende}}</li>
+                                    <li>{{produkt.guider}}</li>
+                                    <li>Pris: {{produkt.pris}} kr per person</li>
+                                </ul>
+                            </div>
+                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                    <div class="wrap" id="barProdukt">
+                        <div class="bar" id="bar1">
+                            <h3>Fysiskt påfrestande </h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar2">
+                            <h3>Temperatur (låg -> hög)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar3">
+                            <h3> Risk (vilda djur med mera) </h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar4">
+                            <h3> Matupplevelse </h3>
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item23">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 1">
+                            <h2> {{produkt.titel}} </h2>
+                            <hr>
+                            <div id="langTexter">
+                                <p>{{produkt.langText}}<p> 
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item24">
+                    <img src="Mur.png" alt="Kinesiska Muren" class="thumbProdukt">
+                </div>
+                <div class="grid-item item25">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 2">
+                            <div id="produktLista">
+                                <ul>
+                                    <li>{{produkt.plats}}</li>
+                                    <li>{{produkt.tid}}</li>
+                                    <li>{{produkt.boende}}</li>
+                                    <li>{{produkt.guider}}</li>
+                                    <li>Pris: {{produkt.pris}} kr per person</li>
+                                </ul>
+                            </div>
+                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                    <div class="wrap" id="barProdukt">
+                        <div class="bar" id="bar5">
+                            <h3>Fysiskt påfrestande</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar6">
+                            <h3>Temperatur (låg -> hög)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar7">
+                            <h3>Risk (vilda djur med mera)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar8">
+                            <h3>Matupplevelse</h3>
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item26">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 2">
+                            <h2> {{ produkt.titel }} </h2>
+                            <hr>
+                            <div id="langTexter">
+                                <p>{{produkt.langText}}<p> 
+                            </div> 
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item27">
+                    <img src="Pingvin.png" alt="Jättepingviner på arktis" class="thumbProdukt">
+                </div>
+                <div class="grid-item item28">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 3">
+                            <div id="produktLista">
+                                <ul>
+                                    <li>{{produkt.plats}}</li>
+                                    <li>{{produkt.tid}}</li>
+                                    <li>{{produkt.boende}}</li>
+                                    <li>{{produkt.guider}}</li>
+                                    <li>Pris: {{produkt.pris}} kr per person</li>
+                                </ul>
+                            </div>
+                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                    <div class="wrap" id="barProdukt">
+                        <div class="bar" id="bar9">
+                            <h3>Fysiskt påfrestande</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar10">
+                            <h3>Temperatur (låg -> hög)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar11">
+                            <h3>Risk (vilda djur med mera)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar12">
+                            <h3>Matupplevelse</h3>
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item29">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 3">
+                            <h2>{{produkt.titel}} </h2>
+                            <hr>
+                            <div id="langTexter">
+                                <p>{{produkt.langText}}<p> 
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item30">
+                    <img src="Safari.png" alt="Felix som står vid sin jeep" class="thumbProdukt">
+                </div>
+                <div class="grid-item item31">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 4">
+                            <div id="produktLista">
+                                <ul>
+                                    <li>{{produkt.plats}}</li>
+                                    <li>{{produkt.tid}}</li>
+                                    <li>{{produkt.boende}}</li>
+                                    <li>{{produkt.guider}}</li>
+                                    <li>Pris: {{produkt.pris}} kr per person</li>
+                                </ul>
+                            </div>
+                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                    <div class="wrap" id="barProdukt">
+                        <div class="bar" id="bar13">
+                            <h3>Fysiskt påfrestande</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar14">
+                            <h3>Temperatur (låg -> hög)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar15">
+                            <h3>Risk (vilda djur med mera)</h3>
+                            <span> </span>
+                        </div>
+                        <div class="bar" id="bar16">
+                            <h3>Matupplevelse</h3>
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item32">
+                    <div v-for="produkt in produkter">
+                        <div v-if="produkt.id === 4">
+                            <h2> {{produkt.titel}} </h2>
+                            <hr>
+                            <div id="langTexter">
+                                <p>{{produkt.langText}}<p> 
+                            </div>                            
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item33">
+                    <div class="contact">
+                        <h3>Kontakt Information</h3>
+                        <p>BeyondBoundsAdventure@xtreme.com</p>
+                        <p>Telefon: (+46) 456-7890</p>
+                        <p>Address: Drottninggatan 3, Örebro</p>
+                        <br>
+                    </div>
+                    <footer>
+                        <p>&copy; 2023 Beyond Bounds Adventure</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
