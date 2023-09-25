@@ -359,35 +359,35 @@ img {
 }
 
 #barFredrik1:nth-child(1) span:before {
-  width:15%;
+  width:60%;
 }
 
 #barFredrik2:nth-child(2) span:before {
-  width:80%;
+  width:20%;
 }
 
 #barFredrik3:nth-child(3) span:before {
-  width:98%;
-}
-
-#barFredrik4:nth-child(4) span:before {
-  width:0%;
-}
-
-#barMåns1:nth-child(1) span:before {
-  width:85%;
-}
-
-#barMåns2:nth-child(2) span:before {
   width:90%;
 }
 
-#barMåns3:nth-child(3) span:before {
+#barFredrik4:nth-child(4) span:before {
+  width:75%;
+}
+
+#barMans1:nth-child(1) span:before {
+  width:75%;
+}
+
+#barMans2:nth-child(2) span:before {
+  width:60%;
+}
+
+#barMans3:nth-child(3) span:before {
   width:50%;
 }
 
-#barMåns4:nth-child(4) span:before {
-  width:20%;
+#barMans4:nth-child(4) span:before {
+  width:90%;
 }
 
 #barFelix1:nth-child(1) span:before {
@@ -395,11 +395,11 @@ img {
 }
 
 #barFelix2:nth-child(2) span:before {
-  width:90%;
+  width:95%;
 }
 
 #barFelix3:nth-child(3) span:before {
-  width:90%;
+  width:10%;
 }
 
 #barFelix4:nth-child(4) span:before {
