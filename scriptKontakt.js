@@ -1,26 +1,9 @@
-// En Vue app för att hämta information om personal från JSON
-const personApp = Vue.createApp({
-    data(){
-        return {
-            personer: []            
-        }
-    },
-    created () {
-
-        axios.get('personer.json')
-        .then((response) => {
-            this.personer = response.data;
-        })
-    }
-});
-// Tillåter Vue att genom mount förändra HTML-element med ID 'personApp'.
-personApp.mount('#personApp');
-
-// En Vue app för att hämta information om produkter från JSON
 const produktApp = Vue.createApp({
     data(){
         return{
-            produkter: []
+            produkter: [
+
+            ]
         }
     },
     created () {
@@ -33,7 +16,6 @@ const produktApp = Vue.createApp({
 // Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
 
-// En Vue app för att hämta information om personal från JSON
 const infoApp = Vue.createApp({
     data(){
         return{
@@ -47,11 +29,8 @@ const infoApp = Vue.createApp({
         })
     }
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'InfoApp'.
 infoApp.mount('#infoApp');
 
-// En Vue app för att skapa en kundvagn för våra produkter.
-// Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
     data() {
         return {
@@ -67,8 +46,8 @@ const kundvagnApp = Vue.createApp({
             this.produkter = response.data;
         });
        
-    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage. 
-    // Om savedCart har värde, spara savedCart i vår array vagn. 
+    // Skapar savedCart, fyller den med cart som är localStorage. 
+    // Om savedCart har värde, spara savedCart i array vagn. 
     // Sätter cartCount som längden av array vagn. 
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -102,19 +81,21 @@ const kundvagnApp = Vue.createApp({
                 this.cartCount--;
             }
             this.saveCartToLocalStorage();
+
         },
         // Sparar till localStorage.
         // Skapar ett Storage Item med nyckel 'cart'.
-        // Omvandlar innehållet i vagn till JSON string, 
-        // iom att localStorage bara sparar string.
+        // Omvandlar innehållet i vagn till JSON string, iom att localStorage bara sparar string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
         openCartWindow() {
+            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'block';
         },
         closeCartWindow() {
+            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'none';
         },
@@ -122,35 +103,42 @@ const kundvagnApp = Vue.createApp({
 });
 // Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
 kundvagnApp.mount('#kundvagnApp');
+function validateName() {
+    const nameInput = document.getElementById('name'); // Get the element using document.getElementById
+    const nameValue = nameInput.value.trim();
+    const nameError = document.getElementById('nameError'); // Similarly, get the error element
 
-// JavaScript kode för bildspelsnavigation
-//Skapar och sparar bilderna här
-const images = document.querySelectorAll('.gallery-image');
-//för att visa tidigare bild
-const prevButton = document.getElementById('prevBtn');
-//för att visa nästa bild
-const nextButton = document.getElementById('nextBtn');
-//variable för att skapa index som sedan ges till bilderna
-let currentIndex = 0;
-
-//Om indexet är samma som bilden ska den visas (block) annars ska den ej visas (none) loopar igenom index med en for each-loop
-function showImage(index) {
-    images.forEach((img, i) => {
-        img.style.display = i === index ? 'block' : 'none';
-    });
+    if (nameValue === '') {
+        nameError.textContent = 'Namn är obligatoriskt';
+    } else {
+        nameError.textContent = '';
+    }
 }
 
-//Vid ett klick på den högra knappet visas nästkommande bild
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-});
+function validateEmail() {
+    const emailInput = document.getElementById('email'); // Get the element using document.getElementById
+    const emailValue = emailInput.value.trim();
+    const emailError = document.getElementById('emailError'); // Similarly, get the error element
 
-//Vid ett klick på den vänstra knappet visas föregående bild
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-});
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-// Visar bilden 
-showImage(currentIndex);
+    if (emailValue === '') {
+        emailError.textContent = 'E-postadress är obligatorisk';
+    } else if (!emailPattern.test(emailValue)) {
+        emailError.textContent = 'Ogiltig e-postadress';
+    } else {
+        emailError.textContent = '';
+    }
+}
+
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+
+nameInput.addEventListener('input', validateName);
+emailInput.addEventListener('input', validateEmail);
+
+// Kör valideringen när sidan laddas
+validateName();
+validateEmail();
