@@ -1,26 +1,58 @@
-/* Reset some default styles for the entire page */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     font-family: 'Questrial', sans-serif
 }
+/* Bakgrundsfärg för sidorna*/
+body{
+    background-color: #f4eee0;
+}
 
-/* Style the header and navigation menu */
+/* Stil för menyn */
 header {
     background-color: #222;
     color: #fff;
     padding: 0.5em 0.5em;
     margin: 0 0 -1em 0;
     background-attachment: fixed;
+    text-align: right;
     
 }
 .rubrik{
-        background-color: #333;
-        color: #fff;
-        text-align: center; 
-        margin: 0 -1em 0 -1em;
-        padding: 0.5em;
-        
+    background-color: #333;
+    color: #fff;
+    text-align: center; 
+    margin: 0 -1em 0 -1em;
+    padding: 0.5em;
+    text-align: center;
+}
+#menu {
+    display: none;
+    text-align: right;
+
+}
+#menu-toggle:checked ~ #menu {
+    display: block;
+}
+#menu li {
+    display: block;
+    text-align: right;
+    
+}
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+#menu a:hover {
+    background-color: white;
+    color: #000000;
+}
+.smooth {
+    transition: all 0.4s ease-in-out;
+}
+#menu-toggle {
+    display: none;
 }
 
 nav ul {
@@ -35,38 +67,26 @@ nav ul li {
 nav ul li:last-child {
     margin-right: 0;
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-.rubrik 
-{
-    text-align: center;
-}
 .rubrik h3
 {
     margin-top: 0.2em;
 }
-/* Style the large gallery section */
+
+/* Stil för bildspelet */
 .gallery {
     padding: 10px;
     text-align: center;
-}
-/* Slideshow Container */
-.slideshow {
-    display: flex; /* Display images in a row */
-    animation: slide 35s linear infinite; /* Adjust the duration as needed */
+    display: flex;
 }
 
-/* Style the individual slides */
 .gallery-image {
     display: none;
     height: 60%;
-    width: 75%; /* Adjust the width to your desired size */
-    margin: 0 auto; /* Center the image horizontally */
+    width: 75%; 
+    margin: 0 auto;
 }
+
+/* Stil för knapparna till bildspelet */
 #prevBtn {
     float:left;
 
@@ -87,7 +107,7 @@ nav ul li a {
     font-size: 1em;
 }
 
-/* Style the text section */
+/* Stil för text */
 .text {
     background-color: #fff;
     padding: 20px;
@@ -103,7 +123,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Style the contact section */
+/* Stil för kontaktsidan */
 .contact {
     background-color: #333;
     color: #fff;
@@ -114,16 +134,16 @@ nav ul li a {
 }
 
 .contact h3 {
-    font-size: 20px;
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0 0 0.2em 0;
 }
 
 .contact p {
-    font-size: 16px;
-    margin: 0 0 1em 0;
-   
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
 }
 
-/* Style the footer */
 footer {
     background-color: #222;
     color: #fff;
@@ -131,90 +151,125 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
-
-
 .grid-container {
     display: grid;
     
 }
 .grid-item {
-    
-    margin: 1em 1em 0 1em;
-    
+    margin: 1em 1em 0 1em;  
 }
 
 .flexcontainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap:1em;
-    align-self: center;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    margin: 2em; 
 }
+
 .projectColumn {
-    width: 295px;
+    width: 265px;
+    border: 2px solid #393939;
+    padding: 10px;  
+    text-align: center;
+}
+.flex-item {
+    margin: 0 10px;
 }
 .projectColumn h3 {
     text-align: center;
-    }
+}
+.projectColumn a {
+    text-align: center;
+    color:#000000;
+    text-decoration: none;
+}
+.projectColumn a:hover {
+    background-color: #333;
+    color: white;
+    padding: 0.3em;
+}
+/* stil för bilder */
 
 img {
     width: 100%;
 }
+
 .thumb {
     width: 100%;
 }
+
 .thumbProdukt {
     width: 30em;
     height: 30em;
+    
 }
-.item3
-{
+.thumbPersonal {
+    width: 30em;
+    height: 30em;
+}
+
+.item3 {
     text-align: center;
+}
+.item5 {
+    text-align: center;
+}
+.item7 {
+    text-align: center;
+}
+.item7 a {
+    text-align: center;
+    color:#000000;
+    text-decoration: none;
+}
+.item7 a:hover {
+    background-color: #333;
+    color: white;
+    padding: 0.3em;
 }
 .item10{
     background-color: #333;
     text-align: center;
     margin: 1em 0 -1em 0;
 }
+
 .item11 {
     text-align: center;
 }
+
 .item14{
     text-align: center;
 }
-#namnRubrik
-{
+
+#namnRubrik {
     text-align: center;
     margin: 1em 0 0 0;
 }
+
 /* Visar felmeddelande i kontakt */
-.error-message 
-{
+.error-message {
     color: red;
     font-size: 14px;
 }
 
 /* centrerar sliderbaren på sidan */
-.wrap
-{
+.wrap {
   max-width: 60%;
   margin: 150px auto 0; 
-  scale: 75%;
 }
 
 /* stil för barsen*/
-.bar
-{
+.bar {
   color:#000000;
-  letter-spacing: 3px;
   font-weight: 400px;
-  font-size: 18px;
+  font-size: 1em;
   position:relative;
+  scale: 80%;
+  margin: -2em 0 0 0;
 }
 
 /* stil för själva bars-elementen*/ 
-.bar span
-{
+.bar span {
   position:relative;
   display: inline-block;
   margin-bottom: 30px;
@@ -225,8 +280,7 @@ img {
 }
 
 /* stil och animation för de animerade barsen*/
-.bar span:before
-{
+.bar span:before {
   position: absolute;
   content:'';
   top: 6px;
@@ -238,77 +292,136 @@ img {
   animation: bar 8s ease;
 }
 
-/* hur stor bar 1 ska bli*/
-#bar1:nth-child(1) span:before
-{
+/* hur stora barsen ska bli */
+
+#bar1:nth-child(1) span:before {
   width:85%;
 }
 
-/* hur stor bar 2 ska bli*/
-#bar2:nth-child(2) span:before
-{
+#bar2:nth-child(2) span:before {
   width:70%;
 }
 
-/* hur stor bar 3 ska bli*/
-#bar3:nth-child(3) span:before
-{
+#bar3:nth-child(3) span:before {
   width:90%;
 }
 
-/* hur stor bar 4 ska bli*/
-#bar4:nth-child(4) span:before
-{
+#bar4:nth-child(4) span:before {
   width:30%;
 }
-#bar5:nth-child(1) span:before
-{
+
+#bar5:nth-child(1) span:before {
   width:20%;
 }
-#bar6:nth-child(2) span:before
-{
+
+#bar6:nth-child(2) span:before {
   width:60%;
 }
-#bar7:nth-child(3) span:before
-{
+
+#bar7:nth-child(3) span:before {
   width:20%;
 }
-#bar8:nth-child(4) span:before
-{
+
+#bar8:nth-child(4) span:before {
   width:85%;
 }
-#bar9:nth-child(1) span:before
-{
+
+#bar9:nth-child(1) span:before {
   width:40%;
 }
-#bar10:nth-child(2) span:before
-{
+
+#bar10:nth-child(2) span:before {
   width:5%;
 }
-#bar11:nth-child(3) span:before
-{
+
+#bar11:nth-child(3) span:before {
   width:60%;
 }
-#bar12:nth-child(4) span:before
-{
+
+#bar12:nth-child(4) span:before {
   width:30%;
 }
-#bar13:nth-child(1) span:before
-{
+
+#bar13:nth-child(1) span:before {
   width:25%;
 }
-#bar14:nth-child(2) span:before
-{
+
+#bar14:nth-child(2) span:before {
   width:95%;
 }
-#bar15:nth-child(3) span:before
-{
+
+#bar15:nth-child(3) span:before {
   width:80%;
 }
-#bar16:nth-child(4) span:before
-{
+
+#bar16:nth-child(4) span:before {
   width:40%;
 }
+
+#barFredrik1:nth-child(1) span:before {
+  width:15%;
+}
+
+#barFredrik2:nth-child(2) span:before {
+  width:80%;
+}
+
+#barFredrik3:nth-child(3) span:before {
+  width:98%;
+}
+
+#barFredrik4:nth-child(4) span:before {
+  width:0%;
+}
+
+#barMåns1:nth-child(1) span:before {
+  width:85%;
+}
+
+#barMåns2:nth-child(2) span:before {
+  width:90%;
+}
+
+#barMåns3:nth-child(3) span:before {
+  width:50%;
+}
+
+#barMåns4:nth-child(4) span:before {
+  width:20%;
+}
+
+#barFelix1:nth-child(1) span:before {
+  width:85%;
+}
+
+#barFelix2:nth-child(2) span:before {
+  width:90%;
+}
+
+#barFelix3:nth-child(3) span:before {
+  width:90%;
+}
+
+#barFelix4:nth-child(4) span:before {
+  width:20%;
+}
+
+#barSimon1:nth-child(1) span:before {
+  width:85%;
+}
+
+#barSimon2:nth-child(2) span:before {
+  width:30%;
+}
+
+#barSimon3:nth-child(3) span:before {
+  width:15%;
+}
+
+#barSimon4:nth-child(4) span:before {
+  width:80%;
+}
+
 /* för att möjligöra animationen */
 @keyframes bar
 {
@@ -320,6 +433,8 @@ img {
 }
 #produktLista{
     padding: 0.5em;
+
+/* Stil för kundvagnsfönstret */
 }
 #cartWindow {
     position: fixed;
@@ -327,17 +442,21 @@ img {
     left: 7em;
     transform: translate(-50%, -50%);
     width: 200px;
-    max-width: 400px; /* Justera den maximala bredden efter ditt behov */
+    max-width: 400px;
     background-color: rgb(33, 106, 62);
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    display: none; /* Dölj varukorgsfönstret från början */
-    overflow-y: auto; /* Aktivera vertikal rullning vid behov */
-    max-height: 130px; /* Justera den maximala höjden efter ditt behov */
+    display: none; 
+    overflow-y: auto;
+    max-height: 130px; 
     margin: 0 auto;
     padding: 5px;
 }
+#cartIcon {
+    text-align: left;
+}
+/* Så att kundvagnen får struktur */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -349,13 +468,57 @@ img {
 
 .cart-item-details {
     flex-grow: 1;
-    font-size: 14px; /* Reduce the font size */
+    font-size: 14px; 
 }
 
 .cart-item button {
-    font-size: 12px; /* Reduce the font size for the "Ta bort" button */
+    font-size: 12px; 
 }
-/* CSS for 1280px and more */
+
+#kassaKnapp{
+    margin-left: 4em;
+}
+
+/* Stil för kontaktsidan */
+#name{
+    width: 14em;
+}
+
+#email{
+    width: 14em;
+}
+
+#telefon{
+    width: 14em;
+}
+
+#meddelande{
+    margin: 0.5em 0 0 0;
+}
+
+#namnRuta {
+    margin: 0.5em 0 0 0;
+}
+
+#epostRuta {
+    margin: 0.5em 0 0 0;
+}
+
+#telefonRuta {
+    margin: 10em 0 0 0;
+}
+
+/* Stil för företagsinformationsrutan */
+#infoApp {
+    border: 2px solid #393939;
+    padding: 10px; 
+    margin: 20px 0; 
+    text-align: center;
+    max-width: 850px;
+    margin: 20px auto; 
+}
+
+/* CSS för 1280px och större upplösning */
 @media only screen and (min-width: 1280px) {
     .item1 {
         grid-column: 1 / span 4;
@@ -414,67 +577,115 @@ img {
  
     }
     .item14 {
-        grid-column: 1 /span 2;
+        grid-column: 1 / span 2;
         grid-row: 4;
     }
     .item15 {
         grid-column: 1 / span 2;
         grid-row: 5;
     }
-    .item20{
+    .item16 {
         grid-column: 1;
+        grid-row: 6;
+    }
+    .item170{
+        grid-column: 2;
+        grid-row: 6;
+    }
+    .item171{
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .item172{
+        grid-column: 2;
+        grid-row: 7;
+    }
+    .item173{
+        grid-column: 1;
+        grid-row: 8;
+    }
+    .item174{
+        grid-column: 2;
+        grid-row: 8;
+    }
+    .item175{
+        grid-column: 1;
+        grid-row: 9;
+    }
+    .item176{
+        grid-column: 2;
+        grid-row: 9;
+    }
+    .item177{
+        grid-column: 1;
+        grid-row: 10;
+    }
+    .item178{
+        grid-column: 2;
+        grid-row: 10;
+    }
+    .item179{
+        grid-column: 1 /span 2;
+        grid-row: 11;
+    }
+    .item20{
+        grid-column: 1 /span 2;
         grid-row: 1;
     }
        
     .item21{
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 1;
+        grid-row: 2;
         
     }
     .item22{
-        grid-column:1 /span 2;
+        grid-column:2;
         grid-row: 2;
         
     }
     .item23{
-        grid-column: 1;
+        grid-column: 1 /span 2;
         grid-row: 3;
     }
     .item24{
-        grid-column: 2;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: 4;
     } 
     .item25{
-        grid-column: 1 /span 2;
+        grid-column: 2;
         grid-row: 4;
     }
     .item26{
-        grid-column: 1;
-        grid-row: 5;
-    }
-    .item27{
-        grid-column: 2;
-        grid-row: 5;
-    }
-    .item28{
         grid-column: 1 /span 2;
         grid-row: 6;
     }
-    .item29{
+    .item27{
         grid-column: 1;
         grid-row: 7;
     }
-    .item30{
+    .item28{
         grid-column: 2;
         grid-row: 7;
     }
-    .item31{
+    .item29{
         grid-column: 1 /span 2;
         grid-row: 8;
     }
+    .item30{
+        grid-column: 1;
+        grid-row: 9;
+    }
+    .item31{
+        grid-column: 2;
+        grid-row: 9;
+    }
     .item32{
         grid-column: 1/span 2;
-        grid-row: 9;
+        grid-row: 10;
+    }
+    .item33{
+        grid-column: 1/span 2;
+        grid-row: 11;
     }
     .item41{
         grid-column: 1;
@@ -484,11 +695,40 @@ img {
         grid-column: 1;
         grid-row: 2;
     }
+    .item50 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item51 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .item52 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .item53 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #menu {
+        display: block;
+    }
+    #menu li {
+        display: inline;
+    }
+    #menuIcon {
+        display: none;
+    }
     #produktLista{
         font-size: 1.5em;
         padding: 0.5em;
-        margin-left: -15em;
+        margin-left: -10em;
         font-family: 'Questrial', sans-serif
+    }
+    #barProdukt{
+        margin-left: -15em;
+        margin-top: 2em;
     }
     #langTexter{
         padding: 1em;
@@ -496,6 +736,24 @@ img {
     }
     #varukorgKnapp{
         font-size: 1.5em;
-        margin-left: -15em;
+    }
+    #meddelande{
+        width: 30em;
+        height: 10em;
+        text-align: top;
+    }
+    #menu{
+        text-align: right;
+    }
+    #menu a {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    #menu a:hover {
+        padding: 1em;
+    }
+    #cartIcon{
+        text-align: left;
+        font-size: 1em;
     }
 }
