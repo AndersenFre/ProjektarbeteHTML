@@ -34,7 +34,7 @@
             <h1>Felix Lundqvist</h1>
         </div>
         <div class="grid-item item12">
-            <img src="" alt="Bild på Felix" class="thumbPersonal">
+            <img src="PorträttFelix.png" alt="Bild på Felix" class="thumbPersonal">
         </div>
         <div class="grid-item item13">
             <div class="wrap">
@@ -59,7 +59,9 @@
     <div class="grid-item item14">
         <div v-for="person in personer">
             <div v-if="person.id === 4">
-                <p> {{person.omGuide}} </p>
+                <hr>
+                <p> {{person.text}} </p>
+                <hr>
             </div>
         </div>
     </div>

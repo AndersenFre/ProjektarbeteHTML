@@ -34,7 +34,7 @@
             <h1>Fredrik Andersen</h1>
         </div>
         <div class="grid-item item12">
-            <img src="" alt="Bild på Fredrik" class="thumbPersonal">
+            <img src="PorträttFredrik.png" alt="Bild på Fredrik" class="thumbPersonal">
         </div>
         <div class="grid-item item13">
             <div class="wrap">
@@ -59,7 +59,9 @@
     <div class="grid-item item14">
         <div v-for="person in personer">
             <div v-if="person.id === 3">
-                <p> {{person.omGuide}} </p>
+                <hr>
+                <p> {{person.text}} </p>
+                <hr>
             </div>
         </div>
     </div>
