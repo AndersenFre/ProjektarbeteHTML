@@ -12,38 +12,36 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul id="menu">
-                    <li><a href="Projekt1.html">Hem</a></li>
-                    <li><a href="Produkt.html">Webbshop</a></li>
-                    <li><a href="#infoApp">Om oss</a></li>
-                    <li><a href="Kontakt.html">Kontakt</a></li>
-                    <li>
-                        <div id="kundvagnApp">
-                            <div id="cartIcon">
-                                <i  class="fa fa-shopping-cart"></i>
-                                <span id="cart-counter">{{ cartCount }}</span>
-                                <button @click="openCartWindow">Open Cart</button>
-                                <div id="cartWindow">
-                                    <h2>Kundvagn</h2>
-                                    <p>Totalt: {{ vagnTotal }} sek</p>
-                                    <ul>
-                                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
-                                            <div class="cart-item-details">
-                                                <h3>{{ item.titel }}</h3>
-                                                <p>Pris: {{ item.pris }} sek</p>
-                                            </div>
-                                            <button @click="removeFromVagn(index)">Ta bort</button>
-                                        </li>
-                                    </ul>
-                                    <button @click="closeCartWindow">Stäng</button>
-                                    <button id="kassaKnapp">Till kassan</button>
+            <label for="menu-toggle" id="menuIcon">&#9776;</label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="menu">
+                <li><a href="Projekt1.html" class="smooth">Hem</a></li>
+                <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
+                <li><a href="#infoApp" class="smooth">Om oss</a></li>
+                <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
+            </ul>
+            <div id="kundvagnApp">
+                <div id="cartIcon">
+                    <i  class="fa fa-shopping-cart"></i>
+                    <span id="cart-counter">{{ cartCount }}</span>
+                    <button @click="openCartWindow">Open Cart</button>
+                    <div id="cartWindow">
+                        <h2>Kundvagn</h2>
+                        <p>Totalt: {{ vagnTotal }} sek</p>
+                        <ul>
+                            <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                <div class="cart-item-details">
+                                    <h3>{{ item.titel }}</h3>
+                                    <p>Pris: {{ item.pris }} sek</p>
                                 </div>
-                            </div>    
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+                                <button @click="removeFromVagn(index)">Ta bort</button>
+                            </li>
+                        </ul>
+                        <button @click="closeCartWindow">Stäng</button>
+                        <button id="kassaKnapp">Till kassan</button>
+                    </div>
+                </div>    
+            </div>
         </header>
         <div class="grid-container">
             <div class="grid-item item1">
@@ -97,7 +95,7 @@
                                         <p> {{person.kortText}} </p>
                                         <br>
                                         <br>
-                                        <a href="Simon.html"> Läs mer</a>
+                                        <a href="Simon.html" class="smooth"> Läs mer</a>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +110,7 @@
                                         <br>
                                         <p> {{person.kortText}} </p>
                                         <br>
-                                        <a href="Måns.html">Läs mer!</a>
+                                        <a href="Måns.html" class="smooth">Läs mer!</a>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +127,7 @@
                                         <br>
                                         <br>
                                         <br>
-                                        <a href="Fredrik.html">Läs mer!</a>
+                                        <a href="Fredrik.html" class="smooth">Läs mer!</a>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +143,7 @@
                                         <p> {{person.kortText}} </p>
                                         <br>
                                         <br>
-                                        <a href="Felix.html">Läs mer!</a>
+                                        <a href="Felix.html" class="smooth">Läs mer!</a>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +218,7 @@
                 </div> 
             </div>
             <div class="grid-item item7">
-                <h2><a href="Produkt.html">Gå till våra resor</a></h2>
+                <h2><a href="Produkt.html" class="smooth">Gå till våra resor</a></h2>
             </div>   
             <div class="grid-item item8">
                 <div class="contact">

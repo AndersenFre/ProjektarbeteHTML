@@ -15,15 +15,44 @@ header {
     padding: 0.5em 0.5em;
     margin: 0 0 -1em 0;
     background-attachment: fixed;
+    text-align: right;
     
 }
 .rubrik{
-        background-color: #333;
-        color: #fff;
-        text-align: center; 
-        margin: 0 -1em 0 -1em;
-        padding: 0.5em;
-        text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: center; 
+    margin: 0 -1em 0 -1em;
+    padding: 0.5em;
+    text-align: center;
+}
+#menu {
+    display: none;
+    text-align: right;
+
+}
+#menu-toggle:checked ~ #menu {
+    display: block;
+}
+#menu li {
+    display: block;
+    text-align: right;
+    
+}
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+#menu a:hover {
+    background-color: white;
+    color: #000000;
+}
+.smooth {
+    transition: all 0.4s ease-in-out;
+}
+#menu-toggle {
+    display: none;
 }
 
 nav ul {
@@ -37,12 +66,6 @@ nav ul li {
 
 nav ul li:last-child {
     margin-right: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
 }
 .rubrik h3
 {
@@ -128,12 +151,10 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
-
-
 .grid-container {
-      display: grid;
+    display: grid;
+    
 }
-
 .grid-item {
     margin: 1em 1em 0 1em;  
 }
@@ -148,19 +169,25 @@ footer {
 .projectColumn {
     width: 265px;
     border: 2px solid #393939;
-    padding: 10px; 
+    padding: 10px;  
     text-align: center;
 }
-
-.flex-item
-{
+.flex-item {
     margin: 0 10px;
 }
-
 .projectColumn h3 {
     text-align: center;
 }
-
+.projectColumn a {
+    text-align: center;
+    color:#000000;
+    text-decoration: none;
+}
+.projectColumn a:hover {
+    background-color: #333;
+    color: white;
+    padding: 0.3em;
+}
 /* stil för bilder */
 
 img {
@@ -179,7 +206,6 @@ img {
 .thumbPersonal {
     width: 30em;
     height: 30em;
-    margin-left: 30%;
 }
 
 .item3 {
@@ -261,7 +287,7 @@ img {
   left: 5px;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to left, rgb(202, 8, 8), rgb(78, 219, 216));
+  background: linear-gradient(to left, rgb(126, 243, 167), rgb(8, 116, 12));
   border-radius: 30px;
   animation: bar 8s ease;
 }
@@ -385,11 +411,11 @@ img {
 }
 
 #barSimon2:nth-child(2) span:before {
-  width:30%;
+  width:78%;
 }
 
 #barSimon3:nth-child(3) span:before {
-  width:15%;
+  width:75%;
 }
 
 #barSimon4:nth-child(4) span:before {
@@ -427,7 +453,9 @@ img {
     margin: 0 auto;
     padding: 5px;
 }
-
+#cartIcon {
+    text-align: left;
+}
 /* Så att kundvagnen får struktur */
 .cart-item {
     display: flex;
@@ -530,35 +558,83 @@ img {
         width: 35vw;
     }
     .item10{
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 1;
     }
 
     .item11 {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 2;
+        margin: 2em 0 2em 0;
     }
     
     .item12 {
-        grid-column: 1 / span 2;
+        grid-column: 1;
         grid-row: 3;
     }
     .item13 {
-        grid-column: 1  / span 2;
-        grid-row: 4;
+        grid-column: 2;
+        grid-row: 3;
+        width: 500px;
+        margin-left: -8em;
+
  
     }
     .item14 {
-        grid-column: 1 /span 2;
-        grid-row: 5;
+        grid-column: 3;
+        grid-row: 3; 
+        width: 500px;
+        margin-top: 3em;
+        margin-left: -3em;
     }
     .item15 {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
+        grid-row: 5;
+        text-align: center;
+    }
+    .item16 {
+        grid-column: 1;
         grid-row: 6;
     }
-    .item16{
-        grid-column: 1 / span 2;
+    .item170{
+        grid-column: 2 / span 2;
+        grid-row: 6;
+    }
+    .item171{
+        grid-column: 1;
         grid-row: 7;
+    }
+    .item172{
+        grid-column: 2 / span 2;
+        grid-row: 7;
+    }
+    .item173{
+        grid-column: 1 ;
+        grid-row: 8;
+    }
+    .item174{
+        grid-column: 2 / span 2;
+        grid-row: 8;
+    }
+    .item175{
+        grid-column: 1;
+        grid-row: 9;
+    }
+    .item176{
+        grid-column: 2 / span 2;
+        grid-row: 9;
+    }
+    .item177{
+        grid-column: 1;
+        grid-row: 10;
+    }
+    .item178{
+        grid-column: 2 / span 2;
+        grid-row: 10;
+    }
+    .item179{
+        grid-column: 1 /span 3;
+        grid-row: 11;
     }
     .item20{
         grid-column: 1 /span 2;
@@ -643,6 +719,15 @@ img {
         grid-column: 1;
         grid-row: 4;
     }
+    #menu {
+        display: block;
+    }
+    #menu li {
+        display: inline;
+    }
+    #menuIcon {
+        display: none;
+    }
     #produktLista{
         font-size: 1.5em;
         padding: 0.5em;
@@ -668,7 +753,15 @@ img {
     #menu{
         text-align: right;
     }
+    #menu a {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    #menu a:hover {
+        padding: 1em;
+    }
     #cartIcon{
         text-align: left;
+        font-size: 1em;
     }
 }

@@ -1,128 +1,144 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <title>Anställd</title>
-        <script defer src="https://unpkg.com/vue@3"></script>
-        <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <script defer src="scriptKontakt.js"></script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul id="menu">
-                    <li><a href="Projekt1.html">Hem</a></li>
-                    <li><a href="Produkt.html">Webbshop</a></li>
-                    <li><a href="Projekt1.html">Om oss</a></li>
-                    <li><a href="Kontakt.html">Kontakt</a></li>
-                    <li>
-                        <div id="kundvagnApp">
-                            <div id="cartIcon">
-                                <i  class="fa fa-shopping-cart"></i>
-                                <span id="cart-counter">{{ cartCount }}</span>
-                                <button @click="openCartWindow">Open Cart</button>
-                                    <div id="cartWindow">
-                                        <h2>Kundvagn</h2>
-                                        <p>Totalt: {{ vagnTotal }} sek</p>
-                                        <ul>
-                                            <li v-for="(item, index) in vagn" :key="index" class="cart-item">
-                                                <div class="cart-item-details">
-                                                    <h3>{{ item.titel }}</h3>
-                                                    <p>Pris: {{ item.pris }} sek</p>
-                                                </div>
-                                                <button @click="removeFromVagn(index)">Ta bort</button>
-                                            </li>
-                                        </ul>
-                                        <button @click="closeCartWindow">Stäng</button>
-                                        <button id="kassaKnapp">Till kassan</button>
-                                    </div>
-                            </div>    
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div class="grid-container">
-            <div class="grid-item item10">
-                <div class="rubrik">
-                    <h1> Beyond Bounds Adventure</h1>
-                    <h3> Här väntar ditt nästa äventyr </h3>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simon Sjöman</title>
+<script defer src="https://unpkg.com/vue@3"></script>
+<script defer src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+<script defer src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+<header>
+    <nav>
+        <ul id="menu">
+            <li><a href="Projekt1.html">Hem</a></li>
+            <li><a href="Produkt.html">Webbshop</a></li>
+            <li><a href="Projekt1.html">Om oss</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div id="personApp">
+    <div class="grid-container">
+    <div class="grid-item item10">
+        <div class="rubrik">
+        <h1> Beyond Bounds Adventure</h1>
+        <h3> Här väntar ditt nästa äventyr </h3>
+    </div>
+    </div>
+
+        <div class="grid-item item11">
+            <h1>Simon Sjöman</h1>
+        </div>
+        <div class="grid-item item12">
+            <img src="PorträttSimon.png" alt="Bild på Simon" class="thumbPersonal">
+        </div>
+        <div class="grid-item item13">
+            <div class="wrap">
+                <div class="bar" id="barSimon1">
+                    <h3> Naturkännedeom </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barSimon2">
+                    <h3> Fysiskt Uthållig </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barSimon3">
+                    <h3> Sjukvårdskunskap </h3>
+                    <span> </span>
+                </div>
+                <div class="bar" id="barSimon4">
+                    <h3> Lokala Språkkunskaper </h3>
+                    <span> </span>
                 </div>
             </div>
-            <div class="grid-item item11">
-                <h1>Simon Sjöman</h1>
+        </div>
+    <div class="grid-item item14">
+        <div v-for="person in personer">
+            <div v-if="person.id === 1">
+                <h3> {{person.titel2}}</h3>
+                <hr>
+                <br>
+                <p> {{person.text}} </p>
+                <br>
+                <hr>
             </div>
-            <div class="grid-item item12">
-                <img src="PorträttSimon.png" alt="Bild på Simon" class="thumbPersonal">
-            </div>
-            <div class="grid-item item13">
-                <p>Simon är en passionerad och erfaren djungelguide som har fördjupat sig i de förtrollande och ofta mystiska djunglarna runt om i världen. Hans hjärta klappar för naturen och han har ägnat sitt liv åt att utforska och dela med sig av djungelns underverk till människor från alla hörn av världen.
+        </div>
+    </div>
+    
+    <div class="grid-item item15">
+        <h2>Tidigare projekt</h2>
+        <br>
+    </div>
 
-                Med ett vänligt leende på läpparna och gnistrande ögon, välkomnar Simon alla äventyrslystna själar till djungelns förunderliga värld. Hans förmåga att se de minsta detaljerna och uppskatta skönheten i varje växt och varelse är inspirerande. Han kan identifiera växter med medicinska egenskaper, visa på spår av djur och berätta intressanta historier om den biologiska mångfalden.
-                
-                Simon är inte bara en guide; han är en pedagog. Han älskar att dela med sig av sin kunskap om djungelns ekosystem, växter och djur. Han berättar levande historier om djurens beteenden och hur allting är sammanflätat i en komplex och fascinerande dans av liv.
-                
-                Djungeln är hans hem, och han behandlar den med stor respekt och ödmjukhet. Han betonar alltid vikten av att vårda och bevara den unika miljö där han arbetar. Han är en förespråkare för hållbar turism och uppmuntrar besökare att resa på ett sätt som respekterar och skyddar naturen.
-                
-                Simon har en djup förståelse för säkerhet i djungeln. Han är noggrann med att informera besökare om risker och vägleda dem genom säkra vägar och beteenden. Han är även utrustad med kunskap om första hjälpen och nödsituationer för att säkerställa en trygg upplevelse för alla.
-                
-                Sammanfattningsvis är Simon en passionerad, kunnig och omtänksam guide som tar dig med på en resa genom djungelns förtrollande värld. Med honom vid din sida är varje steg en upptäckt och varje ögonblick en skatt i djungelns rika sköte.</p>
-            </div>
-            <div class="grid-item item14">
-                <h1>Upplevelser</h1>
-                <p>I en avlägsen del av Amazonas djungel var Simon vår djungelguide, en man med djup förståelse för skogen och dess hemligheter. Vi hade kommit för att utforska denna orörda plats och Simon skulle vara vår kunniga följeslagare genom denna äventyrliga resa.
+    <div class="grid-item item16">
+        <img src="" alt="Från en resa" class="thumbPersonal">
+    </div>
 
-                En kylig dimma svepte genom träden när natten föll. Simon hade berättat om en mytomspunnen plats i djungeln, där lokala legender talade om förlorade själar och en mystisk närvaro som vandrade nattetid. Han varnade oss för att inte vandra iväg på egen hand, särskilt inte när mörkret hade lagt sig.
-                
-                En kväll samlades vi runt lägerelden med Simon. Han berättade historier om djungelns gamla andar och de som vandrade i skuggorna. Det var något med hans berättelser som skakade om oss, men vi skrattade och skämtade för att dölja vår oro.
-                
-                Senare den kvällen, när månen var dold bakom tunga moln, kände vi en plötslig kyla i luften. Lägerelden flackade och skogen tycktes ha tystnat. Där satt vi, spända och vaksamma, och då hörde vi det - ett lågt, viskande ljud. Det lät som en sång, en melodi från en svunnen tid.
-                
-                Simon varnade oss att inte låta oss lockas av det, men något drev några av oss att följa ljudet. Vi bröt mot hans råd, dragna mot det mystiska. Simon skyndade efter oss, varnande för farorna i mörkret.
-                
-                Sakta närmade vi oss källan till sången. Det var en gammal ruin, täckt av mossa och övergiven av tiden. Men sången kom från ingenstans, ingen synlig källa. Plötsligt frös luften till is, och en våg av skräck sköljde över oss.
-                
-                Då började skuggor röra sig runt ruinerna, som om de hade fått liv. Vår oro växte, och vi insåg att vi måste fly. Men skuggorna stängde in oss, och Simon manade oss att hålla ihop och inte låta rädslan styra.
-                
-                När vi tillsammans kämpade oss igenom skuggorna, hörde vi Simons lugna röst som guidade oss ut. Han visste vägen genom mörkret, och vi följde honom tillbaka till lägerplatsen. Den kusliga natten hade slutligen blivit ett minne, men skräcken av det okända skulle följa med oss resten av våra liv.
-                
-                Simon visade sig vara vår räddning i en skrämmande situation, en som vi aldrig skulle glömma. Han var inte bara en djungelguide; han var vår beskyddare i det kusliga och det oförklarliga.</p>
-            </div>
-            <div class="grid-item item15">
-                <div class="wrap">
-                    <div class="bar" id="barSimon1">
-                        <h3> Varmt klimat </h3>
-                        <span> </span>
-                    </div>
-                    <div class="bar" id="barSimon2">
-                        <h3> Boendeupplevelse </h3>
-                        <span> </span>
-                        </div>
-                    <div class="bar" id="barSimon">
-                        <h3> Lokalsinne </h3>
-                        <span> </span>
-                    </div>
-                    <div class="bar" id="barSimon4">
-                        <h3> Djurupplevelse </h3>
-                        <span> </span>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item item16">
+    <div class="grid-item item170">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="grid-item item171">
+        <img src="" alt="Från en resa" class="thumbPersonal">
+    </div>
+
+    <div class="grid-item item172">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="grid-item item173">
+        <img src="" alt="Från en resa" class="thumbPersonal">
+    </div>
+
+    <div class="grid-item item174">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="grid-item item175">
+        <img src="" alt="Från en resa" class="thumbPersonal">
+    </div>
+
+    <div class="grid-item item176">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    
+
+    <div class="grid-item item177">
+        <img src="" alt="Från en resa" class="thumbPersonal">
+    </div>
+
+    <div class="grid-item item178">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="grid-item item179">
                 <div class="contact">
                     <h3>Kontakt Information</h3>
                     <p>BeyondBoundsAdventure@xtreme.com</p>
                     <p>Telefon: (+46) 456-7890</p>
                     <p>Address: Drottninggatan 3, Örebro</p>
                     <br>
-                </div>
-                <footer>
-                    <p>&copy; 2023 Beyond Bounds Adventure</p>
-                </footer>
+                    </div>
+                    <footer>
+                        <p>&copy; 2023 Your Website</p>
+                    </footer> 
             </div>
-        </div>
-    </body>
+    </div>
+    </div>
+
+
+</body>
 </html>
