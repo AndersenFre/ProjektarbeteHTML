@@ -14,16 +14,37 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul id="menu">
-                <!-- Länkar ska in här -->
-                <li><a href="Projekt1.html">Hem</a></li>
-                <li><a href="Produkt.html">Webbshop</a></li>
-                <li><a href="Projekt1.html">Om oss</a></li>
-                <li><a href="Kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-        </header>
+        <label for="menu-toggle" id="menuIcon">&#9776;</label>
+        <input type="checkbox" id="menu-toggle">
+        <ul id="menu">
+            <li><a href="Projekt1.html" class="smooth">Hem</a></li>
+            <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
+            <li><a href="#infoApp" class="smooth">Om oss</a></li>
+            <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
+        </ul>
+        <div id="kundvagnApp">
+            <div id="cartIcon">
+                <i  class="fa fa-shopping-cart"></i>
+                <span id="cart-counter">{{ cartCount }}</span>
+                <button @click="openCartWindow">Open Cart</button>
+                <div id="cartWindow">
+                    <h2>Kundvagn</h2>
+                    <p>Totalt: {{ vagnTotal }} sek</p>
+                    <ul>
+                        <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                            <div class="cart-item-details">
+                                <h3>{{ item.titel }}</h3>
+                                <p>Pris: {{ item.pris }} sek</p>
+                            </div>
+                            <button @click="removeFromVagn(index)">Ta bort</button>
+                        </li>
+                    </ul>
+                    <button @click="closeCartWindow">Stäng</button>
+                    <button id="kassaKnapp">Till kassan</button>
+                </div>
+            </div>    
+        </div>
+    </header>
         <div id="personApp">
         <div class="grid-container">
         <div class="grid-item item10">
@@ -62,7 +83,7 @@
         <div class="grid-item item14">
             <div v-for="person in personer">
                 <div v-if="person.id === 2">
-                    <p> {{person.text}} </p>
+                    <p> {{EmployeeProjects.text}} </p>
                 </div>
             </div>
         </div>
@@ -72,7 +93,7 @@
         </div>
 
         <div class="grid-item item16">
-            <img src="" alt="Från en resa till Taj Mahal" class="thumbPersonal">
+            <img src="bestigamounteverest.png" alt="Från en resa till Mount Everest." class="thumbPersonal">
         </div>
 
         <div class="grid-item item170">
@@ -82,7 +103,7 @@
         </div>
 
         <div class="grid-item item171">
-            <img src="" alt="Från en resa" class="thumbPersonal">
+            <img src="kinesiska muren..png" alt="Från en resa till Kinesiska Muren." class="thumbPersonal">
         </div>
 
         <div class="grid-item item172">
@@ -92,7 +113,7 @@
         </div>
 
         <div class="grid-item item173">
-            <img src="" alt="Från en resa" class="thumbPersonal">
+            <img src="Bada i Onsen.png" alt="Från en resa till Onsens badhus i Japan" class="thumbPersonal">
         </div>
 
         <div class="grid-item item174">
@@ -102,7 +123,7 @@
         </div>
 
         <div class="grid-item item175">
-            <img src="" alt="Från en resa" class="thumbPersonal">
+            <img src="förbjudnastaden.png" alt="Från en resa till den Förbjudna Staden." class="thumbPersonal">
         </div>
 
         <div class="grid-item item176">
@@ -113,7 +134,7 @@
         
 
         <div class="grid-item item177">
-            <img src="" alt="Från en resa" class="thumbPersonal">
+            <img src="gangesfloden.png" alt="Från en resa på Gangesfloden" class="thumbPersonal">
         </div>
 
         <div class="grid-item item178">
