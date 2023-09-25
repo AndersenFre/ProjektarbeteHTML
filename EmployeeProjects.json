@@ -26,11 +26,10 @@
         
     },
     {
-        "id": 4,
-        "namn": "Felix",
-        "titel": "Guiden på Savannen, Felix",
-        "kortText": "Med Felix som din guide på savannen kommer du att få uppleva en oförglömlig resa, full av spännande möten med vilda djur och insikter i savannens ekologi. Hans expertis och djupa respekt för den afrikanska naturen gör honom till den perfekta följeslagaren för en safari i detta fantastiska landskap.",
-        "text": "Möt vår savanneguide, Felix. Hans tidiga barndom var fylld av äventyr på de öppna slätterna, och han utvecklade en stark anknytning till den vilda och otämjda naturen som omgav hans hem. Felix mor var en erfaren safari- och viltguide, och hon delade generöst med sig av sin kunskap till sin son. Tillsammans utforskade de savannen och lärde sig de viktiga färdigheter som krävdes för att navigera i det ibland farliga men alltid spännande territoriet. Felix blev snabbt fascinerad av djurens beteenden och savannens skiftande landskap. När Felix blev äldre beslutade han sig för att följa i sin mors fotspår och blev en professionell savanneguide. Han har sedan dess delat med sig av sin djupa kunskap om savannens flora och fauna med resenärer från hela världen. Hans passion för att bevara det unika ekosystemet och vilda djurlivet på savannen är omisskännlig, och han är en engagerad förespråkare för hållbart ekoturism. Med Felix som din guide på savannen kommer du att få uppleva en oförglömlig resa, full av spännande möten med vilda djur och insikter i savannens ekologi. Hans expertis och djupa respekt för den afrikanska naturen gör honom till den perfekta följeslagaren för en safari i detta fantastiska landskap."
+        "id": 16,
+        "titel": "Bestigning av Kilimanjaro",
+        "kund": "Karin Flinck",
+        "om": "Karin och hennes familj bestämde sig för att ta med Felix och bestiga Afrikas mäktigaste berg, Kilimanjaro. Det tog 4 dagar att ta sig upp och 3 dagar att ta sig ner. Mellan varven i bergstigningen fick de se den utrotningshotade gorillan och massor med andra djur."
     }
 
 ]

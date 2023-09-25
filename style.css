@@ -287,7 +287,7 @@ img {
   left: 5px;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to left, rgb(202, 8, 8), rgb(78, 219, 216));
+  background: linear-gradient(to left, rgb(126, 243, 167), rgb(8, 116, 12));
   border-radius: 30px;
   animation: bar 8s ease;
 }
@@ -411,11 +411,11 @@ img {
 }
 
 #barSimon2:nth-child(2) span:before {
-  width:30%;
+  width:78%;
 }
 
 #barSimon3:nth-child(3) span:before {
-  width:15%;
+  width:75%;
 }
 
 #barSimon4:nth-child(4) span:before {
@@ -558,13 +558,14 @@ img {
         width: 35vw;
     }
     .item10{
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 1;
     }
 
     .item11 {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 2;
+        margin: 2em 0 2em 0;
     }
     
     .item12 {
@@ -574,22 +575,29 @@ img {
     .item13 {
         grid-column: 2;
         grid-row: 3;
+        width: 500px;
+        margin-left: -8em;
+
  
     }
     .item14 {
-        grid-column: 1 / span 2;
-        grid-row: 4;
+        grid-column: 3;
+        grid-row: 3; 
+        width: 500px;
+        margin-top: 3em;
+        margin-left: -3em;
     }
     .item15 {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 5;
+        text-align: center;
     }
     .item16 {
         grid-column: 1;
         grid-row: 6;
     }
     .item170{
-        grid-column: 2;
+        grid-column: 2 / span 2;
         grid-row: 6;
     }
     .item171{
@@ -597,15 +605,15 @@ img {
         grid-row: 7;
     }
     .item172{
-        grid-column: 2;
+        grid-column: 2 / span 2;
         grid-row: 7;
     }
     .item173{
-        grid-column: 1;
+        grid-column: 1 ;
         grid-row: 8;
     }
     .item174{
-        grid-column: 2;
+        grid-column: 2 / span 2;
         grid-row: 8;
     }
     .item175{
@@ -613,7 +621,7 @@ img {
         grid-row: 9;
     }
     .item176{
-        grid-column: 2;
+        grid-column: 2 / span 2;
         grid-row: 9;
     }
     .item177{
@@ -621,11 +629,11 @@ img {
         grid-row: 10;
     }
     .item178{
-        grid-column: 2;
+        grid-column: 2 / span 2;
         grid-row: 10;
     }
     .item179{
-        grid-column: 1 /span 2;
+        grid-column: 1 /span 3;
         grid-row: 11;
     }
     .item20{

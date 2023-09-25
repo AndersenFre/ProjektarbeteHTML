@@ -49,7 +49,22 @@ const infoApp = Vue.createApp({
 });
 // Tillåter Vue att genom mount förändra HTML-element med ID 'InfoApp'.
 infoApp.mount('#infoApp');
+// En Vue app för att hämta information om personal från JSON
+const projectApp = Vue.createApp({
+    data(){
+        return {
+            EmployeeProjects: []            
+        }
+    },
+    created () {
 
+        axios.get('EmployeeProjects.json')
+        .then((response) => {
+            this.EmployeeProjects = response.data;
+        })
+    }
+});
+projectApp.mount('#projectApp');
 // En Vue app för att skapa en kundvagn för våra produkter.
 // Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
