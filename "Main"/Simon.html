@@ -44,7 +44,7 @@
                 </div>    
             </div>
         </header>
-        <div class="grid-container">  
+        <div class="grid-container"> 
             <div class="grid-item item10">
                 <div class="rubrik">
                     <h1> Beyond Bounds Adventure</h1>
@@ -55,7 +55,7 @@
                 <h1>Simon Sjöman</h1>
             </div>
             <div class="grid-item item12">
-                <img src="PorträttSimon.png" alt="Bild på Simon" class="thumbPersonal">
+                <img src="PorträttSimonSida.png" alt="Bild på Simon" class="thumbPersonal">
             </div>
             <div class="grid-item item13">
                 <div class="wrap">
@@ -95,25 +95,26 @@
         <div id="projectApp">
             <div class="grid-container">
                 <div class="grid-item item15">
-                    <h2>Tidigare projekt</h2>
+                    <h2>Tidigare Expeditioner</h2>
                     <br>
                 </div>
                 <div class="grid-item item16">
-                    <img src="Jaguar.png" alt="Från en resa" class="thumbPersonal">
+                    <img src="Project1.png" alt="Från en resa" class="thumbPersonal">
                 </div>
                 <div class="grid-item item170">
                     <div v-for="project in EmployeeProjects">
                         <div v-if="project.id === 1">
-                            <h3> {{EmployeeProjects.titel}} </h3>
+                            <h3> {{project.titel}} </h3>
                             <ul>
                                 <li> {{project.kund}} </li>
+                                <br>
                                 <li> {{project.om}} </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item item171">
-                    <img src="Aztec.png" alt="Från en resa" class="thumbPersonal">
+                    <img src="Project2.png" alt="Från en resa" class="thumbPersonal">
                 </div>
                 <div class="grid-item item172">
                     <div v-for="project in EmployeeProjects">
@@ -121,13 +122,14 @@
                             <h3> {{project.titel}} </h3>
                             <ul>
                                 <li> {{project.kund}} </li>
+                                <br>
                                 <li> {{project.om}} </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item item173">
-                    <img src="Temple.png" alt="Från en resa" class="thumbPersonal">
+                    <img src="Project3.png" alt="Från en resa" class="thumbPersonal">
                 </div>
                 <div class="grid-item item174">
                     <div v-for="project in EmployeeProjects">
@@ -135,13 +137,14 @@
                             <h3> {{project.titel}} </h3>
                             <ul>
                                 <li> {{project.kund}} </li>
+                                <br>
                                 <li> {{project.om}} </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item item175">
-                    <img src="Idol.png" alt="Från en resa" class="thumbPersonal">
+                    <img src="Project4.png" alt="Från en resa" class="thumbPersonal">
                 </div>
                 <div class="grid-item item176">
                     <div v-for="project in EmployeeProjects">
@@ -149,13 +152,14 @@
                             <h3> {{project.titel}} </h3>
                             <ul>
                                 <li> {{project.kund}} </li>
+                                <br>
                                 <li> {{project.om}} </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item item177">
-                    <img src="By.png" alt="Från en resa" class="thumbPersonal">
+                    <img src="Project5.png" alt="Från en resa" class="thumbPersonal">
                 </div>
                 <div class="grid-item item178">
                     <div v-for="project in EmployeeProjects">
@@ -163,6 +167,7 @@
                             <h3> {{project.titel}} </h3>
                             <ul>
                                 <li> {{project.kund}} </li>
+                                <br>
                                 <li> {{project.om}} </li>
                             </ul>
                         </div>

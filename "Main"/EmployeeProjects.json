@@ -1,4 +1,4 @@
-[
+[   
     {
         "id": 1,
         "titel": "Jakten på den bortglömmda skatten, 1981",
@@ -28,5 +28,96 @@
         "titel": "Ett annant perspektiv, 2006",
         "kund": "Kunliga Antropoliogiska sällskapet",
         "om": "Vårt senaste äventyr i Amazonas erbjöd oss en chans att spendera tid tillsammas med lokalbefolkning och med deras hjälp utforska den svårslagna skönheten hos regnskogen efter mörkrets inbrott. Vi såg nattliga djur och hörde deras ljud medan vi vandrade under stjärnklara nätter. En magisk upplevelse."
+    },
+    {
+        "id": 6,
+        "titel": "Bestigning av Mount Everest i Nepal 2022",
+        "kund": "Kund: Atlas Copco AB",
+        "om": "En bild från när Måns och tillhörande grupp besteg Mount Everest. Expeditionen var Måns fjärde expedition med målet att bestiga världens högsta berg. Vandringen var en tuff utmaning som krävde en kämparglöd av varje deltagare"
+    },
+    {
+        "id": 7,
+        "titel": "Promenad på Kinesiska Muren 2020",
+        "kund": "Kund: ICA Kungsbacka AB",
+        "om": "Vandringen på Kinesiska Muren en varm vårmorgon, denna vandring var fantastisk och levde upp till de storslagna förväntningarna som fanns i gruppen. Promenaden varade i fyra timmar och kvällen präglades av en stor grillfest."
+    },
+    {
+        "id": 8,
+        "titel": "Bad i Japans kända badområde Onsen 2019",
+        "kund": "Kund: Örebro Universitet",
+        "om": "Japans kända badområde Onsen anser Måns är ett måste om man besöker Asiens östra delar. Beyond Bounds Adventures guide Måns med tillhörande grupp besökte med glädje denna fantastiska plats som snabbt blev resans höjdpunkt och tillförde balsam för varje individs själ."
+    },
+    {
+        "id": 9,
+        "titel": "Besök i Förbjudna Staden 2018",
+        "kund": "Kund: Linas matkasse AB",
+        "om": "Måns tog med sig Linas matkasse till den Förbjudna Staden i Kina. Besöket innefattade rundvandring och besök vid den välkända resturangen som vidgade gruppens smaklökar och gav inspiration från den Kinesiska matkulturen."
+    },
+    {
+        "id": 10,
+        "titel": "Båtfärd på Gangesfloden 2021",
+        "kund": "Kund: Youtube-kanalen \"JLC\"",
+        "om": "Resan på Gangesfloden tillsammans med JLC blev snabbt en succé då båtens kapten hade stor erfarenhet av flodens utmanande egenskaper. Utflykten varade i 5 timmar med flera stopp längs flodens småstäder som erbjöd flera vidgande smakupplevelser."
+    },
+    {
+        "id": 11,
+        "titel": "Forskningsexpedition på sydpolen -2021",
+        "kund":"Kund: Linköpnings Universitet",
+        "om": "Fredrik guidade en forskingsexpedtion på sydpolen som syftade till kontrollera isens tjocklek på sydpolen. Detta i intresse från Linköpings universitet på grund av globaluppvärmning och konsekvenserna av den."
+    },
+    {
+        "id": 12,
+        "titel": "Pingvinsafari -2021",
+        "kund":"Kund: SVT",
+        "om": "Med kamerateam från SVT genomfördes en Pingvinsafari på sydpolen. Detta för att dokumentera pingvinernas parningssäsong."
+    },
+    {
+        "id": 13,
+        "titel": "Kontroll av hälsa hos Megapingvinerna -2022",
+        "kund":"Kund: Oslo Universitet",
+        "om": "Fredrik ledde en forskningsgrupp till den mest avskiljda delen av sydpolen där Megapingvinerna bor. Denna underart av Pingvin finns endast på ett litet område och är utrotningshotad. Syftet med expeditionen var att undersöka artens bestånd."
+    },  
+    {
+        "id": 14,
+        "titel": "Kick-off med Ikea -2023",
+        "kund":"Kund: Ikea Sverige",
+        "om": "En enklare expedition på nordpolen där gruppen fick bo i igloos, observera isbjörnar och ett fantastiskt norrsken höll gruppen vakna hela natten."
+    },
+    {
+        "id": 15,
+        "titel": "Utforska farleder med isbrytare",
+        "kund":"Kund: Rederiet Mærsk A/S",
+        "om": "Guidade rederiet på isbrytaren HMS Copenhagen i syfte att undersöka och hitta nya transportleder genom norra ishavet."
+        
+    },
+    {
+        "id": 16,
+        "titel": "Bestigning av Kilimanjaro",
+        "kund": "Kund: Karin Flinck",
+        "om": "Karin och hennes familj bestämde sig för att ta med Felix och bestiga Afrikas mäktigaste berg, Kilimanjaro. Det tog 4 dagar att ta sig upp och 3 dagar att ta sig ner. Mellan varven i bergstigningen fick de se den utrotningshotade gorillan och massor med andra djur."
+    },
+    {
+        "id": 17,
+        "titel": "Safari och tältning",
+        "kund": "Kund: Karl-Henrik Andersson",
+        "om": "Karl-Henrik var väldigt sugen på en safari i savannen och tog kontakt med Felix. Safarin startade tidigt en måndag morgon och var klar söndag kväll samma vecka. Under tiden fick dem se massor av intressanta djur, växter och landskap. Tältningen gick bra men några gånger kunde man höra djuren som gick precis utanför."
+    },
+    {
+        "id": 18,
+        "titel": "Båtsafari",
+        "kund": "Kund: Magnus Sparv",
+        "om": "Magnus och hans föräldrar reste ner till Afrika för att bo på en båt i 7 dagar. Med Felix som kapten fick de se alla magiska djur och upplevelser som väntar ute på vattnet. De åkte även och stannade vid flera kuststäder på den södra kusten." 
+    },
+    {
+        "id": 19,
+        "titel": "Ta hand om skadade djur",
+        "kund": "Kund: UNICEF",
+        "om": "10 personer från UNICEF mötte upp guiden Felix utanför nationalparken Utopia. Uppdraget innebar en veckas spaning i området. Det svåraste var en noshörning som blivit av med sitt horn, men som till slut kunde räddas."
+    },
+    {
+        "id": 20,
+        "titel": "Lejonbrottning",
+        "kund": "Kund: Kalle Hurtig",
+        "om": "Kalle och hans kompisar hade bestämt sig för att åka ner och på träningsresa. En av aktiviteterna var den fruktade lejonbrottningen som guiden Felix stod för. Under aktiviteten fick Kalle brottas med ett flertal tama lejon. Alla hade roligt under denna vecka."
     }
 ]

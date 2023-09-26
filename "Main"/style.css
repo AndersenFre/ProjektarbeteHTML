@@ -151,12 +151,31 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
+
 .grid-container {
     display: grid;
     
 }
+
 .grid-item {
     margin: 1em 1em 0 1em;  
+}
+
+#projectApp img {
+    width: 250px;
+    height: 250px;
+}
+
+#projectApp h3 {
+    font-size: 1.7em;
+}
+
+#projectApp li {
+    font-size: 1.2em;
+}
+
+#personApp {
+    font-size: 1.1em;
 }
 
 .flexcontainer {
@@ -201,11 +220,11 @@ img {
 .thumbProdukt {
     width: 30em;
     height: 30em;
-    
 }
+
 .thumbPersonal {
-    width: 30em;
-    height: 30em;
+    width: 25em;
+    height: 25em;
 }
 
 .item3 {
@@ -230,7 +249,6 @@ img {
 .item10{
     background-color: #333;
     text-align: center;
-    margin: 1em 0 -1em 0;
 }
 
 .item11 {
@@ -359,35 +377,35 @@ img {
 }
 
 #barFredrik1:nth-child(1) span:before {
-  width:15%;
+  width:60%;
 }
 
 #barFredrik2:nth-child(2) span:before {
-  width:80%;
+  width:20%;
 }
 
 #barFredrik3:nth-child(3) span:before {
-  width:98%;
-}
-
-#barFredrik4:nth-child(4) span:before {
-  width:0%;
-}
-
-#barMåns1:nth-child(1) span:before {
-  width:85%;
-}
-
-#barMåns2:nth-child(2) span:before {
   width:90%;
 }
 
-#barMåns3:nth-child(3) span:before {
+#barFredrik4:nth-child(4) span:before {
+  width:75%;
+}
+
+#barMans1:nth-child(1) span:before {
+  width:75%;
+}
+
+#barMans2:nth-child(2) span:before {
+  width:60%;
+}
+
+#barMans3:nth-child(3) span:before {
   width:50%;
 }
 
-#barMåns4:nth-child(4) span:before {
-  width:20%;
+#barMans4:nth-child(4) span:before {
+  width:90%;
 }
 
 #barFelix1:nth-child(1) span:before {
@@ -395,11 +413,11 @@ img {
 }
 
 #barFelix2:nth-child(2) span:before {
-  width:90%;
+  width:95%;
 }
 
 #barFelix3:nth-child(3) span:before {
-  width:90%;
+  width:10%;
 }
 
 #barFelix4:nth-child(4) span:before {
@@ -561,36 +579,32 @@ img {
         grid-column: 1 / span 3;
         grid-row: 1;
     }
-
     .item11 {
         grid-column: 1 / span 3;
         grid-row: 2;
         margin: 2em 0 2em 0;
     }
-    
     .item12 {
         grid-column: 1;
         grid-row: 3;
+        margin-top: 2em ;
     }
     .item13 {
         grid-column: 2;
         grid-row: 3;
         width: 500px;
         margin-left: -8em;
-
- 
     }
     .item14 {
         grid-column: 3;
         grid-row: 3; 
         width: 500px;
-        margin-top: 3em;
+        margin-top: 1em;
         margin-left: -3em;
     }
     .item15 {
         grid-column: 1 / span 3;
         grid-row: 5;
-        text-align: center;
     }
     .item16 {
         grid-column: 1;
