@@ -74,36 +74,36 @@ nav ul li:last-child {
 
 /* Stil för bildspelet */
 .gallery {
-    padding: 10px;
-    text-align: center;
     display: flex;
 }
 
 .gallery-image {
     display: none;
-    height: 60%;
-    width: 75%; 
-    margin: 0 auto;
+    height: 75%;
+    width: 90%; 
+    margin: 0 0 0 0.5em;
+    padding: 10px;
 }
 
 /* Stil för knapparna till bildspelet */
 #prevBtn {
-    float:left;
-
+    float: left;
+    left: 2px;
 }
 
 #nextBtn {
     float: right;
+    right: 2px;
 }
 
 .controls button {
     background-color: #333;
     color: #fff;
-    padding: 20px 20px;
+    padding: 8px 8px;
     border: none;
     cursor: pointer;
-    position: relative;
-    top: 45%;
+    position: absolute;
+    top: 40%;
     font-size: 1em;
 }
 
@@ -151,38 +151,46 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
+
 .grid-container {
     display: grid;
     
 }
+
 .grid-item {
     margin: 1em 1em 0 1em;  
 }
 
-.flexcontainer {
-    text-align: center;
-    display: flex; 
-    justify-content: center;
-    margin: 2em; 
+#projectApp img {
+    width: 250px;
+    height: 250px;
 }
 
-.projectColumn {
-    width: 265px;
-    border: 2px solid #393939;
-    padding: 10px;  
-    text-align: center;
+#projectApp h3 {
+    font-size: 1.7em;
 }
-.flex-item {
-    margin: 0 10px;
+
+#projectApp li {
+    font-size: 1.2em;
 }
+
+.contProduct li, p {
+    font-size: 1.5em;
+}
+#personApp {
+    font-size: 1.1em;
+}
+
 .projectColumn h3 {
     text-align: center;
 }
+
 .projectColumn a {
     text-align: center;
     color:#000000;
     text-decoration: none;
 }
+
 .projectColumn a:hover {
     background-color: #333;
     color: white;
@@ -201,11 +209,11 @@ img {
 .thumbProdukt {
     width: 30em;
     height: 30em;
-    
 }
+
 .thumbPersonal {
-    width: 30em;
-    height: 30em;
+    width: 25em;
+    height: 25em;
 }
 
 .item3 {
@@ -230,7 +238,6 @@ img {
 .item10{
     background-color: #333;
     text-align: center;
-    margin: 1em 0 -1em 0;
 }
 
 .item11 {
@@ -241,7 +248,7 @@ img {
     text-align: center;
 }
 
-#namnRubrik {
+.namnRubrik {
     text-align: center;
     margin: 1em 0 0 0;
 }
@@ -254,14 +261,18 @@ img {
 
 /* centrerar sliderbaren på sidan */
 .wrap {
-  max-width: 60%;
-  margin: 150px auto 0; 
+  max-width: 75%;
+  margin-top: 3em; 
 }
+
+.wrapProduct {
+    max-width: 75%;
+    margin-top: 3em; 
+  }
 
 /* stil för barsen*/
 .bar {
   color:#000000;
-  font-weight: 400px;
   font-size: 1em;
   position:relative;
   scale: 80%;
@@ -431,7 +442,7 @@ img {
   }
  
 }
-#produktLista{
+.produktLista{
     padding: 0.5em;
 
 /* Stil för kundvagnsfönstret */
@@ -443,8 +454,8 @@ img {
     transform: translate(-50%, -50%);
     width: 200px;
     max-width: 400px;
-    background-color: rgb(33, 106, 62);
-    border: 1px solid #ccc;
+    background-color: rgb(245, 240, 224);
+    border: 1px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: none; 
@@ -452,7 +463,13 @@ img {
     max-height: 130px; 
     margin: 0 auto;
     padding: 5px;
+    color: #000000;
 }
+
+#closeCartWindow {
+    margin-left: 10em;
+}
+
 #cartIcon {
     text-align: left;
 }
@@ -461,7 +478,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 3px;
     margin: 3px 0;
 }
@@ -492,7 +509,7 @@ img {
     width: 14em;
 }
 
-#meddelande{
+.textArea{
     margin: 0.5em 0 0 0;
 }
 
@@ -567,30 +584,28 @@ img {
         grid-row: 2;
         margin: 2em 0 2em 0;
     }
-    
+
     .item12 {
         grid-column: 1;
         grid-row: 3;
+        margin-top: 2em ;
     }
     .item13 {
         grid-column: 2;
         grid-row: 3;
         width: 500px;
         margin-left: -8em;
-
- 
     }
     .item14 {
         grid-column: 3;
         grid-row: 3; 
         width: 500px;
-        margin-top: 3em;
+        margin-top: 1em;
         margin-left: -3em;
     }
     .item15 {
         grid-column: 1 / span 3;
         grid-row: 5;
-        text-align: center;
     }
     .item16 {
         grid-column: 1;
@@ -728,27 +743,26 @@ img {
     #menuIcon {
         display: none;
     }
-    #produktLista{
+    .produktLista{
         font-size: 1.5em;
         padding: 0.5em;
         margin-left: -10em;
         font-family: 'Questrial', sans-serif
     }
-    #barProdukt{
+    .wrapProduct{
         margin-left: -15em;
         margin-top: 2em;
     }
-    #langTexter{
+    .langTexter{
         padding: 1em;
         font-size: 1.5em;
     }
-    #varukorgKnapp{
+    .varukorgKnapp{
         font-size: 1.5em;
     }
-    #meddelande{
+    .textArea{
         width: 30em;
         height: 10em;
-        text-align: top;
     }
     #menu{
         text-align: right;
@@ -762,6 +776,67 @@ img {
     }
     #cartIcon{
         text-align: left;
+        font-size: 1em;
+    }
+    
+    .flexcontainer {
+        text-align: center;
+        display: flex; 
+        justify-content: center;
+        margin: 2em; 
+    }
+
+    .projectColumn {
+        width: 265px;
+        border: 2px solid #393939;
+        padding: 10px;  
+        text-align: center;
+    }
+
+    .flex-item {
+        margin: 0 10px;
+    }
+
+    .wrap {
+        max-width: 60%;
+        margin: 5em auto 0; 
+    }
+
+    .contProduct li, p {
+        font-size: 1em;
+    }
+    /* Stil för bildspelet */
+    .gallery {
+        padding: 10px;
+        text-align: center;
+        display: flex;
+    }
+
+    .gallery-image {
+        display: none;
+        height: 60%;
+        width: 75%; 
+        margin: 0 auto;
+    }
+
+    /* Stil för knapparna till bildspelet */
+    #prevBtn {
+        float:left;
+
+    }
+
+    #nextBtn {
+        float: right;
+    }
+
+    .controls button {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 20px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        top: 45%;
         font-size: 1em;
     }
 }

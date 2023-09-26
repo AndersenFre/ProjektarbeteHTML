@@ -1,9 +1,26 @@
+// En Vue app för att hämta information om personal från JSON
+const personApp = Vue.createApp({
+    data(){
+        return {
+            personer: []            
+        }
+    },
+    created () {
+
+        axios.get('personer.json')
+        .then((response) => {
+            this.personer = response.data;
+        })
+    }
+});
+// Tillåter Vue att genom mount förändra HTML-element med ID 'personApp'.
+personApp.mount('#personApp');
+
+// En Vue app för att hämta information om produkter från JSON
 const produktApp = Vue.createApp({
     data(){
         return{
-            produkter: [
-
-            ]
+            produkter: []
         }
     },
     created () {
@@ -16,6 +33,7 @@ const produktApp = Vue.createApp({
 // Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
 
+// En Vue app för att hämta information om personal från JSON
 const infoApp = Vue.createApp({
     data(){
         return{
@@ -29,8 +47,26 @@ const infoApp = Vue.createApp({
         })
     }
 });
+// Tillåter Vue att genom mount förändra HTML-element med ID 'InfoApp'.
 infoApp.mount('#infoApp');
+// En Vue app för att hämta information om personal från JSON
+const projectApp = Vue.createApp({
+    data(){
+        return {
+            EmployeeProjects: []            
+        }
+    },
+    created () {
 
+        axios.get('EmployeeProjects.json')
+        .then((response) => {
+            this.EmployeeProjects = response.data;
+        })
+    }
+});
+projectApp.mount('#projectApp');
+// En Vue app för att skapa en kundvagn för våra produkter.
+// Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
     data() {
         return {
@@ -46,8 +82,8 @@ const kundvagnApp = Vue.createApp({
             this.produkter = response.data;
         });
        
-    // Skapar savedCart, fyller den med cart som är localStorage. 
-    // Om savedCart har värde, spara savedCart i array vagn. 
+    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage. 
+    // Om savedCart har värde, spara savedCart i vår array vagn. 
     // Sätter cartCount som längden av array vagn. 
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -81,21 +117,19 @@ const kundvagnApp = Vue.createApp({
                 this.cartCount--;
             }
             this.saveCartToLocalStorage();
-
         },
         // Sparar till localStorage.
         // Skapar ett Storage Item med nyckel 'cart'.
-        // Omvandlar innehållet i vagn till JSON string, iom att localStorage bara sparar string.
+        // Omvandlar innehållet i vagn till JSON string, 
+        // iom att localStorage bara sparar string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
         openCartWindow() {
-            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'block';
         },
         closeCartWindow() {
-            // Kopiera
             const cartWindow = document.getElementById('cartWindow');
             cartWindow.style.display = 'none';
         },
@@ -103,42 +137,92 @@ const kundvagnApp = Vue.createApp({
 });
 // Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
 kundvagnApp.mount('#kundvagnApp');
-function validateName() {
-    const nameInput = document.getElementById('name'); // Get the element using document.getElementById
-    const nameValue = nameInput.value.trim();
-    const nameError = document.getElementById('nameError'); // Similarly, get the error element
 
-    if (nameValue === '') {
+
+//Koden ovanför tillåter en fungerande kundvagnsfunction för våran sida
+//Här är koden för själva realtidsvalideringen
+//Denna kod är separerad från script.js för den krockade med bildspelet
+
+
+// Hämta referenser till formulärfälten och felmeddelandeelementen
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const numberInput = document.getElementById('number');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const numberError = document.getElementById('numberError');
+
+
+//Köra valideringen när sidan laddas in första gången
+validateName();
+validateEmail();
+validateNumber();
+
+// Lyssna på ändringar i namnfältet
+nameInput.addEventListener('input', validateName);
+
+// Lyssna på ändringar i e-postfältet
+emailInput.addEventListener('input', validateEmail);
+
+numberInput.addEventListener('input', validateNumber);
+
+// Validera namnfältet
+function validateName() 
+{
+    const nameValue = nameInput.value.trim();
+    if (nameValue === '') 
+    {
         nameError.textContent = 'Namn är obligatoriskt';
-    } else {
+    } else 
+    {
         nameError.textContent = '';
     }
 }
 
-function validateEmail() {
-    const emailInput = document.getElementById('email'); // Get the element using document.getElementById
+// Validera e-postfältet
+function validateEmail() 
+{
     const emailValue = emailInput.value.trim();
-    const emailError = document.getElementById('emailError'); // Similarly, get the error element
-
+ /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.
+    framför @ (mellan ^och @) är a-zA-Z0-9._- tillåtna tecken. 
+    @ krävs och efter det teckent är a-zA-Z0-9._- tillåtna
+    Slutligen krävs en punkt . och här tillåts a-zA-Z i en längd av 2 till 4 tecken ex: .com */
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-    if (emailValue === '') {
+    //om fältet är tomt visa detta felmedelande
+    if (emailValue === '') 
+    {
         emailError.textContent = 'E-postadress är obligatorisk';
-    } else if (!emailPattern.test(emailValue)) {
+    } 
+    else if (!emailPattern.test(emailValue)) 
+    //om textfältet ej uppfyller de krav vi ställt.
+    {
         emailError.textContent = 'Ogiltig e-postadress';
-    } else {
+    //ananrs så visas inget felmedelande
+    } 
+    else 
+    {
         emailError.textContent = '';
     }
 }
 
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const nameError = document.getElementById('nameError');
-const emailError = document.getElementById('emailError');
+//Validera telefonnummer
+function validateNumber()
+{   
+    const numberValue = numberInput.value.trim();
 
-nameInput.addEventListener('input', validateName);
-emailInput.addEventListener('input', validateEmail);
+    const numberPattern = /^[0-9+]{10,12}$/; 
 
-// Kör valideringen när sidan laddas
-validateName();
-validateEmail();
+    if (numberValue === '') 
+    {
+        numberError.textContent = 'Telefonnummer är obligatoriskt';
+    } 
+    else if (!numberPattern.test(numberValue))
+    {
+        numberError.textContent = 'Ogiltigt telefonnummer';
+    }
+    else
+    {
+        numberError.textContent = '';
+    }
+
+}

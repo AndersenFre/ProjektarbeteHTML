@@ -2,7 +2,6 @@
 <html lang="sv">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Felix Lundqvist</title>
         <script defer src="https://unpkg.com/vue@3"></script>
         <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script> 
@@ -16,9 +15,9 @@
             <label for="menu-toggle" id="menuIcon">&#9776;</label>
             <input type="checkbox" id="menu-toggle">
             <ul id="menu">
-                <li><a href="Projekt1.html" class="smooth">Hem</a></li>
+                <li><a href="Index.html" class="smooth">Hem</a></li>
                 <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
-                <li><a href="Projekt1.html" class="smooth">Om oss</a></li>
+                <li><a href="Index.html#infoApp" class="smooth">Om oss</a></li>
                 <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
             </ul>
             <div id="kundvagnApp">
@@ -28,6 +27,7 @@
                     <button @click="openCartWindow">Open Cart</button>
                     <div id="cartWindow">
                         <h2>Kundvagn</h2>
+                        <button id="closeCartWindow" @click="closeCartWindow">Stäng</button>
                         <p>Totalt: {{ vagnTotal }} sek</p>
                         <ul>
                             <li v-for="(item, index) in vagn" :key="index" class="cart-item">
@@ -38,7 +38,6 @@
                                 <button @click="removeFromVagn(index)">Ta bort</button>
                             </li>
                         </ul>
-                        <button @click="closeCartWindow">Stäng</button>
                         <button id="kassaKnapp">Till kassan</button>
                     </div>
                 </div>    
