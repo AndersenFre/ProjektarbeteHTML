@@ -534,6 +534,17 @@ img {
     max-width: 850px;
     margin: 20px auto; 
 }
+.popup {
+    width: 100%;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.active {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 /* CSS för 1280px och större upplösning */
 @media only screen and (min-width: 1280px) {
