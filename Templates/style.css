@@ -1,0 +1,204 @@
+@keyframes animate-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  .animate {
+    animation-duration: 0.5s;
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  }
+  
+  .delay-1 { animation-delay: 0.6s; }  
+  .delay-2 { animation-delay: 0.7s; }
+  .delay-3 { animation-delay: 0.8s; }
+  .delay-4 { animation-delay: 0.9s; } 
+  .delay-5 { animation-delay: 1s; } 
+
+body {
+    margin: 1em;
+    padding: 0;
+}
+
+header {
+    background-color: #D9D0BF;
+    padding: 0.5em;
+    text-align: right;
+    margin: -1em -1em 0 -1em;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+#menu a:hover {
+    background-color: #733D4B;
+}
+
+a {
+    color: #024959;
+}
+
+a:hover {
+    color: #733D4B;
+    text-decoration: none;
+}
+
+.smooth {
+    transition: all 1s ease-in-out;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    margin: 1em 1em 0 0em;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.projectColumn {
+    width: 280px;
+}
+
+.thumb {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #733D4B;
+    font-size: 1.2em;
+}
+
+h2 {
+    color: #024959;
+    font-size: 1em;
+}
+
+h3 {
+    color: white;
+    background-color: #024959;
+    padding: 0.5em;
+    font-size: 0.8em;
+}
+
+p, ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+.projectColumn h3 {
+    background-color: #A65B69;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+#menu {
+    display: none;
+}
+
+#menu-toggle:checked ~ #menu {
+    display: block;
+}
+
+#menu li {
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* CSS for 480px to 1280px */
+@media only screen and (min-width: 480px) and (max-width: 1280px) {
+
+}
+
+/* CSS for 1280px and more */
+@media only screen and (min-width: 1280px) {
+    .item1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    
+    .item2 {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+        align-self: center;
+    }
+    
+    .item3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .item4 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    
+    .item5 {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+    
+    .item6 {
+        grid-column: 1 /span 3;
+        grid-row: 4;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3, p, ul {
+        font-size: 1em;
+    }
+
+    img {
+        width: 40vw;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menu li {
+        display: inline;
+    }
+
+    #menuIcon {
+        display: none;
+    }
+}

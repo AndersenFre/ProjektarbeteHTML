@@ -2,7 +2,6 @@
 <html lang="sv">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Simon Sjöman</title>
         <script defer src="https://unpkg.com/vue@3"></script>
         <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script> 
@@ -16,9 +15,9 @@
             <label for="menu-toggle" id="menuIcon">&#9776;</label>
             <input type="checkbox" id="menu-toggle">
             <ul id="menu">
-                <li><a href="Projekt1.html" class="smooth">Hem</a></li>
+                <li><a href="Index.html" class="smooth">Hem</a></li>
                 <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
-                <li><a href="Projekt1.html" class="smooth">Om oss</a></li>
+                <li><a href="Index.html#infoApp" class="smooth">Om oss</a></li>
                 <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
             </ul>
             <div id="kundvagnApp">
@@ -28,6 +27,7 @@
                     <button @click="openCartWindow">Open Cart</button>
                     <div id="cartWindow">
                         <h2>Kundvagn</h2>
+                        <button id="closeCartWindow" @click="closeCartWindow">Stäng</button>
                         <p>Totalt: {{ vagnTotal }} sek</p>
                         <ul>
                             <li v-for="(item, index) in vagn" :key="index" class="cart-item">
@@ -38,13 +38,12 @@
                                 <button @click="removeFromVagn(index)">Ta bort</button>
                             </li>
                         </ul>
-                        <button @click="closeCartWindow">Stäng</button>
                         <button id="kassaKnapp">Till kassan</button>
                     </div>
                 </div>    
             </div>
         </header>
-        <div class="grid-container"> 
+        <div class="grid-container">  
             <div class="grid-item item10">
                 <div class="rubrik">
                     <h1> Beyond Bounds Adventure</h1>
@@ -95,82 +94,143 @@
         <div id="projectApp">
             <div class="grid-container">
                 <div class="grid-item item15">
-                    <h1>Tidigare Expeditioner </h1>
-                    <br>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <h2>Tidigare projekt</h2>
+                                <br>
+                            </div>
+                        </section>
+                    </div>    
                 </div>
                 <div class="grid-item item16">
-                    <img src="Project1.png" alt="Från en resa" class="thumbPersonal">
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <img src="Project1.png" alt="Guldidol" class="thumbPersonal">
+                            </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="grid-item item170">
-                    <div v-for="project in EmployeeProjects">
-                        <div v-if="project.id === 1">
-                            <h3> {{project.titel}} </h3>
-                            <ul>
-                                <li> {{project.kund}} </li>
-                                <br>
-                                <li> {{project.om}} </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <div v-for="project in EmployeeProjects">
+                                    <div v-if="project.id === 1">
+                                        <h3> {{project.titel}} </h3>
+                                        <ul>
+                                            <li> {{project.kund}} </li>
+                                            <li> {{project.om}} </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>    
                 </div>
                 <div class="grid-item item171">
-                    <img src="Project2.png" alt="Från en resa" class="thumbPersonal">
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <img src="Project2.png" alt="Pyramid" class="thumbPersonal">
+                            </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="grid-item item172">
-                    <div v-for="project in EmployeeProjects">
-                        <div v-if="project.id === 2">
-                            <h3> {{project.titel}} </h3>
-                            <ul>
-                                <li> {{project.kund}} </li>
-                                <br>
-                                <li> {{project.om}} </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <div v-for="project in EmployeeProjects">
+                                    <div v-if="project.id === 2">
+                                        <h3> {{project.titel}} </h3>
+                                        <ul>
+                                            <li> {{project.kund}} </li>
+                                            <li> {{project.om}} </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
                 </div>
                 <div class="grid-item item173">
-                    <img src="Project3.png" alt="Från en resa" class="thumbPersonal">
-                </div>
-                <div class="grid-item item174">
-                    <div v-for="project in EmployeeProjects">
-                        <div v-if="project.id === 3">
-                            <h3> {{project.titel}} </h3>
-                            <ul>
-                                <li> {{project.kund}} </li>
-                                <br>
-                                <li> {{project.om}} </li>
-                            </ul>
-                        </div>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <img src="Project3.png" alt="Tempel" class="thumbPersonal">
+                            </div>
+                        </section>
                     </div>
                 </div>
+                <div class="grid-item item174">
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <div v-for="project in EmployeeProjects">
+                                    <div v-if="project.id === 3">
+                                        <h3> {{project.titel}} </h3>
+                                        <ul>
+                                            <li> {{project.kund}} </li>
+                                            <li> {{project.om}} </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                </div>
                 <div class="grid-item item175">
-                    <img src="Project4.png" alt="Från en resa" class="thumbPersonal">
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <img src="Project4.png" alt="Jaguar" class="thumbPersonal">
+                            </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="grid-item item176">
-                    <div v-for="project in EmployeeProjects">
-                        <div v-if="project.id === 4">
-                            <h3> {{project.titel}} </h3>
-                            <ul>
-                                <li> {{project.kund}} </li>
-                                <br>
-                                <li> {{project.om}} </li>
-                            </ul>
-                        </div>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <div v-for="project in EmployeeProjects">
+                                    <div v-if="project.id === 4">
+                                        <h3> {{project.titel}} </h3>
+                                        <ul>
+                                            <li> {{project.kund}} </li>
+                                            <li> {{project.om}} </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                        </section>
                     </div>
                 </div>
                 <div class="grid-item item177">
-                    <img src="Project5.png" alt="Från en resa" class="thumbPersonal">
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <img src="Project5.png" alt="By i djunglen" class="thumbPersonal">
+                            </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="grid-item item178">
-                    <div v-for="project in EmployeeProjects">
-                        <div v-if="project.id === 5">
-                            <h3> {{project.titel}} </h3>
-                            <ul>
-                                <li> {{project.kund}} </li>
-                                <br>
-                                <li> {{project.om}} </li>
-                            </ul>
-                        </div>
+                    <div class="popups">
+                        <section>
+                            <div class="popup">
+                                <div v-for="project in EmployeeProjects">
+                                    <div v-if="project.id === 5">
+                                        <h3> {{project.titel}} </h3>
+                                        <ul>
+                                            <li> {{project.kund}} </li>
+                                            <li> {{project.om}} </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
                 <div class="grid-item item179">

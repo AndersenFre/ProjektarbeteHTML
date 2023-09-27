@@ -16,9 +16,9 @@
                 <label for="menu-toggle" id="menuIcon">&#9776;</label>
                 <input type="checkbox" id="menu-toggle">
                 <ul id="menu">
-                    <li><a href="Projekt1.html" class="smooth">Hem</a></li>
+                    <li><a href="Index.html" class="smooth">Hem</a></li>
                     <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
-                    <li><a href="#infoApp" class="smooth">Om oss</a></li>
+                    <li><a href="Index.html#infoApp" class="smooth">Om oss</a></li>
                     <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
                 </ul>
                 <div id="cartIcon">
@@ -27,6 +27,7 @@
                     <button @click="openCartWindow">Open Cart</button>
                     <div id="cartWindow">
                         <h2>Kundvagn</h2>
+                        <button id="closeCartWindow" @click="closeCartWindow">Stäng</button>
                         <p>Totalt: {{ vagnTotal }} sek</p>
                         <ul>
                             <li v-for="(item, index) in vagn" :key="index" class="cart-item">
@@ -37,12 +38,11 @@
                                 <button @click="removeFromVagn(index)">Ta bort</button>
                             </li>
                         </ul>
-                        <button @click="closeCartWindow">Stäng</button>
                         <button id="kassaKnapp">Till kassan</button>
                     </div>
                 </div>    
             </header>
-            <div class="grid-container">
+            <div class="grid-container contProduct">
                 <div class="grid-item item20">
                     <div class="rubrik">
                         <h1> Beyond Bounds Adventure</h1>
@@ -55,7 +55,7 @@
                 <div class="grid-item item22">
                     <div v-for="(produkt, index) in produkter" :key="index">
                         <div v-if="produkt.id === 1">
-                            <div id="produktLista">
+                            <div class="produktLista">
                                 <ul>
                                     <li>{{produkt.plats}}</li>
                                     <li>{{produkt.tid}}</li>
@@ -64,10 +64,10 @@
                                     <li>Pris: {{produkt.pris}} kr per person</li>
                                 </ul>
                             </div>
-                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                            <button class="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
                         </div>
                     </div>
-                    <div class="wrap" id="barProdukt">
+                    <div class="wrapProduct">
                         <div class="bar" id="bar1">
                             <h3>Fysiskt påfrestande </h3>
                             <span> </span>
@@ -91,7 +91,7 @@
                         <div v-if="produkt.id === 1">
                             <h2> {{produkt.titel}} </h2>
                             <hr>
-                            <div id="langTexter">
+                            <div class="langTexter">
                                 <p>{{produkt.langText}}<p> 
                             </div>
                             <hr>
@@ -104,7 +104,7 @@
                 <div class="grid-item item25">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 2">
-                            <div id="produktLista">
+                            <div class="produktLista">
                                 <ul>
                                     <li>{{produkt.plats}}</li>
                                     <li>{{produkt.tid}}</li>
@@ -113,10 +113,10 @@
                                     <li>Pris: {{produkt.pris}} kr per person</li>
                                 </ul>
                             </div>
-                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                            <button class="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
                         </div>
                     </div>
-                    <div class="wrap" id="barProdukt">
+                    <div class="wrapProduct">
                         <div class="bar" id="bar5">
                             <h3>Fysiskt påfrestande</h3>
                             <span> </span>
@@ -140,7 +140,7 @@
                         <div v-if="produkt.id === 2">
                             <h2> {{ produkt.titel }} </h2>
                             <hr>
-                            <div id="langTexter">
+                            <div class="langTexter">
                                 <p>{{produkt.langText}}<p> 
                             </div> 
                             <hr>
@@ -153,7 +153,7 @@
                 <div class="grid-item item28">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 3">
-                            <div id="produktLista">
+                            <div class="produktLista">
                                 <ul>
                                     <li>{{produkt.plats}}</li>
                                     <li>{{produkt.tid}}</li>
@@ -162,10 +162,10 @@
                                     <li>Pris: {{produkt.pris}} kr per person</li>
                                 </ul>
                             </div>
-                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                            <button class="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
                         </div>
                     </div>
-                    <div class="wrap" id="barProdukt">
+                    <div class="wrapProduct">
                         <div class="bar" id="bar9">
                             <h3>Fysiskt påfrestande</h3>
                             <span> </span>
@@ -189,7 +189,7 @@
                         <div v-if="produkt.id === 3">
                             <h2>{{produkt.titel}} </h2>
                             <hr>
-                            <div id="langTexter">
+                            <div class="langTexter">
                                 <p>{{produkt.langText}}<p> 
                             </div>
                             <hr>
@@ -202,7 +202,7 @@
                 <div class="grid-item item31">
                     <div v-for="produkt in produkter">
                         <div v-if="produkt.id === 4">
-                            <div id="produktLista">
+                            <div class="produktLista">
                                 <ul>
                                     <li>{{produkt.plats}}</li>
                                     <li>{{produkt.tid}}</li>
@@ -211,10 +211,10 @@
                                     <li>Pris: {{produkt.pris}} kr per person</li>
                                 </ul>
                             </div>
-                            <button id="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
+                            <button class="varukorgKnapp" @click="addToVagn(produkt)">Lägg i varukorg</button>
                         </div>
                     </div>
-                    <div class="wrap" id="barProdukt">
+                    <div class="wrapProduct">
                         <div class="bar" id="bar13">
                             <h3>Fysiskt påfrestande</h3>
                             <span> </span>
@@ -238,7 +238,7 @@
                         <div v-if="produkt.id === 4">
                             <h2> {{produkt.titel}} </h2>
                             <hr>
-                            <div id="langTexter">
+                            <div class="langTexter">
                                 <p>{{produkt.langText}}<p> 
                             </div>                            
                             <hr>

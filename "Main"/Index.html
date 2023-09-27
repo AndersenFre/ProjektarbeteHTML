@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang ="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Beyond Bounds Adventure</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="https://unpkg.com/vue@3"></script>
+        <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <label for="menu-toggle" id="menuIcon">&#9776;</label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="menu">
+                <li><a href="Index.html" class="smooth">Hem</a></li>
+                <li><a href="Produkt.html" class="smooth">Webbshop</a></li>
+                <li><a href="#infoApp" class="smooth">Om oss</a></li>
+                <li><a href="Kontakt.html" class="smooth">Kontakt</a></li>
+            </ul>
+            <div id="kundvagnApp">
+                <div id="cartIcon">
+                    <i  class="fa fa-shopping-cart"></i>
+                    <span id="cart-counter">{{ cartCount }}</span>
+                    <button @click="openCartWindow">Open Cart</button>
+                    <div id="cartWindow">
+                        <h2>Kundvagn</h2>
+                        <button id="closeCartWindow" @click="closeCartWindow">Stäng</button>
+                        <p>Totalt: {{ vagnTotal }} sek</p>
+                        <ul>
+                            <li v-for="(item, index) in vagn" :key="index" class="cart-item">
+                                <div class="cart-item-details">
+                                    <h3>{{ item.titel }}</h3>
+                                    <p>Pris: {{ item.pris }} sek</p>
+                                </div>
+                                <button @click="removeFromVagn(index)">Ta bort</button>
+                            </li>
+                        </ul>
+                        <button id="kassaKnapp">Till kassan</button>
+                    </div>
+                </div>    
+            </div>
+        </header>
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <div class="rubrik">
+                    <h1> Beyond Bounds Adventure</h1>
+                    <h3> Här väntar ditt nästa äventyr </h3>
+                </div>
+            </div>
+            <div class="grid-item item2">
+                <div class="gallery">
+                    <div class="controls">
+                        <button id="prevBtn"> &larr; </button>
+                    </div>
+                    <img src="BildspelApor.png" alt="Bild på apor" class="gallery-image">
+                    <img src="BildspelBjörn.png" alt="Bild på Isbjörn" class="gallery-image">
+                    <img src="BildspelSavann.png" alt="Bild på lejon" class="gallery-image">
+                    <img src="BildspelTaj.png" alt="Bild på Taj mahal" class="gallery-image">
+                    <img src="BildspelMur.png" alt="Bild på kinesiska muren" class="gallery-image">
+                    <img src="BildspelDjungel.png" alt="Bild från djungel" class="gallery-image">
+                    <img src="BildspelPingvin.png" alt="Bild på pingviner" class="gallery-image">
+                    <img src="BildspelMarknad.png" alt="Bild från matmarknad" class="gallery-image">
+                    <div class="controls">
+                        <button id="nextBtn"> &rarr;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item3">
+                <div id="infoApp">
+                    <div v-for="info in foretagsInfo">
+                        <div v-if="info.id === 1">
+                            <h2> Vilka Är Vi?</h2>
+                            <br>
+                            <p> {{info.beskrivning}}</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Möt Våra Guider</h2>
+                <hr>
+            </div>
+            <div class="grid-item item4">
+                <div id="personApp">
+                    <div class="flexcontainer">
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Simon</h3>
+                                <img src="PorträttSimon.png" alt="Bild på Simon" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 1">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <br>
+                                        <a href="Simon.html" class="smooth"> Läs mer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Måns</h3>
+                                <img src="PorträttMåns.png" alt="Bild på Måns" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 2">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <br>
+                                        <br>
+                                        <a href="Mans.html" class="smooth">Läs mer!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Fredrik</h3>
+                                <img src="PorträttFredrik.png" alt="Bild på Fredrik" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 3">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <br>
+                                        <br>
+                                        <a href="Fredrik.html" class="smooth">Läs mer!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Felix</h3>
+                                <img src="PorträttFelix.png" alt="Bild på Felix" class="thumb">
+                                <div v-for="person in personer">
+                                    <div v-if="person.id === 4">
+                                        <h3> {{person.titel}} </h3>
+                                        <br>
+                                        <p> {{person.kortText}} </p>
+                                        <br>
+                                        <a href="Felix.html" class="smooth">Läs mer!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item5">
+                <h2>Våra resor</h2>
+                <hr>
+            </div>
+            <div class="grid-item item6">
+                <div id="produktApp">
+                    <div class="flexcontainer">
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Sydamerika</h3>
+                                <img src="Guide.png" alt="Bild på Simon" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 1">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Asien</h3>
+                                <img src="Tokyo.png" alt="Bild på Måns" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 2">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Nordpolen</h3>
+                                <img src="Pingvin.png" alt="Bild på Fredrik" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 3">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="projectColumn">
+                                <h3 class="namnRubrik">Afrika</h3>
+                                <img src="Safari.png" alt="Bild på Felix" class="thumb">
+                                <div v-for="produkt in produkter">
+                                    <div v-if="produkt.id === 4">
+                                        <h3> {{produkt.titel}} </h3>
+                                        <br>
+                                        <p> {{produkt.text}} </p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="grid-item item7">
+                <h2><a href="Produkt.html" class="smooth">Gå till våra resor</a></h2>
+            </div>   
+            <div class="grid-item item8">
+                <div class="contact">
+                    <h3>Kontakt Information</h3>
+                    <p>BeyondBoundsAdventure@xtreme.com</p>
+                    <p>Telefon: (+46) 456-7890</p>
+                    <p>Address: Drottninggatan 3, Örebro</p>
+                    <br>
+                </div>
+                <footer>
+                    <p>&copy; 2023 Beyond Bounds Adventure</p>
+                </footer>
+            </div>
+        </div>    
+    </body>
+</html>
