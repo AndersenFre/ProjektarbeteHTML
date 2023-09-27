@@ -6,16 +6,13 @@ const personApp = Vue.createApp({
         }
     },
     created () {
-
         axios.get('personer.json')
         .then((response) => {
             this.personer = response.data;
         })
     }
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'personApp'.
 personApp.mount('#personApp');
-
 // En Vue app för att hämta information om produkter från JSON
 const produktApp = Vue.createApp({
     data(){
@@ -30,9 +27,7 @@ const produktApp = Vue.createApp({
         })
     }
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'produktApp'.
 produktApp.mount('#produktApp');
-
 // En Vue app för att hämta information om personal från JSON
 const infoApp = Vue.createApp({
     data(){
@@ -47,7 +42,6 @@ const infoApp = Vue.createApp({
         })
     }
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'InfoApp'.
 infoApp.mount('#infoApp');
 // En Vue app för att hämta information om personal från JSON
 const projectApp = Vue.createApp({
@@ -66,7 +60,6 @@ const projectApp = Vue.createApp({
 });
 projectApp.mount('#projectApp');
 // En Vue app för att skapa en kundvagn för våra produkter.
-// Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
     data() {
         return {
@@ -81,34 +74,25 @@ const kundvagnApp = Vue.createApp({
         .then((response) => {
             this.produkter = response.data;
         });
-       
-    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage. 
-    // Om savedCart har värde, spara savedCart i vår array vagn. 
-    // Sätter cartCount som längden av array vagn. 
+    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage.  
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
       this.vagn = JSON.parse(savedCart);
       this.cartCount = this.vagn.length;
     }
    },
-    // Funktion som "lyssnar" efter förändringar i array vagn.
-    // Reduce itererar genom antal objekt i array samt sammanställer antal, 
-    // pris per objekt samt totalpris i vagn. 
+    // Funktion som "lyssnar" efter förändringar i array vagn. Reduce itererar genom antal objekt.
     computed: {
         vagnTotal() {
             return this.vagn.reduce((total, item) => total + item.pris, 0);
         },
     },
     // Funktioner för att lägga till och ta bort objekt i array vagn.
-    // Uppdaterar cartCount som syns i meny så rätt antal visas.
-    // Validerar så att cartCount inte kan bli ett negativt värde. 
-    // Uppdaterar även Storage Item med nyckel 'cart' i localStorage.
     methods: {
         addToVagn(produkt) {
             this.vagn.push({ titel: produkt.titel, pris: produkt.pris });
             this.cartCount++;
             this.saveCartToLocalStorage();
-
         },
         removeFromVagn(index) {
             this.vagn.splice(index, 1);
@@ -118,10 +102,7 @@ const kundvagnApp = Vue.createApp({
             }
             this.saveCartToLocalStorage();
         },
-        // Sparar till localStorage.
-        // Skapar ett Storage Item med nyckel 'cart'.
-        // Omvandlar innehållet i vagn till JSON string, 
-        // iom att localStorage bara sparar string.
+        // LocalStorage sparar bara string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
@@ -135,16 +116,13 @@ const kundvagnApp = Vue.createApp({
         },
     },
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
 kundvagnApp.mount('#kundvagnApp');
-
 const popup = () => {
     const popups = document.querySelectorAll(".popup");
-    
     for (let i=0; i<popups.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = popups[i].getBoundingClientRect().top;
-        const elementVisible = 150; 
+        const elementVisible = 50; 
         
         if (elementTop < windowHeight - elementVisible) {
             popups[i].classList.add("active");
@@ -156,34 +134,26 @@ const popup = () => {
 }
 window.addEventListener("scroll", popup); 
 
-// JavaScript kode för bildspelsnavigation
-//Skapar och sparar bilderna här
+// JavaScript kod för bildspelsnavigation
 const images = document.querySelectorAll('.gallery-image');
-//för att visa tidigare bild
 const prevButton = document.getElementById('prevBtn');
-//för att visa nästa bild
 const nextButton = document.getElementById('nextBtn');
-//variable för att skapa index som sedan ges till bilderna
 let currentIndex = 0;
-
 //Om indexet är samma som bilden ska den visas (block) annars ska den ej visas (none) loopar igenom index med en for each-loop
 function showImage(index) {
     images.forEach((img, i) => {
         img.style.display = i === index ? 'block' : 'none';
     });
 }
-
-//Vid ett klick på den högra knappet visas nästkommande bild
+//Kontrollerar så index inte överskrider image.lenght
 nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
 });
-
-//Vid ett klick på den vänstra knappet visas föregående bild
+//Kontrollerar så index inte underskrider image.lenght
 prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
 });
-
-// Visar bilden 
+// Visar bilden när sidan laddas in 
 showImage(currentIndex);
