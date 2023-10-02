@@ -3,12 +3,10 @@ body, h1, h2, p, ul, li {
     padding: 0;
     font-family: 'Questrial', sans-serif
 }
-
 /* Bakgrundsfärg för sidorna*/
 body {
     background-color: #f4eee0;
 }
-
 /* Stil för menyn */
 header {
     background-color: #222;
@@ -17,115 +15,78 @@ header {
     margin: 0 0 -1em 0;
     background-attachment: fixed;
     text-align: right;
-
 }
-
-.rubrik {
+.rubrik{
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: center; 
     margin: 0 -1em 0 -1em;
-    padding: 0.5em;
+    padding: 2em 0 1em 0;
 }
-
 #menu {
     display: none;
 }
-
-#menu-toggle:checked~#menu {
+#menu-toggle:checked ~ #menu {
     display: block;
 }
-
 #menu li {
     display: block;
-    text-align: right;
-
 }
-
 #menu a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
-
 #menu a:hover {
     background-color: white;
     color: #000000;
 }
-
 .smooth {
     transition: all 0.4s ease-in-out;
 }
-
 #menu-toggle {
     display: none;
 }
-
-.rubrik h3 {
+.rubrik h3
+{
     margin-top: 0.2em;
 }
-
 /* Stil för bildspelet */
 .gallery {
     display: flex;
+    align-items: center;
 }
-
 .gallery-image {
     display: none;
     height: 75%;
-    width: 90%;
-    margin: 0 0 0 0.5em;
-    padding: 10px;
+    width: 91%;
+    margin: 0 -1em 0 -1em;
 }
-
 /* Stil för knapparna till bildspelet */
 #prevBtn {
     float: left;
-    left: 2px;
+    left: -1em;
 }
-
 #nextBtn {
     float: right;
-    right: 2px;
+    right: -1em;
 }
-
 .controls button {
     background-color: #333;
     color: #fff;
     padding: 8px 8px;
     border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    font-size: 1em;
+    position: relative;
+    font-size: 1em; 
 }
-
-/* Stil för text */
-.text {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.text p {
-    font-size: 16px;
-}
-
-/* Stil för kontaktsidan */
+/* Stil för kontakt */
 .contact {
     background-color: #333;
     color: #fff;
-    /* padding: 20px; */
-    text-align: center;
+    text-align: center; 
     margin: 0 -1em 0 -1em;
-
+    
 }
-
 .contact h3 {
     font-size: 1.5em;
     padding: 0.5em;
@@ -136,7 +97,6 @@ header {
     font-size: 1em;
     margin: 0 0 0.5em 0;
 }
-
 footer {
     background-color: #222;
     color: #fff;
@@ -144,766 +104,616 @@ footer {
     text-align: center;
     margin: -1em -1em 0 -1em;
 }
-
 .grid-container {
-    display: grid;
-
+    display: grid;   
 }
-
 .grid-item {
-    margin: 1em 1em 0 1em;
+    margin: 1em 1em 0 1em;  
 }
-
 #projectApp img {
     width: 250px;
     height: 250px;
 }
-
 #projectApp h3 {
     font-size: 1.7em;
 }
-
 #projectApp li {
     font-size: 1.2em;
 }
-
-.contProduct li,
-p {
+.contProduct li, p {
     font-size: 1.5em;
 }
-
 #personApp {
     font-size: 1.1em;
 }
-
+#personApp h3 {
+    font-size: 1.5em;
+}
+#produktApp {
+    font-size: 1.1em;
+}
+#produktApp h3 {
+    font-size: 1.5em;
+}
 .projectColumn h3 {
     text-align: center;
 }
-
 .projectColumn a {
     text-align: center;
-    color: #000000;
+    color:#000000;
     text-decoration: none;
 }
-
 .projectColumn a:hover {
     background-color: #333;
     color: white;
     padding: 0.3em;
 }
-
 /* stil för bilder */
-
 img {
     width: 100%;
 }
-
 .thumb {
     width: 100%;
 }
-
 .thumbProdukt {
     width: 30em;
     height: 30em;
 }
-
 .thumbPersonal {
     width: 25em;
     height: 25em;
 }
-
 .item3 {
     text-align: center;
 }
-
 .item5 {
     text-align: center;
 }
-
 .item7 {
     text-align: center;
 }
-
 .item7 a {
     text-align: center;
-    color: #000000;
+    color:#000000;
     text-decoration: none;
 }
-
 .item7 a:hover {
     background-color: #333;
     color: white;
     padding: 0.3em;
 }
-
-.item10 {
-    background-color: #333;
-    text-align: center;
-}
-
 .item11 {
     text-align: center;
 }
-
 .item14 {
     text-align: center;
 }
-
 .namnRubrik {
     text-align: center;
     margin: 1em 0 0 0;
 }
-
 /* Visar felmeddelande i kontakt */
 .error-message {
     color: red;
     font-size: 14px;
 }
-
 /* centrerar sliderbaren på sidan */
 .wrap {
-    max-width: 75%;
-    margin-top: 3em;
+  max-width: 75%;
+  margin-top: 3em; 
 }
-
 .wrapProduct {
     max-width: 75%;
-    margin-top: 3em;
-}
-
+    margin-top: 3em; 
+  }
 /* stil för barsen*/
 .bar {
-    color: #000000;
-    font-size: 1em;
-    position: relative;
-    scale: 80%;
-    margin: -2em 0 0 0;
+  color:#000000;
+  font-size: 1em;
+  position:relative;
+  scale: 80%;
+  margin: -2em 0 0 0;
 }
-
-/* stil för själva bars-elementen*/
+/* stil för själva bars-elementen*/ 
 .bar span {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 30px;
-    width: 130%;
-    height: 20px;
-    background: #000000db;
-    border-radius: 30px;
+  position:relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 130%;
+  height: 20px;
+  background: #000000db;
+  border-radius: 30px;
 }
-
 /* stil och animation för de animerade barsen*/
 .bar span:before {
-    position: absolute;
-    content: '';
-    top: 6px;
-    left: 5px;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to left, rgb(126, 243, 167), rgb(8, 116, 12));
-    border-radius: 30px;
-    animation: bar 8s ease;
+  position: absolute;
+  content:'';
+  top: 6px;
+  left: 5px;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to left, rgb(126, 243, 167), rgb(8, 116, 12));
+  border-radius: 30px;
+  animation: bar 8s ease;
 }
-
 /* hur stora barsen ska bli */
-
 #bar1:nth-child(1) span:before {
-    width: 85%;
+  width:85%;
 }
-
 #bar2:nth-child(2) span:before {
-    width: 70%;
+  width:70%;
 }
-
 #bar3:nth-child(3) span:before {
-    width: 90%;
+  width:90%;
 }
-
 #bar4:nth-child(4) span:before {
-    width: 30%;
+  width:30%;
 }
-
 #bar5:nth-child(1) span:before {
-    width: 20%;
+  width:20%;
 }
-
 #bar6:nth-child(2) span:before {
-    width: 60%;
+  width:60%;
 }
-
 #bar7:nth-child(3) span:before {
-    width: 20%;
+  width:20%;
 }
-
 #bar8:nth-child(4) span:before {
-    width: 85%;
+  width:85%;
 }
-
 #bar9:nth-child(1) span:before {
-    width: 40%;
+  width:40%;
 }
-
 #bar10:nth-child(2) span:before {
-    width: 5%;
+  width:5%;
 }
-
 #bar11:nth-child(3) span:before {
-    width: 60%;
+  width:60%;
 }
-
 #bar12:nth-child(4) span:before {
-    width: 30%;
+  width:30%;
 }
-
 #bar13:nth-child(1) span:before {
-    width: 25%;
+  width:25%;
 }
-
 #bar14:nth-child(2) span:before {
-    width: 95%;
+  width:95%;
 }
-
 #bar15:nth-child(3) span:before {
-    width: 80%;
+  width:80%;
 }
-
 #bar16:nth-child(4) span:before {
-    width: 40%;
+  width:40%;
 }
-
 #barFredrik1:nth-child(1) span:before {
-    width: 60%;
+  width:60%;
 }
-
 #barFredrik2:nth-child(2) span:before {
-    width: 20%;
+  width:20%;
 }
-
 #barFredrik3:nth-child(3) span:before {
-    width: 90%;
+  width:90%;
 }
-
 #barFredrik4:nth-child(4) span:before {
-    width: 75%;
+  width:75%;
 }
-
 #barMans1:nth-child(1) span:before {
-    width: 75%;
+  width:75%;
 }
-
 #barMans2:nth-child(2) span:before {
-    width: 60%;
+  width:60%;
 }
-
 #barMans3:nth-child(3) span:before {
-    width: 50%;
+  width:50%;
 }
-
 #barMans4:nth-child(4) span:before {
-    width: 90%;
+  width:90%;
 }
-
 #barFelix1:nth-child(1) span:before {
-    width: 85%;
+  width:85%;
 }
-
 #barFelix2:nth-child(2) span:before {
-    width: 95%;
+  width:95%;
 }
-
 #barFelix3:nth-child(3) span:before {
-    width: 10%;
+  width:10%;
 }
-
 #barFelix4:nth-child(4) span:before {
-    width: 20%;
+  width:20%;
 }
-
 #barSimon1:nth-child(1) span:before {
-    width: 85%;
+  width:85%;
 }
-
 #barSimon2:nth-child(2) span:before {
-    width: 78%;
+  width:78%;
 }
-
 #barSimon3:nth-child(3) span:before {
-    width: 75%;
+  width:75%;
 }
-
 #barSimon4:nth-child(4) span:before {
-    width: 80%;
+  width:80%;
 }
-
 /* för att möjligöra animationen */
-@keyframes bar {
-    from {
-        width: 0;
-    }
-
+@keyframes bar
+{
+  from
+  {
+    width:0; 
+  }
 }
-
-.produktLista {
+.produktLista{
     padding: 0.5em;
-
-    /* Stil för kundvagnsfönstret */
 }
-
+/* Stil för kundvagnsfönstret */
 #cartWindow {
     position: fixed;
-    top: 6em;
-    left: 7em;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 10%);
     width: 200px;
-    max-width: 400px;
     background-color: rgb(245, 240, 224);
     border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none;
+    display: none; 
     overflow-y: auto;
-    max-height: 130px;
+    max-height: 200px; 
     margin: 0 auto;
     padding: 5px;
     color: #000000;
 }
-
 #closeCartWindow {
     margin-left: 10em;
 }
-
 #cartIcon {
     text-align: left;
 }
-
 /* Så att kundvagnen får struktur */
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border: 1px solid black;
     padding: 3px;
     margin: 3px 0;
 }
-
 .cart-item-details {
-    flex-grow: 1;
-    font-size: 14px;
+    font-size: 14px; 
 }
-
 .cart-item button {
-    font-size: 12px;
+    font-size: 12px; 
 }
-
-#kassaKnapp {
+#kassaKnapp{
     margin-left: 4em;
 }
-
 /* Stil för kontaktsidan */
-#name {
+#name{
     width: 14em;
 }
-
-#email {
+#email{
     width: 14em;
 }
-
-#telefon {
+#number{
     width: 14em;
 }
-
-.textArea {
+.textArea{
     margin: 0.5em 0 0 0;
 }
-
 #namnRuta {
     margin: 0.5em 0 0 0;
 }
-
 #epostRuta {
     margin: 0.5em 0 0 0;
 }
-
 #telefonRuta {
     margin: 10em 0 0 0;
 }
-
 /* Stil för företagsinformationsrutan */
 #infoApp {
     border: 2px solid #393939;
-    padding: 10px;
-    margin: 20px 0;
+    padding: 10px; 
+    margin: 20px 0; 
     text-align: center;
     max-width: 850px;
-    margin: 20px auto;
+    margin: 20px auto; 
 }
-
 .popup {
     width: 100%;
     position: relative;
-    transform: translateY(150px);
-    opacity: 0;
+    transform: translateY(50px);
+    opacity: 0.2;
     transition: 2s all ease;
 }
-
 .active {
     transform: translateY(0);
     opacity: 1;
 }
-
 /* CSS för 1280px och större upplösning */
 @media only screen and (min-width: 1280px) {
     .item1 {
         grid-column: 1 / span 4;
         grid-row: 1;
     }
-
     .item2 {
         grid-column: 1 / span 4;
         grid-row: 2 / span 2;
     }
-
+    
     .item3 {
         grid-column: 1 / span 4;
         grid-row: 4;
     }
-
     .item4 {
         grid-column: 1 / span 4;
-        grid-row: 5/ span 2;
+        grid-row:  5/ span 2;
     }
-
     .item5 {
         grid-column: 1 / span 4;
         grid-row: 7;
     }
-
+    
     .item6 {
         grid-column: 1 / span 4;
         grid-row: 8;
     }
-
     .item7 {
         grid-column: 1 / span 4;
         grid-row: 9;
     }
-
     .item8 {
         grid-column: 1 / span 4;
         grid-row: 10;
     }
-
-    img {
-        width: 35vw;
-    }
-
-    .item10 {
+    .item10{
         grid-column: 1 / span 3;
         grid-row: 1;
     }
-
     .item11 {
         grid-column: 1 / span 3;
         grid-row: 2;
         margin: 2em 0 2em 0;
     }
-
     .item12 {
         grid-column: 1;
         grid-row: 3;
-        margin-top: 2em;
+        margin-top: 2em ;
     }
-
     .item13 {
         grid-column: 2;
         grid-row: 3;
         width: 500px;
         margin-left: -8em;
     }
-
     .item14 {
         grid-column: 3;
-        grid-row: 3;
+        grid-row: 3; 
         width: 500px;
         margin-top: 1em;
         margin-left: -3em;
     }
-
     .item15 {
         grid-column: 1 / span 3;
         grid-row: 5;
     }
-
     .item16 {
         grid-column: 1;
         grid-row: 6;
     }
-
-    .item170 {
+    .item170{
         grid-column: 2 / span 2;
         grid-row: 6;
     }
-
-    .item171 {
+    .item171{
         grid-column: 1;
         grid-row: 7;
     }
-
-    .item172 {
+    .item172{
         grid-column: 2 / span 2;
         grid-row: 7;
     }
-
-    .item173 {
-        grid-column: 1;
+    .item173{
+        grid-column: 1 ;
         grid-row: 8;
     }
-
-    .item174 {
+    .item174{
         grid-column: 2 / span 2;
         grid-row: 8;
     }
-
-    .item175 {
+    .item175{
         grid-column: 1;
         grid-row: 9;
     }
-
-    .item176 {
+    .item176{
         grid-column: 2 / span 2;
         grid-row: 9;
     }
-
-    .item177 {
+    .item177{
         grid-column: 1;
         grid-row: 10;
     }
-
-    .item178 {
+    .item178{
         grid-column: 2 / span 2;
         grid-row: 10;
     }
-
-    .item179 {
+    .item179{
         grid-column: 1 /span 3;
         grid-row: 11;
     }
-
-    .item20 {
+    .item20{
         grid-column: 1 /span 2;
         grid-row: 1;
     }
-
-    .item21 {
+    .item21{
         grid-column: 1;
-        grid-row: 2;
-
+        grid-row: 2; 
     }
-
-    .item22 {
-        grid-column: 2;
+    .item22{
+        grid-column:2;
         grid-row: 2;
-
     }
-
-    .item23 {
+    .item23{
         grid-column: 1 /span 2;
         grid-row: 3;
     }
-
-    .item24 {
+    .item24{
         grid-column: 1;
         grid-row: 4;
-    }
-
-    .item25 {
+    } 
+    .item25{
         grid-column: 2;
         grid-row: 4;
     }
-
-    .item26 {
+    .item26{
         grid-column: 1 /span 2;
         grid-row: 6;
     }
-
-    .item27 {
+    .item27{
         grid-column: 1;
         grid-row: 7;
     }
-
-    .item28 {
+    .item28{
         grid-column: 2;
         grid-row: 7;
     }
-
-    .item29 {
+    .item29{
         grid-column: 1 /span 2;
         grid-row: 8;
     }
-
-    .item30 {
+    .item30{
         grid-column: 1;
         grid-row: 9;
     }
-
-    .item31 {
+    .item31{
         grid-column: 2;
         grid-row: 9;
     }
-
-    .item32 {
+    .item32{
         grid-column: 1/span 2;
         grid-row: 10;
     }
-
-    .item33 {
+    .item33{
         grid-column: 1/span 2;
         grid-row: 11;
     }
-
-    .item41 {
+    .item41{
         grid-column: 1;
         grid-row: 1;
     }
-
-    .item42 {
+    .item42{
         grid-column: 1;
         grid-row: 2;
     }
-
     .item50 {
         grid-column: 1;
         grid-row: 1;
     }
-
     .item51 {
         grid-column: 1;
         grid-row: 2;
     }
-
     .item52 {
         grid-column: 1;
         grid-row: 3;
     }
-
     .item53 {
         grid-column: 1;
         grid-row: 4;
     }
-
     #menu {
         display: block;
     }
-
     #menu li {
         display: inline;
     }
-
     #menuIcon {
         display: none;
     }
-
-    .produktLista {
+    .produktLista{
         font-size: 1.5em;
         padding: 0.5em;
         margin-left: -10em;
-        font-family: 'Questrial', sans-serif
+        font-family: 'Questrial', sans-serif;
     }
-
-    .wrapProduct {
+    .wrapProduct{
         margin-left: -15em;
         margin-top: 2em;
     }
-
-    .langTexter {
+    .langTexter{
         padding: 1em;
         font-size: 1.5em;
     }
-
-    .varukorgKnapp {
+    .varukorgKnapp{
         font-size: 1.5em;
     }
-
-    .textArea {
+    .textArea{
         width: 30em;
         height: 10em;
     }
-
-    #menu {
+    #menu{
         text-align: right;
     }
-
     #menu a {
         padding: 1em;
         font-size: 1.2em;
     }
-
     #menu a:hover {
         padding: 1em;
     }
-
-    #cartIcon {
+    #cartIcon{
         text-align: left;
         font-size: 1em;
     }
-
     .flexcontainer {
-        text-align: center;
-        display: flex;
+        display: flex; 
         justify-content: center;
         margin: 2em;
     }
-
     .projectColumn {
         width: 265px;
         border: 2px solid #393939;
-        padding: 10px;
+        padding: 10px;  
         text-align: center;
     }
-
     .flex-item {
         margin: 0 10px;
     }
-
     .wrap {
         max-width: 60%;
-        margin: 5em auto 0;
+        margin: 5em auto 0; 
     }
-
-    .contProduct li,
-    p {
+    .contProduct li, p {
         font-size: 1em;
     }
-
+    #personApp {
+        font-size: 1em;
+    }
+    #personApp h3 {
+        font-size: 1.2em;
+    }
+    #produktApp {
+        font-size: 1em;
+    }
+    #produktApp h3 {
+        font-size: 1.2em;
+    }
     /* Stil för bildspelet */
     .gallery {
         padding: 10px;
-        text-align: center;
         display: flex;
     }
-
     .gallery-image {
         display: none;
         height: 60%;
-        width: 75%;
+        width: 75%; 
         margin: 0 auto;
     }
-
     /* Stil för knapparna till bildspelet */
     #prevBtn {
-        float: left;
-
+        float:left;
     }
-
     #nextBtn {
         float: right;
     }
-
     .controls button {
         background-color: #333;
         color: #fff;
         padding: 20px 20px;
         border: none;
-        cursor: pointer;
         position: relative;
         top: 45%;
         font-size: 1em;

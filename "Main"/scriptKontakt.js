@@ -1,5 +1,7 @@
+// Koden nedan tillåter en fungerande kundvagnsfunction för kontakt-sidan.
+// Två script-dokument behövdes på grund av konflikter med bildspelet. 
+
 // En Vue app för att skapa en kundvagn för våra produkter.
-// Hämtar produkter med axios --> Möjliggör dessa att läggas i kundvagnen
 const kundvagnApp = Vue.createApp({
     data() {
         return {
@@ -14,28 +16,20 @@ const kundvagnApp = Vue.createApp({
         .then((response) => {
             this.produkter = response.data;
         });
-       
-    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage. 
-    // Om savedCart har värde, spara savedCart i vår array vagn. 
-    // Sätter cartCount som längden av array vagn. 
+    // Skapar savedCart, fyller den data via 'cart' som är nyckel till localStorage.  
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
       this.vagn = JSON.parse(savedCart);
       this.cartCount = this.vagn.length;
     }
    },
-    // Funktion som "lyssnar" efter förändringar i array vagn.
-    // Reduce itererar genom antal objekt i array samt sammanställer antal, 
-    // pris per objekt samt totalpris i vagn. 
+    // Funktion som "lyssnar" efter förändringar i array vagn. Reduce itererar genom antal objekt.
     computed: {
         vagnTotal() {
             return this.vagn.reduce((total, item) => total + item.pris, 0);
         },
     },
     // Funktioner för att lägga till och ta bort objekt i array vagn.
-    // Uppdaterar cartCount som syns i meny så rätt antal visas.
-    // Validerar så att cartCount inte kan bli ett negativt värde. 
-    // Uppdaterar även Storage Item med nyckel 'cart' i localStorage.
     methods: {
         addToVagn(produkt) {
             this.vagn.push({ titel: produkt.titel, pris: produkt.pris });
@@ -51,10 +45,7 @@ const kundvagnApp = Vue.createApp({
             }
             this.saveCartToLocalStorage();
         },
-        // Sparar till localStorage.
-        // Skapar ett Storage Item med nyckel 'cart'.
-        // Omvandlar innehållet i vagn till JSON string, 
-        // iom att localStorage bara sparar string.
+        // LocalStorage sparar bara string.
         saveCartToLocalStorage() {
             localStorage.setItem('cart', JSON.stringify(this.vagn));
         },
@@ -68,14 +59,7 @@ const kundvagnApp = Vue.createApp({
         },
     },
 });
-// Tillåter Vue att genom mount förändra HTML-element med ID 'kundvagnApp'.
 kundvagnApp.mount('#kundvagnApp');
-
-
-//Koden ovanför tillåter en fungerande kundvagnsfunction för våran sida
-//Här är koden för själva realtidsvalideringen
-//Denna kod är separerad från script.js för den krockade med bildspelet
-
 
 // Hämta referenser till formulärfälten och felmeddelandeelementen
 const nameInput = document.getElementById('name');
@@ -85,20 +69,15 @@ const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
 const numberError = document.getElementById('numberError');
 
-
 //Köra valideringen när sidan laddas in första gången
 validateName();
 validateEmail();
 validateNumber();
 
-// Lyssna på ändringar i namnfältet
+// Lyssna på ändringar i fälten.
 nameInput.addEventListener('input', validateName);
-
-// Lyssna på ändringar i e-postfältet
 emailInput.addEventListener('input', validateEmail);
-
 numberInput.addEventListener('input', validateNumber);
-
 // Validera namnfältet
 function validateName() 
 {
@@ -106,45 +85,36 @@ function validateName()
     if (nameValue === '') 
     {
         nameError.textContent = 'Namn är obligatoriskt';
-    } else 
+    } 
+    else 
     {
         nameError.textContent = '';
     }
 }
-
 // Validera e-postfältet
 function validateEmail() 
 {
     const emailValue = emailInput.value.trim();
- /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.
-    framför @ (mellan ^och @) är a-zA-Z0-9._- tillåtna tecken. 
-    @ krävs och efter det teckent är a-zA-Z0-9._- tillåtna
-    Slutligen krävs en punkt . och här tillåts a-zA-Z i en längd av 2 till 4 tecken ex: .com */
+ /* kontrollerar att den angivna eposten använder tillåtna tecken samt att den innehåller krävda tecken.*/
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    //om fältet är tomt visa detta felmedelande
     if (emailValue === '') 
     {
         emailError.textContent = 'E-postadress är obligatorisk';
     } 
-    else if (!emailPattern.test(emailValue)) 
-    //om textfältet ej uppfyller de krav vi ställt.
+    else if (!emailPattern.test(emailValue))
     {
         emailError.textContent = 'Ogiltig e-postadress';
-    //ananrs så visas inget felmedelande
     } 
     else 
     {
         emailError.textContent = '';
     }
 }
-
 //Validera telefonnummer
 function validateNumber()
 {   
     const numberValue = numberInput.value.trim();
-
-    const numberPattern = /^[0-9+]{10,12}$/; 
-
+    const numberPattern = /^[0-9]{10}$/; 
     if (numberValue === '') 
     {
         numberError.textContent = 'Telefonnummer är obligatoriskt';
@@ -157,5 +127,4 @@ function validateNumber()
     {
         numberError.textContent = '';
     }
-
 }
